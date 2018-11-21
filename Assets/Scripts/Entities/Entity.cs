@@ -30,7 +30,6 @@ public class Entity : MonoBehaviour {
     // A reference to the rigid body attached to the Entity.
     protected Rigidbody2D Rigid;
 
-
     private bool Dead = false;
     private bool Immune = true;
 
