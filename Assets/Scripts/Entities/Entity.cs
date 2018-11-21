@@ -10,7 +10,6 @@ public enum EntityTypes
 }
 
 
-
 public class Entity : MonoBehaviour {
 
     // The type of entity this entity is.
@@ -19,11 +18,17 @@ public class Entity : MonoBehaviour {
     // The total amount of health this entity starts with.
     public int Health = 3;
 
+    // The current health the entity has.
+    private int CurrentHealth;
+
     // How fast this entity should move.
     public float MovementSpeed = 500.0f;
 
     // How long this entity should remain immune when damaged.
     public float ImmunityFrameLength = 0.5f;
+
+
+    protected Animator Anim;
 
 
 
@@ -34,12 +39,18 @@ public class Entity : MonoBehaviour {
     private bool Immune = true;
 
 
+
+    /// Functions
+
+
 	// Use this for initialization
 	protected virtual void Start ()
     {
         Rigid = GetComponent<Rigidbody2D>();
+        Anim = GetComponent<Animator>();
 	}
 	
+
 	// Update is called once per frame
 	void Update ()
     {
@@ -52,20 +63,20 @@ public class Entity : MonoBehaviour {
     // @param Target - The Entity that is being damaged.
     // @param Damage - The amount of damage this entity will be inflicted by.
     // @return - The total amount of damage this entity recieved.
-    public static int ApplyDamage(Entity Target, int Damage)
+    public int ApplyDamage(int Damage)
     {
-        if (!Target.IsImmune())
+        if (!Immune)
         {
-            Target.Health -= Damage;
+            CurrentHealth -= Damage;
 
-            // Play hurt animation
+            Anim.SetBool("Damaged", true);
             // Play hurt sound
             // Lock controls.
-            Target.StartImmunityFrames();
+            StartImmunityFrames();
 
-            if (Target.Health <= 0)
+            if (CurrentHealth <= 0)
             {
-                Target.Dead = true;
+                Dead = true;
             }
             return Damage;
         }
@@ -78,24 +89,27 @@ public class Entity : MonoBehaviour {
     // @param Target - The Entity that is being healed.
     // @param Amount - the value this entity should be healed.
     // @return - The total amount of healing the unit recieved.
-    public static int ApplyHeal(Entity Target, int Amount)
+    public int ApplyHeal(int Amount)
     {
-        int Total = Amount * ((Target.Type == EntityTypes.Undead) ? -1 : 1);
-        Target.Health += Total;
+        int Total = Amount * ((Type == EntityTypes.Undead) ? -1 : 1);
+        CurrentHealth += Total;
+
+
+        if (CurrentHealth > Health)
+        {
+            CurrentHealth = Health;
+        }
+
         return Total;
     }
 
 
-    public bool IsImmune()
-    {
-        return Immune;
-    }
-
-
+    // The timer on how long the entity should be immune.
     public IEnumerator StartImmunityFrames()
     {
         yield return new WaitForSeconds(ImmunityFrameLength);
 
         Immune = true;
+        Anim.SetBool("Damaged", false);
     }
 }
