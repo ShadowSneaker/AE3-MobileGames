@@ -16,7 +16,7 @@ public class Entity : MonoBehaviour {
     public EntityTypes Type;
 
     // The total amount of health this entity starts with.
-    public int Health = 3;
+    public int MaxHealth = 3;
 
     // The current health the entity has.
     private int CurrentHealth;
@@ -24,38 +24,46 @@ public class Entity : MonoBehaviour {
     // How fast this entity should move.
     public float MovementSpeed = 500.0f;
 
+    // How high the entity will jump.
+    public float JumpStrength = 10.0f;
+
     // How long this entity should remain immune when damaged.
     public float ImmunityFrameLength = 0.5f;
 
-
+    // A reference to the animator class for the Entity.
     protected Animator Anim;
-
-
 
     // A reference to the rigid body attached to the Entity.
     protected Rigidbody2D Rigid;
 
-    private bool Dead = false;
-    private bool Immune = true;
+
+
+    public bool Dead = false;
+    public bool Immune = false;
+
+
+    public Abilitiy[] Abilities = new Abilitiy[6];
 
 
 
     /// Functions
 
 
-	// Use this for initialization
-	protected virtual void Start ()
+    // Use this for initialization
+    protected virtual void Start ()
     {
         Rigid = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
+
+        CurrentHealth = MaxHealth;
 	}
 	
 
 	// Update is called once per frame
 	void Update ()
     {
-		
-	}
+        
+    }
 
 
     // Damages a targed based off the inputted damage.
@@ -65,19 +73,22 @@ public class Entity : MonoBehaviour {
     // @return - The total amount of damage this entity recieved.
     public int ApplyDamage(int Damage)
     {
-        if (!Immune)
+        if (!Immune && !Dead)
         {
             CurrentHealth -= Damage;
 
             Anim.SetBool("Damaged", true);
             // Play hurt sound
             // Lock controls.
-            StartImmunityFrames();
+            StartCoroutine(StartImmunityFrames());
 
             if (CurrentHealth <= 0)
             {
                 Dead = true;
             }
+
+
+            Debug.Log(CurrentHealth);
             return Damage;
         }
         return 0;
@@ -95,9 +106,9 @@ public class Entity : MonoBehaviour {
         CurrentHealth += Total;
 
 
-        if (CurrentHealth > Health)
+        if (CurrentHealth > MaxHealth)
         {
-            CurrentHealth = Health;
+            CurrentHealth = MaxHealth;
         }
 
         return Total;
@@ -107,9 +118,51 @@ public class Entity : MonoBehaviour {
     // The timer on how long the entity should be immune.
     public IEnumerator StartImmunityFrames()
     {
+        Immune = true;
         yield return new WaitForSeconds(ImmunityFrameLength);
 
-        Immune = true;
+        Immune = false;
         Anim.SetBool("Damaged", false);
+    }
+
+
+    // Casts an ability based off the index.
+    // Puts the ability on cooldown when casted.
+    // @param - 
+    void UseAbility(int AbilityIndex)
+    {
+        if (Abilities[AbilityIndex])
+        {
+            Abilities[AbilityIndex].CastAbility();
+        }
+        else
+        {
+            Debug.Log("Ability: " + AbilityIndex.ToString() + " Is not set!");
+        }
+    }
+
+
+    public void Jump()
+    {
+        Rigid.velocity = new Vector2(Rigid.velocity.x, JumpStrength);
+        Anim.SetTrigger("Jump");
+    }
+
+
+    public void StopJumping()
+    {
+        
+    }
+
+
+    public void MoveLeft(float Value)
+    {
+
+    }
+
+
+    public void MoveRight(float Value)
+    {
+
     }
 }

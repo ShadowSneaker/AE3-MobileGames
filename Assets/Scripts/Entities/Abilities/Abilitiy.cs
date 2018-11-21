@@ -21,17 +21,18 @@ public class Abilitiy : MonoBehaviour {
 
     public IEnumerator StartCountdown()
     {
+        AbilityUp = false;
         yield return new WaitForSeconds(Cooldown);
 
         AbilityUp = true;
     }
 
 
+    // MAKE SURE YOU CALL THIS WHEN OVERRIDED!!! 
     public virtual void CastAbility()
     {
         if (AbilityUp)
         {
-            AbilityUp = false;
             StartCoroutine(StartCountdown());
         }
     }
