@@ -204,4 +204,27 @@ public class Entity : MonoBehaviour
     {
         return Dead;
     }
+
+
+    private void LayerChange()
+    {
+        // using the grounded method to test layer and test attacking
+        if(!OnGround())
+        {
+            Anim.SetLayerWeight(1, 1);
+        }
+        else
+        {
+            Anim.SetLayerWeight(1, 0);
+        }
+
+        // this will be where i add the layer change for attacking
+        // ability parameters will be added later in animator
+
+    }
+
+
+    
+
+
 }
