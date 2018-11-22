@@ -15,10 +15,6 @@ public class CameraScript : MonoBehaviour
 
 
 
-    private float Lerp = 0.0f;
-
-
-
 	// Use this for initialization
 	void Start ()
     {

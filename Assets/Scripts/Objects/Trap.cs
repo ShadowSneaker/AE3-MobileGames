@@ -4,30 +4,54 @@ using UnityEngine;
 
 public class Trap : MonoBehaviour
 {
-
+    // How much damage this trap should inflict.
     public int Damage;
 
+    // How long the delay between applying damage.
+    public float TickTime = 1.0f;
 
+    private List<Entity> DamageEntities = new List<Entity>();
 
-	// Use this for initialization
-	void Start ()
-    {
-	}
 	
-	// Update is called once per frame
+	// Damages all entities touching this trap.
 	void Update ()
     {
-		
+        if (DamageEntities.Count > 0)
+        {
+            for (int i = 0; i < DamageEntities.Count; ++i)
+            {
+                DamageEntities[i].ApplyDamage(Damage);
+
+                if (DamageEntities[i].IsDead())
+                {
+                    DamageEntities.RemoveAt(i);
+                }
+            }
+        }
 	}
 
-    private void OnCollisionStay2D(Collision2D collision)
+
+    // Adds the object when it enters the collider.
+    private void OnCollisionEnter2D(Collision2D collision)
     { 
        
         Entity Obj = collision.gameObject.GetComponent<Entity>();
         
         if (Obj)
         {
-            Obj.ApplyDamage(Damage);
+            DamageEntities.Add(Obj);
+        }
+    }
+
+
+    // Removes the object when it leaves the collider.
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        Entity Obj = collision.gameObject.GetComponent<Entity>();
+
+        if (Obj)
+        {
+            DamageEntities.Remove(Obj);
         }
     }
 }

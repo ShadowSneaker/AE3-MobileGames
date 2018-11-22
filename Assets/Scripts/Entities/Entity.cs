@@ -36,7 +36,8 @@ public class Entity : MonoBehaviour
     // The list of abilities this Entity has.
     public Abilitiy[] Abilities = new Abilitiy[6];
 
-
+    // How far below the collider it will check to see if the character is on the ground.
+    public float GroundOffset = 0.15f;
 
 
     // A reference to the animator class for the Entity.
@@ -63,9 +64,15 @@ public class Entity : MonoBehaviour
     // How large the Collider extents are for this entity (used for calculating if the entity is on the ground).
     private float DistanceToGround;
 
+    private float Offset;
+
     private CapsuleCollider2D Col;
 
+
+
     
+    public LineRenderer DebugLine;
+
 
     /// Functions
 
@@ -80,8 +87,11 @@ public class Entity : MonoBehaviour
         CurrentHealth = MaxHealth;
 
         Col = GetComponent<CapsuleCollider2D>();
-        DistanceToGround = Col.bounds.extents.y;
-	}
+        DistanceToGround = (Col.bounds.extents.y - Col.offset.y) + GroundOffset;
+        Offset = Col.bounds.extents.x + Col.offset.x;
+
+
+    }
 
 
     // Damages a targed based off the inputted damage.
@@ -196,9 +206,10 @@ public class Entity : MonoBehaviour
 
     public bool OnGround()
     {
+        Vector2 StartPos = new Vector2(transform.position.x - Offset, transform.position.y - DistanceToGround);
+        Vector2 EndPos   = new Vector2(transform.position.x + Offset, transform.position.y - DistanceToGround);
 
-
-        return Physics2D.Raycast(new Vector2(transform.position.x - Col.bounds.extents.x, DistanceToGround + 0.15f), Vector2.right, transform.position.x + Col.bounds.extents.x);
+        return Physics2D.Linecast(EndPos, StartPos);
     }
 
 
