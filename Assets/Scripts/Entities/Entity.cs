@@ -63,7 +63,7 @@ public class Entity : MonoBehaviour
     // How large the Collider extents are for this entity (used for calculating if the entity is on the ground).
     private float DistanceToGround;
 
-
+    private CapsuleCollider2D Col;
 
     
 
@@ -79,8 +79,8 @@ public class Entity : MonoBehaviour
 
         CurrentHealth = MaxHealth;
 
-        var Collider = GetComponent<CapsuleCollider2D>();
-        DistanceToGround = Collider.bounds.extents.y;
+        Col = GetComponent<CapsuleCollider2D>();
+        DistanceToGround = Col.bounds.extents.y;
 	}
 
 
@@ -196,7 +196,9 @@ public class Entity : MonoBehaviour
 
     public bool OnGround()
     {
-        return Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y), Vector2.down, DistanceToGround + 0.15f);
+
+
+        return Physics2D.Raycast(new Vector2(transform.position.x - Col.bounds.extents.x, DistanceToGround + 0.15f), Vector2.right, transform.position.x + Col.bounds.extents.x);
     }
 
 
