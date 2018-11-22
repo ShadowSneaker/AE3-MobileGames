@@ -176,7 +176,14 @@ public class Entity : MonoBehaviour
 
         float Num = Value * ((Value >= 0.0f) ? 1 : -1);
 
-        transform.localScale = new Vector2((Value > 0.0f) ? 1.0f : -1.0f, transform.localScale.y);
+        if (Value > 0.0f)
+        {
+            transform.localScale = new Vector2(1.0f, transform.localScale.y);
+        }
+        else if (Value < 0.0f)
+        {
+            transform.localScale = new Vector2(-1.0f, transform.localScale.y);
+        }
 
         Anim.SetFloat("MovementSpeed", Num);
 
