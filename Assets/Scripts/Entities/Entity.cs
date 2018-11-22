@@ -196,7 +196,7 @@ public class Entity : MonoBehaviour
 
     public bool OnGround()
     {
-        return Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y), Vector2.down, DistanceToGround + 0.1f);
+        return Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y), Vector2.down, DistanceToGround + 0.15f);
     }
 
 
