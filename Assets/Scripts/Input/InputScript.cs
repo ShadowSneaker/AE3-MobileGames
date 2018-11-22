@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityStandardAssets.CrossPlatformInput;
 
 
 public enum EDragDirection { Left, Right, Up, Down }
@@ -9,7 +10,6 @@ public enum EDragDirection { Left, Right, Up, Down }
 
 public class InputScript : MonoBehaviour
 {
-
     private Vector3 FirstTouchPos;
     private Vector3 LastTouchPos;
 
@@ -24,19 +24,39 @@ public class InputScript : MonoBehaviour
     public UnityEvent Dragging;
     public UnityEvent Released;
 
-    //public UnityEvent Tap;
+    private Joystick Stick;
+    private Entity Player;
 
     private EDragDirection DragDirection;
 
 
     private void Start()
     {
+        Player = GetComponent<Entity>();
         DragDistance = Screen.height * ScreenPercentForSwipe / 100;
     }
 
 
     void Update()
     {
+#if UNITY_EDITOR
+
+        Player.MoveSideways(Input.GetAxisRaw("Horizontal"));
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            Player.Jump();
+        }
+
+
+#elif UNITY_ANDROID
+        /// Joystick Inputs
+
+        Player.MoveSideways(CrossPlatformInputManager.GetAxis("Horizontal"));
+
+
+        /// Touch Inputs
+
         if (Input.touchCount == 1)
         {
             Touch To = Input.GetTouch(0);
@@ -120,6 +140,7 @@ public class InputScript : MonoBehaviour
                     break;
             }
         }
+#endif
     }
 
 
@@ -134,19 +155,11 @@ public class InputScript : MonoBehaviour
                 {
                     // Right Swipe
                     DragDirection = EDragDirection.Right;
-                    //if (DragRight != null)
-                    //{
-                    //    DragRight.Invoke();
-                    //}
                 }
                 else
                 {
                     // Left Swipe
                     DragDirection = EDragDirection.Left;
-                    //if (DragLeft != null)
-                    //{
-                    //    DragLeft.Invoke();
-                    //}
                 }
             }
             else
@@ -156,26 +169,13 @@ public class InputScript : MonoBehaviour
                 {
                     // Up Swipe
                     DragDirection = EDragDirection.Up;
-                    //if (DragUp != null)
-                    //{
-                    //    DragUp.Invoke();
-                    //}
                 }
                 else
                 {
                     // Down Swipe
                     DragDirection = EDragDirection.Down;
-                    //if (DragDown != null)
-                    //{
-                    //    DragDown.Invoke();
-                    //}
                 }
             }
-        }
-        else
-        {
-            // Tap
-
         }
         return DragDirection;
     }

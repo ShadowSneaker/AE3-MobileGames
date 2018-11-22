@@ -10,16 +10,16 @@ public enum EntityTypes
 }
 
 
-public class Entity : MonoBehaviour {
+public class Entity : MonoBehaviour
+{
+
+    /// Propperties
 
     // The type of entity this entity is.
     public EntityTypes Type;
 
     // The total amount of health this entity starts with.
     public int MaxHealth = 3;
-
-    // The current health the entity has.
-    private int CurrentHealth;
 
     // How fast this entity should move.
     public float MovementSpeed = 500.0f;
@@ -30,21 +30,41 @@ public class Entity : MonoBehaviour {
     // How long this entity should remain immune when damaged.
     public float ImmunityFrameLength = 0.5f;
 
+    // The downward velocity the player needs to reach in order to die on impact.
+    public float TerminalVelocity = -20.0f;
+
+    // The list of abilities this Entity has.
+    public Abilitiy[] Abilities = new Abilitiy[6];
+
+
+
+
     // A reference to the animator class for the Entity.
     protected Animator Anim;
 
     // A reference to the rigid body attached to the Entity.
     protected Rigidbody2D Rigid;
+    
+    
+
+    
+    // The default speed of the animation.
+    private float AnimSpeed;
+
+    // The current health the entity has.
+    private int CurrentHealth;
+
+    // The value determining if the entity is dead or alive.
+    private bool Dead = false;
+
+    // Prevents this entity from being damaged.
+    private bool Immune = false;
+
+    // How large the Collider extents are for this entity (used for calculating if the entity is on the ground).
+    private float DistanceToGround;
 
 
-
-    public bool Dead = false;
-    public bool Immune = false;
-
-
-    public Abilitiy[] Abilities = new Abilitiy[6];
-
-
+    
 
     /// Functions
 
@@ -54,16 +74,13 @@ public class Entity : MonoBehaviour {
     {
         Rigid = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
+        AnimSpeed = Anim.speed;
 
         CurrentHealth = MaxHealth;
-	}
-	
 
-	// Update is called once per frame
-	void Update ()
-    {
-        
-    }
+        var Collider = GetComponent<CapsuleCollider2D>();
+        DistanceToGround = Collider.bounds.extents.y;
+	}
 
 
     // Damages a targed based off the inputted damage.
@@ -144,25 +161,30 @@ public class Entity : MonoBehaviour {
 
     public void Jump()
     {
-        Rigid.velocity = new Vector2(Rigid.velocity.x, JumpStrength);
-        Anim.SetTrigger("Jump");
+        if (OnGround())
+        {
+            Rigid.velocity = new Vector2(Rigid.velocity.x, JumpStrength);
+            Anim.SetTrigger("Jump");
+        }
     }
 
 
-    public void StopJumping()
+    public void MoveSideways(float Value)
     {
-        
+        Rigid.velocity = new Vector2(Value * MovementSpeed * Time.deltaTime, Rigid.velocity.y);
+
+        Anim.speed = AnimSpeed * Value * ((Value > 0.0f) ? 1 : -1);
     }
 
 
-    public void MoveLeft(float Value)
+    public bool OnGround()
     {
-
+        return Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y), Vector2.down, DistanceToGround + 0.1f);
     }
 
 
-    public void MoveRight(float Value)
+    public bool IsDead()
     {
-
+        return Dead;
     }
 }
