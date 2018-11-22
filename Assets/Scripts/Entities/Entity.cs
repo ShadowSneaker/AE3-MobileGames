@@ -174,6 +174,12 @@ public class Entity : MonoBehaviour
     {
         Rigid.velocity = new Vector2(Value * MovementSpeed * Time.deltaTime, Rigid.velocity.y);
 
+        float Num = Value * ((Value >= 0.0f) ? 1 : -1);
+
+        transform.localScale = new Vector2((Value > 0.0f) ? 1.0f : -1.0f, transform.localScale.y);
+
+        Anim.SetFloat("MovementSpeed", Num);
+
         if (Value > 0.0f)
         {
             Anim.speed = AnimSpeed * Value * ((Value > 0.0f) ? 1 : -1);
