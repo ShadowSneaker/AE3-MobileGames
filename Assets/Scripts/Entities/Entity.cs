@@ -64,6 +64,7 @@ public class Entity : MonoBehaviour
     private float DistanceToGround;
 
 
+
     
 
     /// Functions
@@ -173,7 +174,10 @@ public class Entity : MonoBehaviour
     {
         Rigid.velocity = new Vector2(Value * MovementSpeed * Time.deltaTime, Rigid.velocity.y);
 
-        Anim.speed = AnimSpeed * Value * ((Value > 0.0f) ? 1 : -1);
+        if (Value > 0.0f)
+        {
+            Anim.speed = AnimSpeed * Value * ((Value > 0.0f) ? 1 : -1);
+        }
     }
 
 
