@@ -94,6 +94,17 @@ public class Entity : MonoBehaviour
     }
 
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (OnGround())
+        {
+            Anim.SetLayerWeight(1, 0);
+            Anim.ResetTrigger("Jump");
+            Anim.SetBool("Falling", false);
+        }
+    }
+
+
     // Damages a targed based off the inputted damage.
     // Kills the Entity if the health goes below 0.
     // @param Target - The Entity that is being damaged.
@@ -177,6 +188,7 @@ public class Entity : MonoBehaviour
         {
             Rigid.velocity = new Vector2(Rigid.velocity.x, JumpStrength);
             Anim.SetTrigger("Jump");
+            Anim.SetLayerWeight(1, 1);
         }
     }
 

@@ -33,7 +33,13 @@ public class Abilitiy : MonoBehaviour {
     {
         if (AbilityUp)
         {
-            StartCoroutine(StartCountdown());
+            
         }
+    }
+
+
+    public virtual void EndAbility()
+    {
+        StartCoroutine(StartCountdown());
     }
 }
