@@ -113,6 +113,7 @@ public class Entity : MonoBehaviour
             if (CurrentHealth <= 0)
             {
                 Dead = true;
+                Anim.SetBool("Dead", true);
             }
 
 
