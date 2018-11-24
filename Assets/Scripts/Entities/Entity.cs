@@ -70,8 +70,7 @@ public class Entity : MonoBehaviour
 
 
 
-    
-    public LineRenderer DebugLine;
+   
 
 
     /// Functions
@@ -81,20 +80,22 @@ public class Entity : MonoBehaviour
     protected virtual void Start ()
     {
         Rigid = GetComponent<Rigidbody2D>();
+
+
         Anim = GetComponent<Animator>();
         AnimSpeed = Anim.speed;
 
         CurrentHealth = MaxHealth;
 
         Col = GetComponent<CapsuleCollider2D>();
-        DistanceToGround = (Col.bounds.extents.y - Col.offset.y) + GroundOffset;
-        Offset = Col.bounds.extents.x + Col.offset.x;
+        DistanceToGround = (Col.bounds.extents.y - Col.bounds.extents.y) + GroundOffset;
+        Offset = Col.bounds.extents.x + Col.bounds.extents.x;
 
 
     }
 
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (OnGround())
         {
@@ -168,7 +169,7 @@ public class Entity : MonoBehaviour
 
     // Casts an ability based off the index.
     // Puts the ability on cooldown when casted.
-    // @param - 
+    // @param - What ability should be casted in the ability array
     void UseAbility(int AbilityIndex)
     {
         if (Abilities[AbilityIndex])
@@ -186,7 +187,8 @@ public class Entity : MonoBehaviour
     {
         if (OnGround())
         {
-            Rigid.velocity = new Vector2(Rigid.velocity.x, JumpStrength);
+            Rigid.velocity = new Vector3(Rigid.velocity.x, JumpStrength, 0.0f);
+
             Anim.SetTrigger("Jump");
             Anim.SetLayerWeight(1, 1);
         }
@@ -196,6 +198,8 @@ public class Entity : MonoBehaviour
     public void MoveSideways(float Value)
     {
         Rigid.velocity = new Vector2(Value * MovementSpeed * Time.deltaTime, Rigid.velocity.y);
+
+
 
         float Num = Value * ((Value >= 0.0f) ? 1 : -1);
 
@@ -221,7 +225,7 @@ public class Entity : MonoBehaviour
     {
         Vector2 StartPos = new Vector2(transform.position.x - Offset, transform.position.y - DistanceToGround);
         Vector2 EndPos   = new Vector2(transform.position.x + Offset, transform.position.y - DistanceToGround);
-
+        
         return Physics2D.Linecast(EndPos, StartPos);
     }
 
@@ -235,7 +239,7 @@ public class Entity : MonoBehaviour
     private void LayerChange()
     {
         // using the grounded method to test layer and test attacking
-        if(!OnGround())
+        if (OnGround())
         {
             Anim.SetLayerWeight(1, 1);
         }
@@ -249,8 +253,6 @@ public class Entity : MonoBehaviour
 
     }
 
-
-    
 
 
 }
