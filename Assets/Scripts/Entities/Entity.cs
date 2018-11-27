@@ -94,8 +94,18 @@ public class Entity : MonoBehaviour
 
     }
 
+    // testing the velocity to start the falling animation
+    private void Update()
+    {
+        if(Rigid.velocity.y < 0)
+        {
+            Anim.SetBool("Falling", true);
+        }
+    }
 
-    private void OnCollisionEnter(Collision collision)
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (OnGround())
         {
@@ -190,8 +200,12 @@ public class Entity : MonoBehaviour
             Rigid.velocity = new Vector3(Rigid.velocity.x, JumpStrength, 0.0f);
 
             Anim.SetTrigger("Jump");
+            
             Anim.SetLayerWeight(1, 1);
         }
+        
+
+
     }
 
 
@@ -252,7 +266,5 @@ public class Entity : MonoBehaviour
         // ability parameters will be added later in animator
 
     }
-
-
 
 }
