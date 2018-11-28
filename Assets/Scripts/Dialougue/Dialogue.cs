@@ -4,9 +4,15 @@ using UnityEngine;
 
 
 [System.Serializable]
-public class Dialogue {
+public class Dialogue
+{
 
+    // typically name given to the charecter speaking
     public string name;
+
+
+    // this creates the area where it can be manipulated in the inspector
+    [TextArea(3, 10)]
     public string[] sentences;
 
 }
