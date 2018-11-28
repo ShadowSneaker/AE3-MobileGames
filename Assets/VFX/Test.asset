@@ -9,10 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a3bdb2cd68f901469e7cc149151eb49, type: 3}
-  m_Name: tEST
+  m_Name: Test
   m_EditorClassIdentifier: 
   debugViews:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       mode: 0
       depth:
@@ -25,27 +25,27 @@ MonoBehaviour:
         motionVectorsResolution: 24
         motionVectorsAmplitude: 64
   fog:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       excludeSkybox: 1
   antialiasing:
     m_Enabled: 0
     m_Settings:
-      method: 0
+      method: 1
       fxaaSettings:
         preset: 2
       taaSettings:
-        jitterSpread: 0.75
-        sharpen: 0.3
-        stationaryBlending: 0.95
+        jitterSpread: 0.5
+        sharpen: 0.15
+        stationaryBlending: 0.8
         motionBlending: 0.85
   ambientOcclusion:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
-      intensity: 1
-      radius: 0.3
-      sampleCount: 10
-      downsampling: 1
+      intensity: 3
+      radius: 0.75
+      sampleCount: 6
+      downsampling: 0
       forceForwardCompatibility: 0
       ambientOnly: 0
       highPrecision: 0
@@ -69,12 +69,12 @@ MonoBehaviour:
       screenEdgeMask:
         intensity: 0.03
   depthOfField:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
-      focusDistance: 10
+      focusDistance: 5
       aperture: 5.6
-      focalLength: 50
-      useCameraFov: 0
+      focalLength: 285
+      useCameraFov: 1
       kernelSize: 1
   motionBlur:
     m_Enabled: 0
@@ -85,46 +85,46 @@ MonoBehaviour:
   eyeAdaptation:
     m_Enabled: 0
     m_Settings:
-      lowPercent: 45
-      highPercent: 95
+      lowPercent: 1
+      highPercent: 50.999973
       minLuminance: -5
-      maxLuminance: 1
+      maxLuminance: -3.5
       keyValue: 0.25
       dynamicKeyValue: 1
       adaptationType: 0
       speedUp: 2
       speedDown: 1
-      logMin: -8
+      logMin: -7
       logMax: 4
   bloom:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 0.5
-        threshold: 1.1
-        softKnee: 0.5
+        intensity: 2.5
+        threshold: 1
+        softKnee: 0.1
         radius: 4
-        antiFlicker: 0
+        antiFlicker: 1
       lensDirt:
         texture: {fileID: 0}
         intensity: 3
   colorGrading:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       tonemapping:
         tonemapper: 2
-        neutralBlackIn: 0.02
-        neutralWhiteIn: 10
+        neutralBlackIn: 0.041
+        neutralWhiteIn: 14
         neutralBlackOut: 0
-        neutralWhiteOut: 10
-        neutralWhiteLevel: 5.3
+        neutralWhiteOut: 11
+        neutralWhiteLevel: 3
         neutralWhiteClip: 10
       basic:
         postExposure: 0
         temperature: 0
         tint: 0
         hueShift: 0
-        saturation: 1
+        saturation: 0.6
         contrast: 1
       channelMixer:
         red: {x: 1, y: 0, z: 0}
@@ -134,13 +134,13 @@ MonoBehaviour:
       colorWheels:
         mode: 1
         log:
-          slope: {r: 0, g: 0, b: 0, a: 0}
-          power: {r: 0, g: 0, b: 0, a: 0}
-          offset: {r: 0, g: 0, b: 0, a: 0}
+          slope: {r: 1, g: 1, b: 1, a: 0}
+          power: {r: 1, g: 1, b: 1, a: 0}
+          offset: {r: 1, g: 1, b: 1, a: 0}
         linear:
-          lift: {r: 0, g: 0, b: 0, a: 0}
-          gamma: {r: 0, g: 0, b: 0, a: 0}
-          gain: {r: 0, g: 0, b: 0, a: 0}
+          lift: {r: 1, g: 1, b: 1, a: 0}
+          gamma: {r: 1, g: 1, b: 1, a: 0}
+          gain: {r: 1, g: 1, b: 1, a: 0}
       curves:
         master:
           curve:
@@ -305,25 +305,25 @@ MonoBehaviour:
       lut: {fileID: 0}
       contribution: 1
   chromaticAberration:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       spectralTexture: {fileID: 0}
-      intensity: 0.1
+      intensity: 0.2
   grain:
     m_Enabled: 0
     m_Settings:
-      colored: 1
-      intensity: 0.5
-      size: 1
-      luminanceContribution: 0.8
+      colored: 0
+      intensity: 0.095
+      size: 0.94
+      luminanceContribution: 0
   vignette:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       mode: 0
       color: {r: 0, g: 0, b: 0, a: 1}
       center: {x: 0.5, y: 0.5}
-      intensity: 0.45
-      smoothness: 0.2
+      intensity: 0.25
+      smoothness: 1
       roundness: 1
       mask: {fileID: 0}
       opacity: 1
@@ -332,7 +332,7 @@ MonoBehaviour:
     m_Enabled: 0
   monitors:
     currentMonitorID: 0
-    refreshOnPlay: 0
+    refreshOnPlay: 1
     histogramMode: 3
     waveformExposure: 0.12
     waveformY: 0
