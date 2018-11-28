@@ -88,8 +88,8 @@ public class Entity : MonoBehaviour
         CurrentHealth = MaxHealth;
 
         Col = GetComponent<CapsuleCollider2D>();
-        DistanceToGround = (Col.bounds.extents.y - Col.bounds.extents.y) + GroundOffset;
-        Offset = Col.bounds.extents.x + Col.bounds.extents.x;
+        DistanceToGround = (Col.bounds.extents.y) + GroundOffset;
+        Offset = Col.bounds.extents.x / 2;
 
 
     }
