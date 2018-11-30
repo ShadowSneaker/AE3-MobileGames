@@ -46,7 +46,8 @@ public class Entity : MonoBehaviour
     // A reference to the rigid body attached to the Entity.
     protected Rigidbody2D Rigid;
     
-    
+    // Determins if the entity is attacking or not.
+    internal bool Attacking = false;
 
     
     // The default speed of the animation.
@@ -67,7 +68,6 @@ public class Entity : MonoBehaviour
     private float Offset;
 
     private CapsuleCollider2D Col;
-
 
 
    
