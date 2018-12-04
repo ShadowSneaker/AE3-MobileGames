@@ -15,13 +15,15 @@ public class Abilitiy : MonoBehaviour {
     // The animation clip that should be played when this ability is casted.
     public AnimationClip Clip;
 
+    private AnimatorOverrideController AOC;
 
-
-    private bool AbilityUp = true;
+    protected bool AbilityUp = true;
 
     private Entity Owner;
 
     private Animator Anim;
+
+    private string AttackName = "AttackAnim";
 
 
 	// Use this for initialization
@@ -29,6 +31,8 @@ public class Abilitiy : MonoBehaviour {
     {
         Owner = GetComponent<Entity>();
         Anim = GetComponent<Animator>();
+
+        AOC = new AnimatorOverrideController(Anim.runtimeAnimatorController);
 	}
 	
 	// Update is called once per frame
@@ -60,9 +64,34 @@ public class Abilitiy : MonoBehaviour {
     // MAKE SURE YOU CALL THIS WHEN OVERRIDED!!! 
     public virtual void CastAbility()
     {
+        Debug.Log("ATTACK!");
         if (AbilityUp)
         {
+            var Anims = new List<KeyValuePair<AnimationClip, AnimationClip>>();
+
+
+
+            for (int i = 0; i < AOC.animationClips.Length; i++)
+            {
+                if (AOC.animationClips[i].name == "AttackAnim")
+                {
+                    Anims.Add(new KeyValuePair<AnimationClip, AnimationClip>(AOC.animationClips[i], Clip));
+                    AOC.animationClips[i] = Clip;
+                    //AttackName = Clip.name;
+                    break;
+                }
+            }
+
+            AOC.ApplyOverrides(Anims);
+            Anim.runtimeAnimatorController = AOC;
+
+
+            Anim.SetLayerWeight(2, 1.0f);
+            Anim.SetBool("Attack", true);
+
             
+            //AOC.animationClips[0] = Clip;
+
         }
     }
 
@@ -70,5 +99,7 @@ public class Abilitiy : MonoBehaviour {
     public virtual void EndAbility()
     {
         StartCoroutine(StartCountdown());
+        Anim.SetBool("Attack", false);
+        Anim.SetLayerWeight(2, 0.0f);
     }
 }

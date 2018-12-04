@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: BasicAttackAnim
+  m_Name: Warrior_Basic
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -83,4 +83,12 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.6
+    functionName: EndAbility()
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: b729236331271c0429469dc61bc6fed9,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

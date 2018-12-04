@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public enum EntityTypes
 {
     Normal,
@@ -101,6 +100,16 @@ public class Entity : MonoBehaviour
         {
             Anim.SetBool("Falling", true);
         }
+
+        if (Input.GetKeyDown("q"))
+        {
+            UseAbility(0);
+        }
+
+        if (Input.GetKeyDown("1"))
+        {
+            UseAbility(1);
+        }
     }
 
 
@@ -182,6 +191,7 @@ public class Entity : MonoBehaviour
     // @param - What ability should be casted in the ability array
     void UseAbility(int AbilityIndex)
     {
+        
         if (Abilities[AbilityIndex])
         {
             Abilities[AbilityIndex].CastAbility();
