@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 50190418039334480}
   - component: {fileID: 114023138286617526}
   - component: {fileID: 114262009237308882}
+  - component: {fileID: 114915115993682650}
   - component: {fileID: 114888507769027496}
   m_Layer: 0
   m_Name: Player
@@ -179,12 +180,12 @@ MonoBehaviour:
   Type: 0
   MaxHealth: 3
   MovementSpeed: 500
-  JumpStrength: 15
+  JumpStrength: 20
   ImmunityFrameLength: 0.5
   TerminalVelocity: -20
   Abilities:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 114262009237308882}
+  - {fileID: 114915115993682650}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -202,6 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cooldown: 3
+  Clip: {fileID: 7400000, guid: da751ce266486b9468cefa4c83d80b42, type: 2}
 --- !u!114 &114888507769027496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -249,6 +251,19 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114915115993682650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1463172384208808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27a283bcb7f9c6f448d5a1c2e4b1d3e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cooldown: 5
+  Clip: {fileID: 7400000, guid: 128cf1779fb2bdb418cf15a0c90ac1e7, type: 2}
 --- !u!212 &212213025882455106
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -108,6 +108,7 @@ public class Entity : MonoBehaviour
 
         if (Input.GetKeyDown("1"))
         {
+            Debug.Log("Pressed");
             UseAbility(1);
         }
     }

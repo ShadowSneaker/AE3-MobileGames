@@ -27,7 +27,7 @@ public class Abilitiy : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start ()
+	protected virtual void Start ()
     {
         Owner = GetComponent<Entity>();
         Anim = GetComponent<Animator>();
@@ -45,10 +45,7 @@ public class Abilitiy : MonoBehaviour {
     {
         AbilityUp = false;
 
-        if (Owner)
-        {
-            Owner.Attacking = true;
-        }
+        
 
         yield return new WaitForSeconds(Cooldown);
 
@@ -56,7 +53,7 @@ public class Abilitiy : MonoBehaviour {
 
         if (Owner)
         {
-            Owner.Attacking = true;
+            Owner.Attacking = false;
         }
     }
 
@@ -64,12 +61,14 @@ public class Abilitiy : MonoBehaviour {
     // MAKE SURE YOU CALL THIS WHEN OVERRIDED!!! 
     public virtual void CastAbility()
     {
-        Debug.Log("ATTACK!");
         if (AbilityUp)
         {
+            if (Owner)
+            {
+                Owner.Attacking = true;
+            }
+
             var Anims = new List<KeyValuePair<AnimationClip, AnimationClip>>();
-
-
 
             for (int i = 0; i < AOC.animationClips.Length; i++)
             {
@@ -90,7 +89,7 @@ public class Abilitiy : MonoBehaviour {
             Anim.SetBool("Attack", true);
 
             
-            //AOC.animationClips[0] = Clip;
+            AOC.animationClips[0] = Clip;
 
         }
     }
@@ -98,6 +97,9 @@ public class Abilitiy : MonoBehaviour {
 
     public virtual void EndAbility()
     {
+        // Anim for some reason keeps loosing reference and thus must be set here.
+        Anim = GetComponent<Animator>();
+
         StartCoroutine(StartCountdown());
         Anim.SetBool("Attack", false);
         Anim.SetLayerWeight(2, 0.0f);
