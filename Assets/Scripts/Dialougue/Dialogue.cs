@@ -19,4 +19,7 @@ public class Dialogue
     // i want this to be the replay sentence always said
     [TextArea(3, 10)]
     public string FinalLine;
+
+    [TextArea(3, 10)]
+    public string StartLine;
 }

@@ -20,6 +20,9 @@ public class DialogueManager : MonoBehaviour
     public Animator NPCAnim;
 
     public Button SkipB;
+    public Button End;
+    public Button Next;
+
 
     // creates the postprocessing object to use
     private PostProcessingBehaviour CameraBlur;
@@ -53,7 +56,9 @@ public class DialogueManager : MonoBehaviour
         {
             Senteces.Enqueue(sentence);
         }
-        
+
+        StartCoroutine(TypeWriter(dialogue.StartLine));
+
     }
 
     public void Skip()
@@ -90,9 +95,10 @@ public class DialogueManager : MonoBehaviour
         //part of function for when the dialog ends
         if(Senteces.Count == 0)
         {
-
+            // type out the last sentence
         }
         //everything else used for normal text
+        StartCoroutine(TypeWriter(Senteces.Dequeue()));
     }
 
     IEnumerator TypeWriter(string Line)
