@@ -169,7 +169,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     name: MadManJones
-    sentences: []
+    sentences:
+    - You're the madman not I! How dare you think I'm a madman!
+    - 'I heard the boss has a massive amount of work to do.
+
+      10 CHARECTERS!'
+    - Thats a lot of koala-t
+    FinalLine: blublublublublublublublublublublublublublublublublublublu
 --- !u!212 &42150602
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -529,10 +535,10 @@ RectTransform:
   m_Father: {fileID: 1497382180}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000022888, y: -139.01}
-  m_SizeDelta: {x: 800, y: 221.82}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -4, y: -160}
+  m_SizeDelta: {x: 0, y: 219.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &971943436
 GameObject:
