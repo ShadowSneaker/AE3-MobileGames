@@ -194,6 +194,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &885583075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 885583077}
+  - component: {fileID: 885583076}
+  m_Layer: 0
+  m_Name: SplineCurve
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &885583076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885583075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f01da948b3b34d4a8af73e4b6781e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Points:
+  - {x: -0.324949, y: 0.65855265, z: 4.6521006}
+  - {x: 3.2542815, y: 0, z: 2.2687435}
+  - {x: -2.8992436, y: 0, z: 0.5510674}
+  - {x: 1.4799845, y: 0, z: -2.6049178}
+--- !u!4 &885583077
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885583075}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.15, y: 2.338, z: 0.19}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1022941592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1022941594}
+  - component: {fileID: 1022941593}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1022941593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1022941592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec088b7f262ab442b3324954db287d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Points:
+  - {x: 1, y: 0, z: 0}
+  - {x: 2, y: 0, z: 0.9115555}
+  - {x: 1.8793969, y: 0, z: -0.90505326}
+  - {x: 4, y: 0, z: 0}
+  - {x: 5.2305727, y: 0, z: 0.53338695}
+  - {x: 6, y: 0, z: 1.2873871}
+  - {x: 3.3369348, y: 0, z: 3.0388827}
+  - {x: 2.045548, y: 0, z: 1.5541173}
+  - {x: -1.8342826, y: 0, z: 5.406849}
+  - {x: 1.0342782, y: 0, z: 0.018233687}
+--- !u!4 &1022941594
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1022941592}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.0427773, y: 4.396571, z: -0.015021712}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1932572679
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,7 +300,7 @@ GameObject:
   - component: {fileID: 1932572681}
   - component: {fileID: 1932572680}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -221,18 +317,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a03f385dae5cc44492c0b94547aa00f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartPos: {x: -0.84, y: 0, z: 0}
-  EndPos: {x: 5.97, y: 47.26, z: 0}
+  StartPos: {x: 0, y: 0, z: 0}
+  EndPos: {x: 0.96594375, y: -0.00000010430813, z: 0.28214923}
 --- !u!4 &1932572681
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1932572679}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.96, y: 2.89, z: -0.10759247}
+  m_LocalRotation: {x: -0.23204376, y: -0, z: -0, w: 0.9727054}
+  m_LocalPosition: {x: -0.035, y: 2.338, z: 0.034}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -26.835001, y: 0, z: 0}
