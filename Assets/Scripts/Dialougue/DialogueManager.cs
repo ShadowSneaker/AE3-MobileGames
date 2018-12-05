@@ -41,6 +41,8 @@ public class DialogueManager : MonoBehaviour
     //bool for corutine running
     private bool CR_Running;
 
+
+
     // player Entity
     Entity playerEntity;
 
@@ -61,7 +63,7 @@ public class DialogueManager : MonoBehaviour
         End.onClick.AddListener(EndDialog);
 
         CR_Running = false;
-        playerEntity = GameObject.FindGameObjectWithTag("Player").GetComponent<Entity>();
+        //playerEntity = GameObject.FindGameObjectWithTag("Player").GetComponent<Entity>();
 	}
 
 
@@ -132,6 +134,10 @@ public class DialogueManager : MonoBehaviour
 
                 //set the mad mans new sprite
                 MadMan.GetComponent<SpriteRenderer>().sprite = EnragedMan;
+
+
+                MadMan.GetComponent<Entity>().enabled = true;
+                
             }
         }
         else
@@ -173,6 +179,8 @@ public class DialogueManager : MonoBehaviour
 
         // set the camera back to normal
         CameraBlur.profile = Default;
+
+        MadMan.GetComponent<Entity>().enabled = true;
     }
 
     IEnumerator TypeWriter(string Line)
