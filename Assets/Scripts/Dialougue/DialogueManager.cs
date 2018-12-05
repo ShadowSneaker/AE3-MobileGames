@@ -24,7 +24,8 @@ public class DialogueManager : MonoBehaviour
 
     // animations for the dialogue box
     public Animator Anim;
-
+    public Animator NextA;
+    public Animator EndA;
 
     public Button SkipB;
     public Button End;
@@ -38,15 +39,19 @@ public class DialogueManager : MonoBehaviour
     public Text CharecterText;
     private string finalline;
 
+    private string DisplaySentence;
+
     // change the dialog for madman to get angry
 
-	void Start ()
+    void Start ()
     {
         CameraBlur = FindObjectOfType<Camera>().GetComponent<PostProcessingBehaviour>();
         Senteces = new Queue<string>();
         MadCount = new Queue<string>();
+
         SkipB.onClick.AddListener(Skip);
         Next.onClick.AddListener(ProgressDialogue);
+        End.onClick.AddListener(EndDialog);
 	}
 
 
@@ -54,6 +59,7 @@ public class DialogueManager : MonoBehaviour
     {
         //set animation bool
         Anim.SetBool("DialogStart", true);
+        NextA.SetBool("Fader", true);
 
         // still need to set the bools to false in a later function
 
@@ -66,6 +72,7 @@ public class DialogueManager : MonoBehaviour
         // gets all the normal dialog
         foreach (string sentence in dialogue.sentences)
         {
+            DisplaySentence = sentence;
             Senteces.Enqueue(sentence);
         }
 
@@ -76,21 +83,25 @@ public class DialogueManager : MonoBehaviour
         }
 
         StartCoroutine(TypeWriter(dialogue.StartLine));
-
+        
     }
 
     public void Skip()
     {
         // this will give the player the option to skip the dialog sentences
 
-       
 
+        //clears the text if you skip
+        StopAllCoroutines();
         
-        //stops the first corutine
-        StopCoroutine(TypeWriter(Senteces.Dequeue()));
-
         // normal mad text begin
-        StartCoroutine(TypeWriter(MadCount.Dequeue()));
+        if(MadCount.Count != 0)
+        {
+            
+            CharecterText.text = "";
+            StartCoroutine(TypeWriter(MadCount.Dequeue()));
+        }
+        
 
         if (MadCount.Count == 0)
         {
@@ -112,25 +123,49 @@ public class DialogueManager : MonoBehaviour
 
     public void ProgressDialogue()
     {
+        //clears the text if you skip
+        StopAllCoroutines();
+
         //part of function for when the dialog ends
-        if(Senteces.Count == 0)
+        if (Senteces.Count == 0)
         {
             // type out the last sentence
+            NextA.SetBool("Fader", false);
+            EndA.SetBool("Fader", true);
             StartCoroutine(TypeWriter(finalline));
-        }
+            // have normal next button and skip disaper and end button appear
 
-        //everything else used for normal text
-        StartCoroutine(TypeWriter(Senteces.Dequeue()));
+
+        }
+        else
+        {
+            //everything else used for normal text
+            StartCoroutine(TypeWriter(Senteces.Dequeue()));
+        }
+        
+    }
+
+    public void EndDialog()
+    {
+        Anim.SetBool("DialogStart", false);
+        new WaitForSeconds(1);
+
+        // set the camera back to normal
+        CameraBlur.profile = Default;
     }
 
     IEnumerator TypeWriter(string Line)
     {
+
         CharecterText.text = "";
-        foreach(char letter in Line.ToCharArray())
-        {
-            CharecterText.text += letter;
-            yield return null;
-        }
+        
+            foreach (char letter in Line.ToCharArray())
+            {
+                CharecterText.text += letter;
+                yield return null;
+            }
+
+        
     }
   
     public void GetFinalText(string finaltext)
