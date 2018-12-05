@@ -40,7 +40,9 @@ public class CameraScript : MonoBehaviour
                 Pos.y = Mathf.Lerp(transform.position.y, FollowObject.transform.position.y, MaxSpeed * Time.deltaTime);
                 Pos.x = Mathf.Lerp(transform.position.x, FollowObject.transform.position.x, MaxSpeed * Time.deltaTime);
 
+                
                 transform.position = Pos;
+                
             }
         }
     }

@@ -17,6 +17,9 @@ public class Entity : MonoBehaviour
     // The type of entity this entity is.
     public EntityTypes Type;
 
+    // Should this entity be allowed to fly.
+    public bool CanFly = false;
+
     // The total amount of health this entity starts with.
     public int MaxHealth = 3;
 
@@ -32,11 +35,11 @@ public class Entity : MonoBehaviour
     // The downward velocity the player needs to reach in order to die on impact.
     public float TerminalVelocity = -20.0f;
 
-    // The list of abilities this Entity has.
-    public Abilitiy[] Abilities = new Abilitiy[6];
-
     // How far below the collider it will check to see if the character is on the ground.
     public float GroundOffset = 0.15f;
+    
+    // The list of abilities this Entity has.
+    public Abilitiy[] Abilities = new Abilitiy[6];
 
 
 
@@ -45,12 +48,12 @@ public class Entity : MonoBehaviour
 
     // A reference to the rigid body attached to the Entity.
     protected Rigidbody2D Rigid;
-    
+
     // Determins if the entity is attacking or not.
     internal bool Attacking = false;
 
 
-    
+
     // The default speed of the animation.
     private float AnimSpeed;
 
@@ -63,24 +66,27 @@ public class Entity : MonoBehaviour
     // Prevents this entity from being damaged.
     private bool Immune = false;
 
+    // Stores if the entity is flying.
+    private bool Flying = false;
+
     // How large the Collider extents are for this entity (used for calculating if the entity is on the ground).
     private float DistanceToGround;
 
     // The distance between the left side and the right side of the collider extents.
     private float Offset;
 
-
+    // A reference to the collider around the Entity
     private CapsuleCollider2D Col;
 
 
-   
+
 
 
     /// Functions
 
 
-    // Use this for initialization
-    protected virtual void Start ()
+    // Initializes all reference components.
+    protected virtual void Start()
     {
         Rigid = GetComponent<Rigidbody2D>();
 
@@ -94,13 +100,17 @@ public class Entity : MonoBehaviour
         DistanceToGround = (Col.bounds.extents.y) + GroundOffset;
         Offset = Col.bounds.extents.x / 2;
 
-
+        if (CanFly)
+        {
+            SetFlying(true);
+        }
     }
 
-    // testing the velocity to start the falling animation
+
+    // Test Info and animations
     private void Update()
     {
-        if(Rigid.velocity.y < 0)
+        if (Rigid.velocity.y < 0)
         {
             Anim.SetBool("Falling", true);
         }
@@ -112,15 +122,20 @@ public class Entity : MonoBehaviour
 
         if (Input.GetKeyDown("1"))
         {
-            UseAbility(1);
+            if (CanFly)
+            {
+                SetFlying(!Flying);
+            }
+               
         }
     }
 
 
-
+    // Triggers when the object collides with another object.
+    // Disables the falling animation.
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (OnGround())
+        if (OnGround() && !Flying)
         {
             Anim.SetLayerWeight(1, 0);
             Anim.ResetTrigger("Jump");
@@ -193,9 +208,9 @@ public class Entity : MonoBehaviour
     // Casts an ability based off the index.
     // Puts the ability on cooldown when casted.
     // @param - What ability should be casted in the ability array
-    void UseAbility(int AbilityIndex)
+    public void UseAbility(int AbilityIndex)
     {
-        
+
         if (Abilities[AbilityIndex])
         {
             Abilities[AbilityIndex].CastAbility();
@@ -207,26 +222,28 @@ public class Entity : MonoBehaviour
     }
 
 
+    // Launches the entity in the air based on the JumpStrength.
+    // The entity can only jump if they are on the ground.
+    // Flying entities cannot jump.
     public void Jump()
     {
-        if (OnGround())
+        if (OnGround() && !Flying)
         {
             Rigid.velocity = new Vector3(Rigid.velocity.x, JumpStrength, 0.0f);
 
             Anim.SetTrigger("Jump");
-            
+
             Anim.SetLayerWeight(1, 1);
         }
-        
-
-
     }
 
 
+    // Moves the entity left or right based off a value.
+    // The value ranges from -1 to 1.
+    // @param Value - The direction the chaeracter should move in (-1 to move left, 1 to move right).
     public void MoveSideways(float Value)
     {
         Rigid.velocity = new Vector2(Value * MovementSpeed * Time.deltaTime, Rigid.velocity.y);
-
 
 
         float Num = Value * ((Value >= 0.0f) ? 1 : -1);
@@ -249,36 +266,30 @@ public class Entity : MonoBehaviour
     }
 
 
+    // Checks if the player is currently standing on a platform.
+    // @return - Returns true if the entity is on the ground.
     public bool OnGround()
     {
         Vector2 StartPos = new Vector2(transform.position.x - Offset, transform.position.y - DistanceToGround);
-        Vector2 EndPos   = new Vector2(transform.position.x + Offset, transform.position.y - DistanceToGround);
-        
+        Vector2 EndPos = new Vector2(transform.position.x + Offset, transform.position.y - DistanceToGround);
+
         return Physics2D.Linecast(EndPos, StartPos);
     }
 
 
+    // Checks if the entity has died.
+    // @return - Returns if the entity is dead.
     public bool IsDead()
     {
         return Dead;
     }
 
 
-    private void LayerChange()
+    public void SetFlying(bool Fly)
     {
-        // using the grounded method to test layer and test attacking
-        if (OnGround())
-        {
-            Anim.SetLayerWeight(1, 1);
-        }
-        else
-        {
-            Anim.SetLayerWeight(1, 0);
-        }
+        Flying = Fly;
 
-        // this will be where i add the layer change for attacking
-        // ability parameters will be added later in animator
-
+        //Rigid.simulated = !Fly;
+        Rigid.gravityScale = (Fly) ? 0.0f : 1.0f;
     }
-
 }

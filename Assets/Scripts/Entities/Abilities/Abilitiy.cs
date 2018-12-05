@@ -23,10 +23,6 @@ public class Abilitiy : MonoBehaviour {
 
     private Animator Anim;
 
-    private string AttackName = "AttackAnim";
-
-    bool Test = false;
-
     float AbilityTime = 0.0f;
 
 
@@ -75,8 +71,6 @@ public class Abilitiy : MonoBehaviour {
     {
         if (AbilityUp)
         {
-
-            //Test = true;
             if (Owner)
             {
                 Owner.Attacking = true;
@@ -90,7 +84,6 @@ public class Abilitiy : MonoBehaviour {
                 {
                     Anims.Add(new KeyValuePair<AnimationClip, AnimationClip>(AOC.animationClips[i], Clip));
                     AOC.animationClips[i] = Clip;
-                    //AttackName = Clip.name;
                     break;
                 }
             }
@@ -112,15 +105,10 @@ public class Abilitiy : MonoBehaviour {
 
     public virtual void EndAbility()
     {
-        //if (Test)
-        //{
-            //Test = false;
-            // Anim for some reason keeps loosing reference and thus must be set here.
-            Anim = GetComponent<Animator>();
+        Anim = GetComponent<Animator>();
 
-            StartCoroutine(StartCountdown());
-            Anim.SetBool("Attack", false);
-            Anim.SetLayerWeight(2, 0.0f);
-        //}
+        StartCoroutine(StartCountdown());
+        Anim.SetBool("Attack", false);
+        Anim.SetLayerWeight(2, 0.0f);
     }
 }
