@@ -27,10 +27,9 @@ public class DialogueManager : MonoBehaviour
     public Animator NextA;
     public Animator EndA;
 
-    public Button SkipB;
+    //public Button SkipB;
     public Button End;
     public Button Next;
-
 
     // creates the postprocessing object to use
     private PostProcessingBehaviour CameraBlur;
@@ -39,9 +38,17 @@ public class DialogueManager : MonoBehaviour
     public Text CharecterText;
     private string finalline;
 
-    private string DisplaySentence;
+    //bool for corutine running
+    private bool CR_Running;
 
-    // change the dialog for madman to get angry
+    // player Entity
+    Entity playerEntity;
+
+    // MadMan Sprites
+    public Sprite EnragedMan;
+
+    // MadMan GameObject
+    public GameObject MadMan;
 
     void Start ()
     {
@@ -49,9 +56,12 @@ public class DialogueManager : MonoBehaviour
         Senteces = new Queue<string>();
         MadCount = new Queue<string>();
 
-        SkipB.onClick.AddListener(Skip);
+        //SkipB.onClick.AddListener(Skip);
         Next.onClick.AddListener(ProgressDialogue);
         End.onClick.AddListener(EndDialog);
+
+        CR_Running = false;
+        playerEntity = GameObject.FindGameObjectWithTag("Player").GetComponent<Entity>();
 	}
 
 
@@ -60,11 +70,14 @@ public class DialogueManager : MonoBehaviour
         //set animation bool
         Anim.SetBool("DialogStart", true);
         NextA.SetBool("Fader", true);
+        // set buttons
+        Next.gameObject.SetActive(true);
+        //SkipB.gameObject.SetActive(true);
 
         // still need to set the bools to false in a later function
 
         // disable player input
-        // something needs to be put in place
+        //playerEntity.enabled = false;
 
         // create a blur on the background
         CameraBlur.profile = Blur;
@@ -72,7 +85,7 @@ public class DialogueManager : MonoBehaviour
         // gets all the normal dialog
         foreach (string sentence in dialogue.sentences)
         {
-            DisplaySentence = sentence;
+            
             Senteces.Enqueue(sentence);
         }
 
@@ -86,62 +99,64 @@ public class DialogueManager : MonoBehaviour
         
     }
 
-    public void Skip()
-    {
-        // this will give the player the option to skip the dialog sentences
-
-
-        //clears the text if you skip
-        StopAllCoroutines();
-        
-        // normal mad text begin
-        if(MadCount.Count != 0)
-        {
-            
-            CharecterText.text = "";
-            StartCoroutine(TypeWriter(MadCount.Dequeue()));
-        }
-        
-
-        if (MadCount.Count == 0)
-        {
-            // add the entity to the madman and begin fight
-
-            //animation change (this stuff will mostrpobably be put in a function later on)
-            Anim.SetBool("DialogStart", false);
-            new WaitForSeconds(1);
-
-            // set the camera back to normal
-            CameraBlur.profile = Default;
-
-            // give back the players movement
-            //something needs to be put in place
-        }
-
-
-    }
 
     public void ProgressDialogue()
     {
-        //clears the text if you skip
-        StopAllCoroutines();
-
-        //part of function for when the dialog ends
-        if (Senteces.Count == 0)
+        if(CR_Running)
         {
-            // type out the last sentence
-            NextA.SetBool("Fader", false);
-            EndA.SetBool("Fader", true);
-            StartCoroutine(TypeWriter(finalline));
-            // have normal next button and skip disaper and end button appear
+            //clears the text if you skip
+            StopAllCoroutines();
+
+            // normal mad text begin
+            if (MadCount.Count != 0)
+            {
+
+                CharecterText.text = "";
+                StartCoroutine(TypeWriter(MadCount.Dequeue()));
+            }
 
 
+            if (MadCount.Count == 0)
+            {
+                // add the entity to the madman and begin fight
+
+                //animation change (this stuff will mostrpobably be put in a function later on)
+                Anim.SetBool("DialogStart", false);
+                new WaitForSeconds(1);
+
+                // set the camera back to normal
+                CameraBlur.profile = Default;
+
+                // give back the players movement
+                //playerEntity.enabled = true;
+
+                //set the mad mans new sprite
+                MadMan.GetComponent<SpriteRenderer>().sprite = EnragedMan;
+            }
         }
         else
         {
-            //everything else used for normal text
-            StartCoroutine(TypeWriter(Senteces.Dequeue()));
+            //part of function for when the dialog ends
+            if (Senteces.Count == 0)
+            {
+                // type out the last sentence
+                NextA.SetBool("Fader", false);
+
+                EndA.SetBool("Fader", true);
+                StartCoroutine(TypeWriter(finalline));
+
+
+            }
+            else
+            {
+                //everything else used for normal text
+                StartCoroutine(TypeWriter(Senteces.Dequeue()));
+            }
         }
+
+        
+
+        
         
     }
 
@@ -150,12 +165,19 @@ public class DialogueManager : MonoBehaviour
         Anim.SetBool("DialogStart", false);
         new WaitForSeconds(1);
 
+        Next.gameObject.SetActive(false);
+        //SkipB.gameObject.SetActive(false);
+
+        //giving the player control again
+        //playerEntity.enabled = true;
+
         // set the camera back to normal
         CameraBlur.profile = Default;
     }
 
     IEnumerator TypeWriter(string Line)
     {
+        CR_Running = true;
 
         CharecterText.text = "";
         
@@ -165,7 +187,7 @@ public class DialogueManager : MonoBehaviour
                 yield return null;
             }
 
-        
+        CR_Running = false;
     }
   
     public void GetFinalText(string finaltext)
