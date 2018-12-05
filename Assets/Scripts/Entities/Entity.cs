@@ -39,6 +39,7 @@ public class Entity : MonoBehaviour
     public float GroundOffset = 0.15f;
 
 
+
     // A reference to the animator class for the Entity.
     protected Animator Anim;
 
@@ -47,6 +48,7 @@ public class Entity : MonoBehaviour
     
     // Determins if the entity is attacking or not.
     internal bool Attacking = false;
+
 
     
     // The default speed of the animation.
@@ -64,7 +66,9 @@ public class Entity : MonoBehaviour
     // How large the Collider extents are for this entity (used for calculating if the entity is on the ground).
     private float DistanceToGround;
 
+    // The distance between the left side and the right side of the collider extents.
     private float Offset;
+
 
     private CapsuleCollider2D Col;
 
