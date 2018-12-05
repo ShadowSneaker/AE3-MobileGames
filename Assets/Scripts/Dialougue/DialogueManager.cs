@@ -6,8 +6,16 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    //stuff for depth of field thing
+    //DepthOfFieldModel.Settings temp = new DepthOfFieldModel.Settings();
+    //temp.aperture = Mathf.Lerp(0.01f, 5.5f, Time.time);
+    //FindObjectOfType<Camera>().GetComponent<PostProcessingBehaviour>().profile.depthOfField.settings = temp; 
+
+
     // creates a que of sentences that the npc can iterate through
     private Queue<string> Senteces;
+    private Queue<string> MadCount;
+
     // text that each charecter will play once all main dialogue is complete
     private string LoopText;
     // the background blur variables
@@ -16,8 +24,7 @@ public class DialogueManager : MonoBehaviour
 
     // animations for the dialogue box
     public Animator Anim;
-    public Animator PlayerAnim;
-    public Animator NPCAnim;
+
 
     public Button SkipB;
     public Button End;
@@ -26,14 +33,20 @@ public class DialogueManager : MonoBehaviour
 
     // creates the postprocessing object to use
     private PostProcessingBehaviour CameraBlur;
+
     // text for use on the dialog
     public Text CharecterText;
+    private string finalline;
+
+    // change the dialog for madman to get angry
 
 	void Start ()
     {
         CameraBlur = FindObjectOfType<Camera>().GetComponent<PostProcessingBehaviour>();
         Senteces = new Queue<string>();
+        MadCount = new Queue<string>();
         SkipB.onClick.AddListener(Skip);
+        Next.onClick.AddListener(ProgressDialogue);
 	}
 
 
@@ -41,8 +54,7 @@ public class DialogueManager : MonoBehaviour
     {
         //set animation bool
         Anim.SetBool("DialogStart", true);
-        PlayerAnim.SetBool("Fader", true);
-        NPCAnim.SetBool("Fader", true);
+
         // still need to set the bools to false in a later function
 
         // disable player input
@@ -51,10 +63,16 @@ public class DialogueManager : MonoBehaviour
         // create a blur on the background
         CameraBlur.profile = Blur;
 
-
+        // gets all the normal dialog
         foreach (string sentence in dialogue.sentences)
         {
             Senteces.Enqueue(sentence);
+        }
+
+        // gets all of the angry response sentences
+        foreach(string mad in dialogue.Angry)
+        {
+            MadCount.Enqueue(mad);
         }
 
         StartCoroutine(TypeWriter(dialogue.StartLine));
@@ -63,31 +81,33 @@ public class DialogueManager : MonoBehaviour
 
     public void Skip()
     {
-        // this will give the player the option to skip the dialog
+        // this will give the player the option to skip the dialog sentences
+
+       
+
+        
+        //stops the first corutine
+        StopCoroutine(TypeWriter(Senteces.Dequeue()));
+
+        // normal mad text begin
+        StartCoroutine(TypeWriter(MadCount.Dequeue()));
+
+        if (MadCount.Count == 0)
+        {
+            // add the entity to the madman and begin fight
+
+            //animation change (this stuff will mostrpobably be put in a function later on)
+            Anim.SetBool("DialogStart", false);
+            new WaitForSeconds(1);
+
+            // set the camera back to normal
+            CameraBlur.profile = Default;
+
+            // give back the players movement
+            //something needs to be put in place
+        }
 
 
-
-        //animation change (this stuff will mostrpobably be put in a function later on)
-        Anim.SetBool("DialogStart", false);
-        new WaitForSeconds(1);
-        PlayerAnim.SetBool("Fader", false);
-        NPCAnim.SetBool("Fader", false);
-
-
-
-        // give back the players movement
-        //something needs to be put in place
-
-
-        // set the camera back to normal
-        CameraBlur.profile = Default;
-
-        // add the function to make mad man angry and begin to attack
-
-
-        //DepthOfFieldModel.Settings temp = new DepthOfFieldModel.Settings();
-        //temp.aperture = Mathf.Lerp(0.01f, 5.5f, Time.time);
-        //FindObjectOfType<Camera>().GetComponent<PostProcessingBehaviour>().profile.depthOfField.settings = temp; 
     }
 
     public void ProgressDialogue()
@@ -96,7 +116,9 @@ public class DialogueManager : MonoBehaviour
         if(Senteces.Count == 0)
         {
             // type out the last sentence
+            StartCoroutine(TypeWriter(finalline));
         }
+
         //everything else used for normal text
         StartCoroutine(TypeWriter(Senteces.Dequeue()));
     }
@@ -111,4 +133,8 @@ public class DialogueManager : MonoBehaviour
         }
     }
   
+    public void GetFinalText(string finaltext)
+    {
+        finalline = finaltext;
+    }
 }
