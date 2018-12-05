@@ -25,6 +25,10 @@ public class Abilitiy : MonoBehaviour {
 
     private string AttackName = "AttackAnim";
 
+    bool Test = false;
+
+    float AbilityTime = 0.0f;
+
 
 	// Use this for initialization
 	protected virtual void Start ()
@@ -33,12 +37,20 @@ public class Abilitiy : MonoBehaviour {
         Anim = GetComponent<Animator>();
 
         AOC = new AnimatorOverrideController(Anim.runtimeAnimatorController);
+
+        AbilityTime = Clip.length;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
 	}
+
+    private IEnumerator AbilityDuration()
+    {
+        yield return new WaitForSeconds(AbilityTime);
+        EndAbility();
+    }
 
 
     private IEnumerator StartCountdown()
@@ -63,6 +75,8 @@ public class Abilitiy : MonoBehaviour {
     {
         if (AbilityUp)
         {
+
+            //Test = true;
             if (Owner)
             {
                 Owner.Attacking = true;
@@ -91,17 +105,22 @@ public class Abilitiy : MonoBehaviour {
             
             AOC.animationClips[0] = Clip;
 
+            StartCoroutine(AbilityDuration());
         }
     }
 
 
     public virtual void EndAbility()
     {
-        // Anim for some reason keeps loosing reference and thus must be set here.
-        Anim = GetComponent<Animator>();
+        //if (Test)
+        //{
+            //Test = false;
+            // Anim for some reason keeps loosing reference and thus must be set here.
+            Anim = GetComponent<Animator>();
 
-        StartCoroutine(StartCountdown());
-        Anim.SetBool("Attack", false);
-        Anim.SetLayerWeight(2, 0.0f);
+            StartCoroutine(StartCountdown());
+            Anim.SetBool("Attack", false);
+            Anim.SetLayerWeight(2, 0.0f);
+        //}
     }
 }
