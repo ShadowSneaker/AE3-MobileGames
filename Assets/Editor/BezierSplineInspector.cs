@@ -105,6 +105,8 @@ public class BezierSplineInspector : Editor
 
     private void ShowDirection()
     {
+        Spline.TotalLength = 0.0f;
+
         Handles.color = Color.green;
         Vector3 Point = Spline.GetPoint(0.0f);
         Vector3 LastPoint = Point;

@@ -281,37 +281,25 @@ public class BezierSpline : MonoBehaviour
     }
 
 
-    public float GetDistanceOfSpline()
+    public void SetLength()
     {
-        float Distance = 0.0f;
+        TotalLength = 0.0f;
+        
         Vector3 Point = GetPoint(0.0f);
         Vector3 LastPoint = Point;
-
         int Steps = 10 * CurveCount;
-        // Every Sub-point section.
         for (int i = 1; i <= Steps; i++)
         {
             Point = GetPoint(i / (float)Steps);
 
-            float Mag = Point.magnitude - LastPoint.magnitude;
-            if (Mag < 0.0f)
+            // Gets the distance between each segment - Use this to calculate the distance between points.
+            float Mag = 0.0f;
+            if (i + 1 <= Steps)
             {
-                Mag *= -1.0f;
+                Mag = Vector3.Distance(Point, GetPoint((i + 1) / (float)Steps));
             }
-            Distance += Mag;
-            PointLengths.Add(Distance);
-
-
-            Debug.Log(Distance);
+            TotalLength += Mag;
             LastPoint = Point;
         }
-
-        if (Distance < 0)
-        {
-            Distance *= -1.0f;
-        }
-
-        TotalLength = Distance;
-        return Distance;
     }
 }
