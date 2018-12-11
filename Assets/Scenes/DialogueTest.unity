@@ -792,6 +792,14 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9529ecc3d479da5499993355e6c2cb4f, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9529ecc3d479da5499993355e6c2cb4f, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9529ecc3d479da5499993355e6c2cb4f, type: 2}
   m_IsPrefabParent: 0
@@ -839,6 +847,12 @@ Prefab:
       propertyPath: FollowObject
       value: 
       objectReference: {fileID: 2103809728}
+    - target: {fileID: 114984191957498652, guid: a4b7274db4cc44e499ab92233cbfbcdd,
+        type: 2}
+      propertyPath: profile
+      value: 
+      objectReference: {fileID: 11400000, guid: 60b5ccfe25809a64b9e84d76d20c3446,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a4b7274db4cc44e499ab92233cbfbcdd, type: 2}
   m_IsPrefabParent: 0
@@ -869,8 +883,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 878418453129bf1418a0d21ab3f901c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Blur: {fileID: 11400000, guid: 60b5ccfe25809a64b9e84d76d20c3446, type: 2}
-  Default: {fileID: 11400000, guid: be68e7739a5df0e4ab50e63499142e99, type: 2}
   Anim: {fileID: 423649848}
   NextA: {fileID: 1490928444}
   EndA: {fileID: 1543739698}

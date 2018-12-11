@@ -19,8 +19,8 @@ public class DialogueManager : MonoBehaviour
     // text that each charecter will play once all main dialogue is complete
     private string LoopText;
     // the background blur variables
-    public PostProcessingProfile Blur;
-    public PostProcessingProfile Default;
+    //public PostProcessingProfile Blur;
+    //public PostProcessingProfile Default;
 
     // animations for the dialogue box
     public Animator Anim;
@@ -41,7 +41,12 @@ public class DialogueManager : MonoBehaviour
     //bool for corutine running
     private bool CR_Running;
 
+    // timer
+    private float Timer = 1;
 
+    //bools for timer
+    private bool EnableTimer;
+    private bool ReverseTimer;
 
     // player Entity
     Entity playerEntity;
@@ -66,6 +71,47 @@ public class DialogueManager : MonoBehaviour
         //playerEntity = GameObject.FindGameObjectWithTag("Player").GetComponent<Entity>();
 	}
 
+    private void Update()
+    {
+        if(EnableTimer)
+        {
+            if(!ReverseTimer)
+            {
+                if(Timer > 0)
+                {
+                    Timer -= Time.deltaTime;
+
+                    
+
+                }
+                else
+                {
+                    EnableTimer = false;
+                }
+            }
+            else
+            {
+                if(Timer < 1)
+                {
+                    Timer += Time.deltaTime;
+
+                    
+
+                }
+                else
+                {
+                    EnableTimer = false;
+                }
+            }
+            
+            DepthOfFieldModel.Settings temp = CameraBlur.profile.depthOfField.settings;
+            temp.focusDistance = Timer;
+            CameraBlur.profile.depthOfField.settings = temp;
+
+        }
+        
+        
+    }
 
     public void BeginDialogue(Dialogue dialogue)
     {
@@ -82,7 +128,10 @@ public class DialogueManager : MonoBehaviour
         //playerEntity.enabled = false;
 
         // create a blur on the background
-        CameraBlur.profile = Blur;
+        EnableTimer = true;
+        ReverseTimer = false;
+
+        //CameraBlur.profile = Blur;
 
         // gets all the normal dialog
         foreach (string sentence in dialogue.sentences)
@@ -127,10 +176,12 @@ public class DialogueManager : MonoBehaviour
                 new WaitForSeconds(1);
 
                 // set the camera back to normal
-                CameraBlur.profile = Default;
+                //CameraBlur.profile = Default;
 
                 // give back the players movement
                 //playerEntity.enabled = true;
+                EnableTimer = true;
+                ReverseTimer = true;
 
                 //set the mad mans new sprite
                 MadMan.GetComponent<SpriteRenderer>().sprite = EnragedMan;
@@ -178,7 +229,9 @@ public class DialogueManager : MonoBehaviour
         //playerEntity.enabled = true;
 
         // set the camera back to normal
-        CameraBlur.profile = Default;
+        //CameraBlur.profile = Default;
+        EnableTimer = true;
+        ReverseTimer = true;
 
         MadMan.GetComponent<Entity>().enabled = true;
     }
