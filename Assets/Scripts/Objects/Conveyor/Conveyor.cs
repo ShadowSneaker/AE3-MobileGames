@@ -25,16 +25,16 @@ public class Conveyor : MonoBehaviour
 
     public Transform MoveObject;
 
-    public float Speed;
-    float Distance = 0;
+    //public float Speed;
+    //float Distance = 0;
 
+    public bool Reverse;
 
     private BezierSpline Spline;
 
-    private float Progress;
+    public float Progress;
 
     private bool MovingForward = true;
-
 
 
 
@@ -42,6 +42,14 @@ public class Conveyor : MonoBehaviour
     {
         Spline = GetComponent<BezierSpline>();
         Spline.SetLength();
+
+        if (Reverse)
+        {
+            //MovingForward = false;
+            Vector3 Position = Spline.GetPoint(1) - ((IsChildObject) ? transform.position : new Vector3(0.0f, 0.0f, 0.0f));
+            MoveObject.localPosition = Position;
+            Progress = 1.0f;
+        }
     }
 
 
@@ -52,7 +60,7 @@ public class Conveyor : MonoBehaviour
             if (MovingForward)
             {
                 Progress += Time.deltaTime / Duration;
-                Distance += Speed * Time.deltaTime;
+                //Distance += Speed * Time.deltaTime;
                 if (Progress > 1.0f)
                 {
                     switch (Mode)
@@ -77,7 +85,7 @@ public class Conveyor : MonoBehaviour
             else
             {
                 Progress -= Time.deltaTime / Duration;
-                Distance -= Speed * Time.deltaTime;
+                //Distance -= Speed * Time.deltaTime;
 
                 if (Progress < 0.0f)
                 {
@@ -86,11 +94,8 @@ public class Conveyor : MonoBehaviour
                 }
             }
 
-            Debug.Log(Distance);
 
-
-
-            Vector3 Position = Spline.GetPoint(Distance / Spline.TotalLength) - ((IsChildObject) ? transform.position : new Vector3(0.0f, 0.0f, 0.0f));
+            Vector3 Position = Spline.GetPoint(Progress) - ((IsChildObject) ? transform.position : new Vector3(0.0f, 0.0f, 0.0f));
             MoveObject.transform.localPosition = Position;
             if (Rotate)
             {
