@@ -41,7 +41,8 @@ public class Entity : MonoBehaviour
     // The list of abilities this Entity has.
     public Abilitiy[] Abilities = new Abilitiy[6];
 
-
+    // Refernce to the UI Script
+    public UserInterface UI;
 
     // A reference to the animator class for the Entity.
     protected Animator Anim;
@@ -99,6 +100,11 @@ public class Entity : MonoBehaviour
         Col = GetComponent<CapsuleCollider2D>();
         DistanceToGround = (Col.bounds.extents.y) + GroundOffset;
         Offset = Col.bounds.extents.x / 2;
+
+        if(UI)
+        {
+            UI.Init(CurrentHealth);
+        }
 
         if (CanFly)
         {
