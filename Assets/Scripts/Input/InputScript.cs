@@ -45,6 +45,7 @@ public class InputScript : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
+            Debug.Log("Jumped");
             Player.Jump();
         }
 

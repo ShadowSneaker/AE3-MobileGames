@@ -53,7 +53,6 @@ public class Abilitiy : MonoBehaviour {
     {
         AbilityUp = false;
 
-        
 
         yield return new WaitForSeconds(Cooldown);
 

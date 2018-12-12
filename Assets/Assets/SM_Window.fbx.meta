@@ -1,21 +1,52 @@
 fileFormatVersion: 2
-guid: d7546d81244c6d349952e52618a07775
+guid: b458acfbeba59c845a770c0587808633
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: SM_Gate
-    400000: //RootNode
-    400002: SM_Gate
-    2100000: lambert2
-    2300000: //RootNode
-    2300002: SM_Gate
-    3300000: //RootNode
-    3300002: SM_Gate
-    4300000: SM_DoorFrame
-    4300002: SM_Gate
-    7400000: Take 001
-    9500000: //RootNode
+    100000: pCube1
+    100002: pCube2
+    100004: pCube3
+    100006: pCube4
+    100008: pCube5
+    100010: pCube6
+    100012: pCube7
+    100014: pCylinder1
+    100016: pCylinder2
+    100018: pPlane1
+    100020: //RootNode
+    100022: transform1
+    100024: transform2
+    100026: transform3
+    100028: transform4
+    100030: transform5
+    100032: transform6
+    100034: transform7
+    100036: transform8
+    100038: transform9
+    400000: pCube1
+    400002: pCube2
+    400004: pCube3
+    400006: pCube4
+    400008: pCube5
+    400010: pCube6
+    400012: pCube7
+    400014: pCylinder1
+    400016: pCylinder2
+    400018: pPlane1
+    400020: //RootNode
+    400022: transform1
+    400024: transform2
+    400026: transform3
+    400028: transform4
+    400030: transform5
+    400032: transform6
+    400034: transform7
+    400036: transform8
+    400038: transform9
+    2100000: lambert1
+    2300000: pCube7
+    3300000: pCube7
+    4300000: pCube7
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -91,7 +122,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

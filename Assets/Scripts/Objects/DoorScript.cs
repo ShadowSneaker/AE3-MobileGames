@@ -18,19 +18,32 @@ public class DoorScript : ActivatableObject
         Anim.SetBool("Open", Activated);
     }
 
+    private void Update()
+    {
+        //Anim.SetBool("Open", Activated);
+        //Anim.runtimeAnimatorController.animationClips[0]. = (Activated) ? 1.0f : -1.0f;
+        Anim.SetBool("Open", Activated);
+
+    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (GoToRoom != "")
+        // Only go to the next scene if the player goes through the door.
+        if (collision.gameObject.CompareTag("Player"))
         {
-            for (int i = 0; i < SceneManager.sceneCountInBuildSettings; ++i)
-            {
-                string Scene = SceneUtility.GetScenePathByBuildIndex(i);
-                int LastSlash = Scene.LastIndexOf("/");
 
-                if (GoToRoom == Scene.Substring(LastSlash + 1, Scene.LastIndexOf(".") - LastSlash - 1))
+            if (GoToRoom != "")
+            {
+                for (int i = 0; i < SceneManager.sceneCountInBuildSettings; ++i)
                 {
-                    SceneManager.LoadScene(GoToRoom);
+                    string Scene = SceneUtility.GetScenePathByBuildIndex(i);
+                    int LastSlash = Scene.LastIndexOf("/");
+
+                    if (GoToRoom == Scene.Substring(LastSlash + 1, Scene.LastIndexOf(".") - LastSlash - 1))
+                    {
+                        SceneManager.LoadScene(GoToRoom);
+                    }
                 }
             }
         }

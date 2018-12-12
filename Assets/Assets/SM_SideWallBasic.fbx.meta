@@ -1,21 +1,16 @@
 fileFormatVersion: 2
-guid: d7546d81244c6d349952e52618a07775
+guid: d91ee610f6b3d9347a493afb9c0c6da9
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: SM_Gate
     400000: //RootNode
-    400002: SM_Gate
-    2100000: lambert2
+    2100000: lambert1
+    2100002: lambert3
     2300000: //RootNode
-    2300002: SM_Gate
     3300000: //RootNode
-    3300002: SM_Gate
-    4300000: SM_DoorFrame
-    4300002: SM_Gate
-    7400000: Take 001
-    9500000: //RootNode
+    4300000: polySurface1
+    4300002: SM_SideWallBasic
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -91,7 +86,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
