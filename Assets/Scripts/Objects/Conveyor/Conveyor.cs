@@ -41,7 +41,7 @@ public class Conveyor : MonoBehaviour
     private void Start()
     {
         Spline = GetComponent<BezierSpline>();
-        Spline.SetLength();
+        //Spline.SetLength();
 
         if (Reverse)
         {
