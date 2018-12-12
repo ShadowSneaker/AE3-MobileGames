@@ -19,7 +19,7 @@ public class Abilitiy : MonoBehaviour {
 
     protected bool AbilityUp = true;
 
-    private Entity Owner;
+    protected Entity Owner;
 
     private Animator Anim;
 

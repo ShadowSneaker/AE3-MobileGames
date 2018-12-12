@@ -9,7 +9,7 @@ public class UserInterface : MonoBehaviour {
     private Image[] Hearts;
 
     // the heart image
-    public Sprite Heart;
+    public Sprite HeartIMG;
 
 
 	void Start ()
@@ -24,9 +24,14 @@ public class UserInterface : MonoBehaviour {
 	}
 
     // initialize the amount of hearts
-    public void Init(int health)
+    public void Init(int Health)
     {
-        Hearts = new Image[health];
+        Hearts = new Image[Health];
+
+        for (int i = 0; i < Hearts.Length; i++)
+        {
+            Hearts[i].sprite = HeartIMG;
+        }
     }
 
     public void HeartUpdate()

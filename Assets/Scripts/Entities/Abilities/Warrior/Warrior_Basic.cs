@@ -23,5 +23,14 @@ public class Warrior_Basic : Abilitiy
     public override void CastAbility()
     {
         base.CastAbility();
+
+        Owner.MELEE_COLIDER.SetActive(true);
+    }
+
+    public override void EndAbility()
+    {
+        base.EndAbility();
+
+        Owner.MELEE_COLIDER.SetActive(false);
     }
 }

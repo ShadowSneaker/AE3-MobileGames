@@ -44,11 +44,25 @@ public class Entity : MonoBehaviour
     // Refernce to the UI Script
     public UserInterface UI;
 
+    // The minimum amount of items this entity can drop on death.
+    public int MinDropCount;
+
+    // The maximum amount of items this entity can drop on death.
+    public int MaxDropCount;
+
+    // Randomly selects X amount of objects to drop on death.
+    public GameObject[] DropObjects;
+
+    // The garenteed list of items this entity will drop.
+    public GameObject[] WillDropItems;
+
     // A reference to the animator class for the Entity.
     protected Animator Anim;
 
     // A reference to the rigid body attached to the Entity.
     protected Rigidbody2D Rigid;
+
+
 
     // Determins if the entity is attacking or not.
     internal bool Attacking = false;
@@ -80,6 +94,12 @@ public class Entity : MonoBehaviour
     private CapsuleCollider2D Col;
 
 
+
+
+    /// TEMP VARIABLES DO NOT RELAY OF THESE VARIABLES THEY WILL BE REMOVED
+
+    // Warning: Temporary Variable.
+    public GameObject MELEE_COLIDER;
 
 
 
@@ -128,10 +148,7 @@ public class Entity : MonoBehaviour
 
         if (Input.GetKeyDown("1"))
         {
-            if (CanFly)
-            {
-                SetFlying(!Flying);
-            }
+            ApplyDamage(1);
                
         }
     }
@@ -152,6 +169,7 @@ public class Entity : MonoBehaviour
 
     // Damages a targed based off the inputted damage.
     // Kills the Entity if the health goes below 0.
+    // If the Entity dies, spawn the held items.
     // @param Target - The Entity that is being damaged.
     // @param Damage - The amount of damage this entity will be inflicted by.
     // @return - The total amount of damage this entity recieved.
@@ -170,6 +188,7 @@ public class Entity : MonoBehaviour
             {
                 Dead = true;
                 Anim.SetBool("Dead", true);
+                StartCoroutine(DropItems());
             }
 
 
@@ -208,6 +227,31 @@ public class Entity : MonoBehaviour
 
         Immune = false;
         Anim.SetBool("Damaged", false);
+    }
+
+
+    // Drops a list of items around the entity.
+    private IEnumerator DropItems()
+    {
+        Debug.Log("");
+        for (int i = 0; i < WillDropItems.Length; ++i)
+        {
+            int Direction = Random.Range(-500, 500);
+            int Height = Random.Range(500, 1000);
+            GameObject SpawnedObject = Instantiate<GameObject>(WillDropItems[i], transform.position, transform.rotation);
+            SpawnedObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(Direction, Random.Range(700, 800)));
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        for (int i = 0; i < Random.Range(MinDropCount, MaxDropCount); ++i)
+        {
+            int Direction = Random.Range(-500, 500);
+            int Height = Random.Range(500, 1000);
+
+            GameObject SpawnedObject = Instantiate<GameObject>(DropObjects[Random.Range(0, DropObjects.Length)], transform.position, transform.rotation);
+            SpawnedObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(Direction, Random.Range(1000, 2000)));
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 
 
