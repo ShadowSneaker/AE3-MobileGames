@@ -105,11 +105,8 @@ public class BezierSplineInspector : Editor
 
     private void ShowDirection()
     {
-        Spline.TotalLength = 0.0f;
-
         Handles.color = Color.green;
         Vector3 Point = Spline.GetPoint(0.0f);
-        Vector3 LastPoint = Point;
         Handles.DrawLine(Point, Point + Spline.GetDirection(0.0f) * DirectionScale);
         int Steps = StepsPerCurve * Spline.CurveCount;
         for (int i = 1; i <= Steps; i++)
@@ -117,13 +114,12 @@ public class BezierSplineInspector : Editor
             Point = Spline.GetPoint(i / (float)Steps);
             
             // Gets the distance between each segment - Use this to calculate the distance between points.
-            float Mag = 0.0f;
+            float Distance = 0.0f;
             if (i + 1 <= Steps)
             {
-                Mag = Vector3.Distance(Point, Spline.GetPoint((i + 1) / (float)Steps));
+                Distance = Vector3.Distance(Point, Spline.GetPoint((i + 1) / (float)Steps));
             }
-            Handles.DrawLine(Point, Point + Spline.GetDirection(i / (float)Steps) * Mag);
-            LastPoint = Point;
+            Handles.DrawLine(Point, Point + Spline.GetDirection(i / (float)Steps) * Distance);
         }
     }
 
@@ -138,7 +134,7 @@ public class BezierSplineInspector : Editor
         }
 
         Handles.color = ModeColors[(int)Spline.GetControlPointMode(Index)];
-        if (Handles.Button(Point, HandleRotation, Size * HandleSize, Size * PickSize, Handles.DotCap)) // Use Handles.CapFunction
+        if (Handles.Button(Point, HandleRotation, Size * HandleSize, Size * PickSize, Handles.DotCap)) // Use Handles.CapFunction instead of dot cap
         {
             SelectedIndex = Index;
             Repaint();

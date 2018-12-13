@@ -10,8 +10,12 @@ public enum EDragDirection { Left, Right, Up, Down }
 
 public class InputScript : MonoBehaviour
 {
+
+#if UNITY_EDITOR
+#elif UNITY_ANDROID
     private Vector3 FirstTouchPos;
     private Vector3 LastTouchPos;
+
 
     public int ScreenPercentForSwipe = 5;
     private float DragDistance;
@@ -25,123 +29,147 @@ public class InputScript : MonoBehaviour
     public UnityEvent Released;
 
     private Joystick Stick;
-    private Entity Player;
 
     private EDragDirection DragDirection;
+#endif
+
+    private Entity Player;
+
+
+
+    bool TEMP_ATTACK = true;
 
 
     private void Start()
     {
         Player = GetComponent<Entity>();
+
+#if UNITY_EDITOR
+#elif UNITY_ANDROID
         DragDistance = Screen.height * ScreenPercentForSwipe / 100;
+#endif
     }
 
 
     void Update()
     {
 #if UNITY_EDITOR
-
-        Player.MoveSideways(Input.GetAxisRaw("Horizontal"));
-
-        if (Input.GetButtonDown("Jump"))
+        if (!Player.IsDead())
         {
-            Debug.Log("Jumped");
-            Player.Jump();
+            Player.MoveSideways(Input.GetAxisRaw("Horizontal"));
+
+            if (Input.GetButtonDown("Jump"))
+            {
+                Player.Jump();
+            }
+
+            if (Input.GetKeyDown("q") && TEMP_ATTACK)
+            {
+                Player.UseAbility(0);
+            }
+
+            if (Input.GetKeyDown("1"))
+            {
+                Player.ApplyDamage(1);
+            }
         }
 
 
 #elif UNITY_ANDROID
         /// Joystick Inputs
 
-        Player.MoveSideways(CrossPlatformInputManager.GetAxis("Horizontal"));
-
-
-        /// Touch Inputs
-
-        if (Input.touchCount == 1)
+        if (!Player.IsDead())
         {
-            Touch To = Input.GetTouch(0);
+            Player.MoveSideways(CrossPlatformInputManager.GetAxis("Horizontal"));
 
-            switch (To.phase)
+
+            /// Touch Inputs
+
+            if (Input.touchCount == 1)
             {
-                case TouchPhase.Began:
-                    FirstTouchPos = To.position;
-                    LastTouchPos = To.position;
-                    if (Pressed != null)
-                    {
-                        Pressed.Invoke();
-                    }
+                Touch To = Input.GetTouch(0);
 
-                    break;
+                switch (To.phase)
+                {
+                    case TouchPhase.Began:
+                        FirstTouchPos = To.position;
+                        LastTouchPos = To.position;
+                        if (Pressed != null)
+                        {
+                            Pressed.Invoke();
+                        }
 
-
-                case TouchPhase.Moved:
-                    LastTouchPos = To.position;
-
-
-
-                    CalculateDirection();
+                        break;
 
 
-
-                    if (Dragging != null)
-                    {
-                        Dragging.Invoke();
-                    }
+                    case TouchPhase.Moved:
+                        LastTouchPos = To.position;
 
 
 
-                    break;
+                        CalculateDirection();
 
 
-                case TouchPhase.Ended:
-                    LastTouchPos = To.position;
 
-                    if (Released != null)
-                    {
-                        Released.Invoke();
-                    }
-
-                    CalculateDirection();
-
-                    switch (DragDirection)
-                    {
-                        case EDragDirection.Left:
-                            if (DragLeft != null)
-                            {
-                                DragLeft.Invoke();
-                            }
-                            break;
+                        if (Dragging != null)
+                        {
+                            Dragging.Invoke();
+                        }
 
 
-                        case EDragDirection.Right:
-                            if (DragRight != null)
-                            {
-                                DragRight.Invoke();
-                            }
-                            break;
+
+                        break;
 
 
-                        case EDragDirection.Up:
-                            if (DragUp != null)
-                            {
-                                DragUp.Invoke();
-                            }
-                            break;
+                    case TouchPhase.Ended:
+                        LastTouchPos = To.position;
+
+                        if (Released != null)
+                        {
+                            Released.Invoke();
+                        }
+
+                        CalculateDirection();
+
+                        switch (DragDirection)
+                        {
+                            case EDragDirection.Left:
+                                if (DragLeft != null)
+                                {
+                                    DragLeft.Invoke();
+                                }
+                                break;
 
 
-                        case EDragDirection.Down:
-                            if (DragDown != null)
-                            {
-                                DragDown.Invoke();
-                            }
-                            break;
-                    }
+                            case EDragDirection.Right:
+                                if (DragRight != null)
+                                {
+                                    DragRight.Invoke();
+                                }
+                                break;
 
-                    break;
+
+                            case EDragDirection.Up:
+                                if (DragUp != null)
+                                {
+                                    DragUp.Invoke();
+                                }
+                                break;
+
+
+                            case EDragDirection.Down:
+                                if (DragDown != null)
+                                {
+                                    DragDown.Invoke();
+                                }
+                                break;
+                        }
+
+                        break;
+                }
             }
         }
-#endif
+
     }
 
 
@@ -179,11 +207,14 @@ public class InputScript : MonoBehaviour
             }
         }
         return DragDirection;
+#endif
     }
 
-
+#if UNITY_EDITOR
+#elif UNITY_ANDROID
     public EDragDirection GetDirection()
     {
         return DragDirection;
     }
+#endif
 }

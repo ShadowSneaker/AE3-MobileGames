@@ -24,13 +24,14 @@ public class Warrior_Basic : Abilitiy
     {
         base.CastAbility();
 
-        Owner.MELEE_COLIDER.SetActive(true);
+        Owner.MELEE_COLIDER.GetComponent<BoxCollider2D>().enabled = true;
+
     }
 
     public override void EndAbility()
     {
         base.EndAbility();
 
-        Owner.MELEE_COLIDER.SetActive(false);
+        Owner.MELEE_COLIDER.GetComponent<BoxCollider2D>().enabled = false;
     }
 }

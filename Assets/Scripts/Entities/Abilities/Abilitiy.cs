@@ -15,15 +15,29 @@ public class Abilitiy : MonoBehaviour {
     // The animation clip that should be played when this ability is casted.
     public AnimationClip Clip;
 
-    private AnimatorOverrideController AOC;
+    // The sound this ability should play when attacking.
+    public AudioClip SoundClip;
 
-    protected bool AbilityUp = true;
 
+
+    // A reference to the entity that casted this ability.
     protected Entity Owner;
 
+
+
+    // Determines if the ability is available.
+    private bool AbilityUp = true;
+
+    // The override controller, used to change the attacking animation clip to this ability's attacking animation clip.
+    private AnimatorOverrideController AOC;
+
+    // A reference to the animator used to play this ability's animation.
     private Animator Anim;
 
-    float AbilityTime = 0.0f;
+    // The amount of time this ability's animation takes.
+    private float AbilityTime;
+
+
 
 
 	// Use this for initialization
@@ -109,5 +123,14 @@ public class Abilitiy : MonoBehaviour {
         StartCoroutine(StartCountdown());
         Anim.SetBool("Attack", false);
         Anim.SetLayerWeight(2, 0.0f);
+    }
+
+
+    public bool GetAbilityUp
+    {
+        get
+        {
+            return AbilityUp;
+        }
     }
 }

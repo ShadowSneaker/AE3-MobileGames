@@ -26,7 +26,7 @@ public class HandSlam : Abilitiy {
     public override void CastAbility()
     {
         base.CastAbility();
-        if (AbilityUp)
+        if (GetAbilityUp)
         {
             Hand.SetActive(true);
 

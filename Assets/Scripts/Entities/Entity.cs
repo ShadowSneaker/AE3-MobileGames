@@ -8,14 +8,31 @@ public enum EntityTypes
     Undead
 }
 
-
 public class Entity : MonoBehaviour
 {
+
+    public struct EntitySounds
+    {
+        public AudioClip WalkSound;
+        public AudioClip AttackSound;
+        public AudioClip JumpSound;
+        public AudioClip LandingSound;
+        public AudioClip HealSound;
+        public AudioClip ReviveSound;
+        public AudioClip HurtSound;
+        public AudioClip DeathSound;
+    }
+
+
+
 
     /// Propperties
 
     // The type of entity this entity is.
     public EntityTypes Type;
+
+    // The type of sounds this entity makes.
+    public EntitySounds Sounds = new EntitySounds();
 
     // Should this entity be allowed to fly.
     public bool CanFly = false;
@@ -93,7 +110,7 @@ public class Entity : MonoBehaviour
     // A reference to the collider around the Entity
     private CapsuleCollider2D Col;
 
-
+    private AudioManager SFX;
 
 
     /// TEMP VARIABLES DO NOT RELAY OF THESE VARIABLES THEY WILL BE REMOVED
@@ -111,6 +128,7 @@ public class Entity : MonoBehaviour
     {
         Rigid = GetComponent<Rigidbody2D>();
 
+        SFX = GameObject.FindGameObjectWithTag("Sound").GetComponent<AudioManager>();
 
         Anim = GetComponent<Animator>();
         AnimSpeed = Anim.speed;
@@ -136,21 +154,7 @@ public class Entity : MonoBehaviour
     // Test Info and animations
     private void Update()
     {
-        if (Rigid.velocity.y < 0)
-        {
-            Anim.SetBool("Falling", true);
-        }
-
-        if (Input.GetKeyDown("q"))
-        {
-            UseAbility(0);
-        }
-
-        if (Input.GetKeyDown("1"))
-        {
-            ApplyDamage(1);
-               
-        }
+        Anim.SetBool("Falling", Rigid.velocity.y < 0.0f);
     }
 
 
@@ -180,8 +184,6 @@ public class Entity : MonoBehaviour
             CurrentHealth -= Damage;
 
             Anim.SetBool("Damaged", true);
-            // Play hurt sound
-            // Lock controls.
             StartCoroutine(StartImmunityFrames());
 
             if (CurrentHealth <= 0)
@@ -189,10 +191,16 @@ public class Entity : MonoBehaviour
                 Dead = true;
                 Anim.SetBool("Dead", true);
                 StartCoroutine(DropItems());
+                Rigid.bodyType = RigidbodyType2D.Kinematic;
+                Col.isTrigger = true;
+
+                SFX.PlaySound(Sounds.DeathSound);
+            }
+            else
+            {
+                SFX.PlaySound(Sounds.HurtSound);
             }
 
-
-            Debug.Log(CurrentHealth);
             return Damage;
         }
         return 0;
@@ -201,21 +209,56 @@ public class Entity : MonoBehaviour
 
     // Heals a target based off the inputted amount.
     // This will damage Undead targets.
-    // @param Target - The Entity that is being healed.
+    // Revived Entities will not drop items.
+    // The the entity is undead and being revived still heal the entity.
     // @param Amount - the value this entity should be healed.
+    // @param CanRevive - Should this entity be revived if they are dead.
     // @return - The total amount of healing the unit recieved.
-    public int ApplyHeal(int Amount)
+    public int ApplyHeal(int Amount, bool CanRevive = false)
     {
-        int Total = Amount * ((Type == EntityTypes.Undead) ? -1 : 1);
-        CurrentHealth += Total;
-
-
-        if (CurrentHealth > MaxHealth)
+        if (!Dead || CanRevive)
         {
-            CurrentHealth = MaxHealth;
-        }
+            int Total = 0;
 
-        return Total;
+            if (CanRevive && Dead)
+            {
+                Rigid.bodyType = RigidbodyType2D.Kinematic;
+                Col.isTrigger = false;
+
+                Dead = false;
+                Anim.SetBool("Dead", false);
+                DropObjects = new GameObject[0];
+                WillDropItems = new GameObject[0];
+
+                // Unlock controls.
+
+                SFX.PlaySound(Sounds.ReviveSound);
+                // Play Revive particle system.
+
+                CurrentHealth += Total;
+            }
+            else
+            {
+                if (Type != EntityTypes.Undead)
+                {
+                    Total = Amount;
+                    CurrentHealth += Total;
+                    
+                    SFX.PlaySound(Sounds.HealSound);
+                }
+                else
+                {
+                    ApplyDamage(Amount);
+                    Total = 0;
+                }
+            }
+
+
+            Mathf.Clamp(CurrentHealth, 0, MaxHealth);
+
+            return Total;
+        }
+        return 0;
     }
 
 
@@ -225,8 +268,7 @@ public class Entity : MonoBehaviour
         Immune = true;
         yield return new WaitForSeconds(ImmunityFrameLength);
 
-        Immune = false;
-        Anim.SetBool("Damaged", false);
+        Immune = false;        
     }
 
 
@@ -239,7 +281,7 @@ public class Entity : MonoBehaviour
             int Direction = Random.Range(-500, 500);
             int Height = Random.Range(500, 1000);
             GameObject SpawnedObject = Instantiate<GameObject>(WillDropItems[i], transform.position, transform.rotation);
-            SpawnedObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(Direction, Random.Range(700, 800)));
+            SpawnedObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(Direction, Height));
             yield return new WaitForSeconds(0.1f);
         }
 
@@ -249,7 +291,7 @@ public class Entity : MonoBehaviour
             int Height = Random.Range(500, 1000);
 
             GameObject SpawnedObject = Instantiate<GameObject>(DropObjects[Random.Range(0, DropObjects.Length)], transform.position, transform.rotation);
-            SpawnedObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(Direction, Random.Range(1000, 2000)));
+            SpawnedObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(Direction, Height));
             yield return new WaitForSeconds(0.1f);
         }
     }
@@ -260,14 +302,13 @@ public class Entity : MonoBehaviour
     // @param - What ability should be casted in the ability array
     public void UseAbility(int AbilityIndex)
     {
-
         if (Abilities[AbilityIndex])
         {
             Abilities[AbilityIndex].CastAbility();
         }
         else
         {
-            Debug.Log("Ability: " + AbilityIndex.ToString() + " Is not set!");
+            Debug.Log("Ability " + AbilityIndex.ToString() + " is not set!");
         }
     }
 
@@ -341,5 +382,18 @@ public class Entity : MonoBehaviour
 
         //Rigid.simulated = !Fly;
         Rigid.gravityScale = (Fly) ? 0.0f : 1.0f;
+    }
+
+
+    public void FinishHurtAnim()
+    {
+        Anim.SetBool("Damaged", false);
+    }
+
+
+    public void PlayWalkSound(float Pitch)
+    {
+        //Sounds.WalkSound.pitch = Pitch;
+        // Play Walk sound
     }
 }

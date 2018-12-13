@@ -24,12 +24,6 @@ public class BezierSpline : MonoBehaviour
     // Specifies if the spline should loop connecting the first point with the last (and sharing the tangents).
     [SerializeField]
     private bool loop;
-
-    [SerializeField]
-    public List<float> PointLengths;
-
-    [SerializeField]
-    public float TotalLength;
     
 
 
@@ -277,29 +271,6 @@ public class BezierSpline : MonoBehaviour
                 Modes[Modes.Length - 1] = Modes[0];
                 SetControlPoint(0, Points[0]);
             }
-        }
-    }
-
-
-    public void SetLength()
-    {
-        TotalLength = 0.0f;
-        
-        Vector3 Point = GetPoint(0.0f);
-        Vector3 LastPoint = Point;
-        int Steps = 10 * CurveCount;
-        for (int i = 1; i <= Steps; i++)
-        {
-            Point = GetPoint(i / (float)Steps);
-
-            // Gets the distance between each segment - Use this to calculate the distance between points.
-            float Mag = 0.0f;
-            if (i + 1 <= Steps)
-            {
-                Mag = Vector3.Distance(Point, GetPoint((i + 1) / (float)Steps));
-            }
-            TotalLength += Mag;
-            LastPoint = Point;
         }
     }
 }
