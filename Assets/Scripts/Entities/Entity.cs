@@ -59,7 +59,7 @@ public class Entity : MonoBehaviour
     public Abilitiy[] Abilities = new Abilitiy[6];
 
     // Refernce to the UI Script
-    public UserInterface UI;
+    //public UserInterface UI;
 
     // The minimum amount of items this entity can drop on death.
     public int MinDropCount;
@@ -138,11 +138,7 @@ public class Entity : MonoBehaviour
         Col = GetComponent<CapsuleCollider2D>();
         DistanceToGround = (Col.bounds.extents.y) + GroundOffset;
         Offset = Col.bounds.extents.x / 2;
-
-        if(UI)
-        {
-            UI.Init(CurrentHealth);
-        }
+        
 
         if (CanFly)
         {
@@ -395,5 +391,14 @@ public class Entity : MonoBehaviour
     {
         //Sounds.WalkSound.pitch = Pitch;
         // Play Walk sound
+    }
+
+
+    public int GetHealth
+    {
+        get
+        {
+            return CurrentHealth;
+        }
     }
 }

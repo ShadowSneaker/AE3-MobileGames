@@ -2,15 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CirclePatrol : MonoBehaviour
+public class Player : Entity
 {
-    public Transform MoveAroundPoint;
+    public UserInterface UI;
 
 	// Use this for initialization
-	void Start ()
+	protected override void Start ()
     {
-		
-	}
+        base.Start();
+
+        if (UI)
+        {
+            UI.Init(GetHealth);
+        }
+    }
 	
 	// Update is called once per frame
 	void Update ()

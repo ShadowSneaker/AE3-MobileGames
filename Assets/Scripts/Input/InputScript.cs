@@ -20,6 +20,11 @@ public class InputScript : MonoBehaviour
     public int ScreenPercentForSwipe = 5;
     private float DragDistance;
 
+    private Joystick Stick;
+
+    private EDragDirection DragDirection;
+#endif
+
     public UnityEvent DragUp;
     public UnityEvent DragDown;
     public UnityEvent DragLeft;
@@ -28,10 +33,7 @@ public class InputScript : MonoBehaviour
     public UnityEvent Dragging;
     public UnityEvent Released;
 
-    private Joystick Stick;
 
-    private EDragDirection DragDirection;
-#endif
 
     private Entity Player;
 
