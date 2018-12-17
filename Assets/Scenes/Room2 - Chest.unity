@@ -751,6 +751,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114676369748479340, guid: 1247c342911e18943a13cca02681bbc9,
+        type: 2}
+      propertyPath: DropObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4048021072292238, guid: 1247c342911e18943a13cca02681bbc9, type: 2}
       propertyPath: m_LocalPosition.x
       value: 18
@@ -787,12 +792,33 @@ Prefab:
         type: 2}
       propertyPath: DropObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 627720390}
+      objectReference: {fileID: 11400000, guid: 1687f55456c213f4baa66277bef02419,
+        type: 2}
     - target: {fileID: 114676369748479340, guid: 1247c342911e18943a13cca02681bbc9,
         type: 2}
       propertyPath: DropObjects.Array.data[1]
       value: 
       objectReference: {fileID: 627720390}
+    - target: {fileID: 114676369748479340, guid: 1247c342911e18943a13cca02681bbc9,
+        type: 2}
+      propertyPath: Open
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114676369748479340, guid: 1247c342911e18943a13cca02681bbc9,
+        type: 2}
+      propertyPath: SpawnPrefab
+      value: 
+      objectReference: {fileID: 627720395}
+    - target: {fileID: 114676369748479340, guid: 1247c342911e18943a13cca02681bbc9,
+        type: 2}
+      propertyPath: MaxDropCount
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114676369748479340, guid: 1247c342911e18943a13cca02681bbc9,
+        type: 2}
+      propertyPath: MinDropCount
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1247c342911e18943a13cca02681bbc9, type: 2}
   m_IsPrefabParent: 0
@@ -807,8 +833,9 @@ GameObject:
   - component: {fileID: 627720393}
   - component: {fileID: 627720392}
   - component: {fileID: 627720391}
+  - component: {fileID: 627720395}
   m_Layer: 8
-  m_Name: Test Item (Not real item object)
+  m_Name: Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -919,6 +946,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &627720395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 627720390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6f12fda4c5ff0f45812748f9251f389, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: 1687f55456c213f4baa66277bef02419, type: 2}
 --- !u!1001 &786075156
 Prefab:
   m_ObjectHideFlags: 0
@@ -1202,34 +1241,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1186394707
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1186394708}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1186394708
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1186394707}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.966656, y: 1.5932631, z: 1.1214069}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 30
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1220681305
 Prefab:
   m_ObjectHideFlags: 0
@@ -1458,6 +1469,11 @@ Prefab:
     - target: {fileID: 4936370870195796, guid: c667d7f97f0bf214186274064c7a1a79, type: 2}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 212213025882455106, guid: c667d7f97f0bf214186274064c7a1a79,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c667d7f97f0bf214186274064c7a1a79, type: 2}
