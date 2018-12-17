@@ -97,7 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ace996082deb1164fb06c5903ec8542b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FollowObject: {fileID: 0}
+  FollowObject: {fileID: 1463172384208808, guid: c667d7f97f0bf214186274064c7a1a79,
+    type: 2}
   MaxSpeed: 4
   LockOnObject: 0
   SnapOnStart: 1
@@ -112,4 +113,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: be68e7739a5df0e4ab50e63499142e99, type: 2}
+  profile: {fileID: 0}

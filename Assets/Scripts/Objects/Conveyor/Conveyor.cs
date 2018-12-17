@@ -35,6 +35,7 @@ public class Conveyor : MonoBehaviour
     public float Progress;
 
     private bool MovingForward = true;
+    
 
 
 
@@ -46,7 +47,7 @@ public class Conveyor : MonoBehaviour
         if (Reverse)
         {
             //MovingForward = false;
-            Vector3 Position = Spline.GetPoint(1) - ((IsChildObject) ? transform.position : new Vector3(0.0f, 0.0f, 0.0f));
+            Vector3 Position = Spline.GetPoint(1) - transform.position;
             MoveObject.localPosition = Position;
             Progress = 1.0f;
         }
@@ -95,7 +96,7 @@ public class Conveyor : MonoBehaviour
             }
 
 
-            Vector3 Position = Spline.GetPoint(Progress) - ((IsChildObject) ? transform.position : new Vector3(0.0f, 0.0f, 0.0f));
+            Vector3 Position = Spline.GetPoint(Progress) - transform.position;
             MoveObject.transform.localPosition = Position;
             if (Rotate)
             {
