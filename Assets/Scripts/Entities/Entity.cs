@@ -271,7 +271,6 @@ public class Entity : MonoBehaviour
     // Drops a list of items around the entity.
     private IEnumerator DropItems()
     {
-        Debug.Log("");
         for (int i = 0; i < WillDropItems.Length; ++i)
         {
             int Direction = Random.Range(-500, 500);

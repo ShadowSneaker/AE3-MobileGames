@@ -7,11 +7,17 @@ public class CameraScript : MonoBehaviour
 
     public GameObject FollowObject;
 
+
     public float MaxSpeed = 2.0f;
+
 
     public bool LockOnObject = false;
 
     public bool SnapOnStart = true;
+
+
+    public bool LockCameraOffset = true;
+    public Vector3 Offset = new Vector3(0.0f, 1.5f, 0.0f);
 
 
 
@@ -20,7 +26,7 @@ public class CameraScript : MonoBehaviour
     {
 		if (SnapOnStart)
         {
-            transform.position = new Vector3(FollowObject.transform.position.x, FollowObject.transform.position.y, transform.position.z);
+            transform.position = new Vector3(FollowObject.transform.position.x, FollowObject.transform.position.y, transform.position.z) + ((LockCameraOffset) ? Offset : Vector3.zero);
         }
 	}
 	
@@ -31,14 +37,15 @@ public class CameraScript : MonoBehaviour
         {
             if (LockOnObject)
             {
-                transform.position = new Vector3(FollowObject.transform.position.x, FollowObject.transform.position.y, transform.position.z);
+                transform.position = new Vector3(FollowObject.transform.position.x, FollowObject.transform.position.y, transform.position.z) + ((LockCameraOffset) ? Offset : Vector3.zero);
 
             }
             else
             {
+                Vector3 OffsetCalc = (LockCameraOffset) ? Offset : Vector3.zero;
                 Vector3 Pos = transform.position;
-                Pos.y = Mathf.Lerp(transform.position.y, FollowObject.transform.position.y, MaxSpeed * Time.deltaTime);
-                Pos.x = Mathf.Lerp(transform.position.x, FollowObject.transform.position.x, MaxSpeed * Time.deltaTime);
+                Pos.y = Mathf.Lerp(transform.position.y, FollowObject.transform.position.y + OffsetCalc.y, MaxSpeed * Time.deltaTime);
+                Pos.x = Mathf.Lerp(transform.position.x, FollowObject.transform.position.x + OffsetCalc.x, MaxSpeed * Time.deltaTime);
 
                 
                 transform.position = Pos;
