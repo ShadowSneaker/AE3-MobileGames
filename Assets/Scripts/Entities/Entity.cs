@@ -151,6 +151,9 @@ public class Entity : MonoBehaviour
     private void Update()
     {
         Anim.SetBool("Falling", Rigid.velocity.y < 0.0f);
+
+        // Prevent Sliding
+
     }
 
 
