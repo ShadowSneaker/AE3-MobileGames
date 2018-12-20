@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 33009650550308166}
   - component: {fileID: 23193822943982074}
   - component: {fileID: 95881467078340240}
+  - component: {fileID: 58833573822720578}
   - component: {fileID: 114676369748479340}
   m_Layer: 0
   m_Name: Chest
@@ -231,6 +232,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1016802625282564}
   m_Mesh: {fileID: 4300002, guid: 79ba63c56bce9d94fbd98141cb52c84d, type: 3}
+--- !u!58 &58833573822720578
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1939729701226594}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.5}
+  serializedVersion: 2
+  m_Radius: 2
 --- !u!95 &95881467078340240
 Animator:
   serializedVersion: 3
@@ -260,8 +276,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7cccc14ced87de4694d5edbc4ea0daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Open: 0
-  MinDropCount: 1
-  MaxDropCount: 2
-  DropObjects: []
+  SpawnPrefab: {fileID: 0}
+  Open: 1
+  MinDropCount: 100
+  MaxDropCount: 100
+  DropObjects:
+  - {fileID: 11400000, guid: 1687f55456c213f4baa66277bef02419, type: 2}
   StaticItems: []

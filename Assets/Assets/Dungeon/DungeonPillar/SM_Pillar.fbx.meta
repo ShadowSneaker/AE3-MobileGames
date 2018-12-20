@@ -4,12 +4,26 @@ ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
+    100002: pCube1
+    100004: pCube2
+    100006: pCube3
+    100008: transform1
+    100010: transform2
     400000: //RootNode
+    400002: pCube1
+    400004: pCube2
+    400006: pCube3
+    400008: transform1
+    400010: transform2
     2100000: lambert3
     2100002: lambert2
+    2100004: lambert4
     2300000: //RootNode
+    2300002: pCube3
     3300000: //RootNode
+    3300002: pCube3
     4300000: pCube1
+    4300002: pCube3
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -20,6 +34,11 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lambert3
+    second: {fileID: 2100000, guid: 65246c475cc9c554aad179d4d0437e0e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert4
     second: {fileID: 2100000, guid: 3295df73fb4256448a5ba0a489f40a54, type: 2}
   materials:
     importMaterials: 1

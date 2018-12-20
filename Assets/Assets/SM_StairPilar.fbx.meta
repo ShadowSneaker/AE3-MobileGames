@@ -1,15 +1,14 @@
 fileFormatVersion: 2
-guid: 47e8d344f103c484e993cb3a99279252
+guid: 507f8ec8bcb5f9a4a90ee222c3043fb2
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
     2100000: lambert1
-    2100002: lambert6
     2300000: //RootNode
     3300000: //RootNode
-    4300000: SM_Stairs
+    4300000: SM_StairPilar
   externalObjects: {}
   materials:
     importMaterials: 1

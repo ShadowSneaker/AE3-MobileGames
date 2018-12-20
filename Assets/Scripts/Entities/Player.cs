@@ -22,4 +22,10 @@ public class Player : Entity
     {
 		
 	}
+
+
+    public override void Jump()
+    {
+        base.Jump();
+    }
 }

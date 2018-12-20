@@ -173,7 +173,6 @@ public class Entity : MonoBehaviour
     // Damages a targed based off the inputted damage.
     // Kills the Entity if the health goes below 0.
     // If the Entity dies, spawn the held items.
-    // @param Target - The Entity that is being damaged.
     // @param Damage - The amount of damage this entity will be inflicted by.
     // @return - The total amount of damage this entity recieved.
     public int ApplyDamage(int Damage)
@@ -314,7 +313,7 @@ public class Entity : MonoBehaviour
     // Launches the entity in the air based on the JumpStrength.
     // The entity can only jump if they are on the ground.
     // Flying entities cannot jump.
-    public void Jump()
+    public virtual void Jump()
     {
         if (OnGround() && !Flying)
         {

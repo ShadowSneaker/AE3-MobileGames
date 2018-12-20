@@ -2,14 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemPickup : InteractableObject
+public class ItemPickup : MonoBehaviour
 {
     public ItemScript Item;
 
-    public override void Interact()
-    {
-        base.Interact();
 
-        // Put Item into Inventory.
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            // Put Item into Inventory.
+
+            Destroy(gameObject);
+        }
     }
 }
