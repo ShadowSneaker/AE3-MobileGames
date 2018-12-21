@@ -1,23 +1,15 @@
 fileFormatVersion: 2
-guid: d91ee610f6b3d9347a493afb9c0c6da9
+guid: f36062850c7310a478047632ea625e21
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
     2100000: lambert1
-    2100002: lambert3
-    2100004: lambert7
     2300000: //RootNode
     3300000: //RootNode
-    4300000: polySurface1
-    4300002: SM_SideWallBasic
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert7
-    second: {fileID: 2100000, guid: 83b85f85169e82f4f9970da193f2efd1, type: 2}
+    4300000: SM_PillarBase
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -73,7 +65,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2

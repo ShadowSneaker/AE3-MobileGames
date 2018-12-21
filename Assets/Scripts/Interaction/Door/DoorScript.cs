@@ -8,7 +8,10 @@ public class DoorScript : ActivatableObject
 {
     public string GoToRoom;
 
+    public ItemScript UnlockItem;
+
     private Animator Anim;
+
 
     // Use this for initialization
     void Start()
@@ -20,10 +23,7 @@ public class DoorScript : ActivatableObject
 
     private void Update()
     {
-        //Anim.SetBool("Open", Activated);
-        //Anim.runtimeAnimatorController.animationClips[0]. = (Activated) ? 1.0f : -1.0f;
         Anim.SetBool("Open", Activated);
-
     }
 
 
@@ -47,6 +47,7 @@ public class DoorScript : ActivatableObject
                 }
             }
         }
+        
     }
 
 

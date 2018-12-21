@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
+    public bool Active;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
 		
 	}

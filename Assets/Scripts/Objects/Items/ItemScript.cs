@@ -7,14 +7,12 @@ using UnityEngine;
 public class ItemScript : ScriptableObject
 {
     public bool ConsumeOnUse = true;
-    public Mesh Object;
+    public Sprite Image;
 
+    public string ItemName;
 
-	public virtual void Use()
+	public virtual void Use(Entity User)
     {
-        if (ConsumeOnUse)
-        {
-
-        }
+        
     }
 }

@@ -1,23 +1,21 @@
 fileFormatVersion: 2
-guid: d91ee610f6b3d9347a493afb9c0c6da9
+guid: d61db3fa22162da46b467672e856eccf
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
     2100000: lambert1
-    2100002: lambert3
-    2100004: lambert7
     2300000: //RootNode
     3300000: //RootNode
-    4300000: polySurface1
-    4300002: SM_SideWallBasic
+    4300000: SM_FloorBase
+    2186277476908879412: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: lambert7
-    second: {fileID: 2100000, guid: 83b85f85169e82f4f9970da193f2efd1, type: 2}
+      name: lambert1
+    second: {fileID: 2100000, guid: 3295df73fb4256448a5ba0a489f40a54, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -71,9 +69,9 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 3
+    tangentImportMode: 0
     normalCalculationMode: 4
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2

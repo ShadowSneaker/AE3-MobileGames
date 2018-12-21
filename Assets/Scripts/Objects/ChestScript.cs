@@ -6,7 +6,7 @@ public class ChestScript : InteractableObject
 {
 
     public ItemPickup SpawnPrefab;
-    public bool Open;
+    
 
     // The minimum amount of items that can be dropped.
     public int MinDropCount;
@@ -32,7 +32,7 @@ public class ChestScript : InteractableObject
     {
         Anim = GetComponent<Animator>();
 
-        if (Open)
+        if (Active)
         {
             Anim.enabled = true;
 
@@ -45,12 +45,32 @@ public class ChestScript : InteractableObject
     public override void Interact()
     {
         base.Interact();
-        if (!Open)
+        if (!Active)
         {
-            Open = true;
+            Active = true;
             Anim.enabled = true;
 
-            DropItems();
+            StartCoroutine(DropItems());
+        }
+    }
+
+
+    public void OnTriggerEnter2D(Collider2D Collision)
+    {
+        Player OBJ = Collision.GetComponent<Player>();
+        if (OBJ && !OBJ.Interact)
+        {
+            OBJ.Interact = this;
+        }
+    }
+
+
+    public void OnTriggerExit2D(Collider2D Collision)
+    {
+        Player OBJ = Collision.GetComponent<Player>();
+        if (OBJ && OBJ.Interact == this)
+        {
+            OBJ.Interact = null;
         }
     }
 
@@ -65,6 +85,8 @@ public class ChestScript : InteractableObject
 
             ItemPickup SpawnedObject = Instantiate<ItemPickup>(SpawnPrefab, transform.position, transform.rotation);
             SpawnedObject.Item = StaticItems[i];
+            SpawnedObject.GetComponent<SpriteRenderer>().sprite = SpawnedObject.Item.Image;
+
             SpawnedObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(Direction, Height));
             yield return new WaitForSeconds(0.1f);
             SpawnedObject.transform.position = new Vector3(SpawnedObject.transform.position.x, SpawnedObject.transform.position.y, 0.0f);
@@ -78,11 +100,11 @@ public class ChestScript : InteractableObject
 
             ItemPickup SpawnedObject = Instantiate<ItemPickup>(SpawnPrefab, transform.position, transform.rotation);
             SpawnedObject.Item = DropObjects[Random.Range(0, DropObjects.Length)];
+            SpawnedObject.GetComponent<SpriteRenderer>().sprite = SpawnedObject.Item.Image;
+
             SpawnedObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(Direction, Height));
             yield return new WaitForSeconds(0.1f);
             SpawnedObject.transform.position = new Vector3(SpawnedObject.transform.position.x, SpawnedObject.transform.position.y, 0.0f);
-        }
-
-        
+        }   
     }
 }

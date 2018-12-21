@@ -6,6 +6,8 @@ public class Player : Entity
 {
     public UserInterface UI;
 
+    internal InteractableObject Interact;
+
 	// Use this for initialization
 	protected override void Start ()
     {
@@ -26,6 +28,12 @@ public class Player : Entity
 
     public override void Jump()
     {
+        if (Interact && !Interact.Active)
+        {
+            Interact.Interact();
+            return;
+        }
+
         base.Jump();
     }
 }

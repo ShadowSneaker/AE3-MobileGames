@@ -66,6 +66,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1705488950763100
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4457679343281696}
+  - component: {fileID: 58252920868931906}
+  - component: {fileID: 114416655167220352}
+  m_Layer: 0
+  m_Name: CheckRange
+  m_TagString: DoorRange
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &4451535672983768
 Transform:
   m_ObjectHideFlags: 1
@@ -73,13 +90,27 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1511333405021692}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 40, y: 24.5, z: 0}
+  m_LocalPosition: {x: 54.25, y: 3.5, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 4623261321417794}
   - {fileID: 4702603710998048}
+  - {fileID: 4457679343281696}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4457679343281696
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1705488950763100}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4451535672983768}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4623261321417794
 Transform:
@@ -233,6 +264,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1390905046252866}
   m_Mesh: {fileID: 4300000, guid: c4038a6d36fa8784684862cf93cae42d, type: 3}
+--- !u!58 &58252920868931906
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1705488950763100}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 199.66354}
+  serializedVersion: 2
+  m_Radius: 200
 --- !u!61 &61430567294179798
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -301,6 +347,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114416655167220352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1705488950763100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b4a9bc6d9bd54e498de3ebd6d3a1e33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114901673287792866
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -312,5 +369,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86c88217494f803498eef63e8e1e18cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Activated: 0
+  Activated: 1
   GoToRoom: SampleScene
+  UnlockItem: {fileID: 0}
