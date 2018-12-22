@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Replace MonoBehaviour with the Activation Script.
+
 public class DoorScript : ActivatableObject
 {
     public string GoToRoom;

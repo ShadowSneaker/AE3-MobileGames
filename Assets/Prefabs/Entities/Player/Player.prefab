@@ -71,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1463172384208808}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 1.7, z: 0}
+  m_LocalPosition: {x: 0, y: 1.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4281636889565754}
@@ -170,7 +170,7 @@ MonoBehaviour:
   Type: 0
   CanFly: 0
   MaxHealth: 3
-  MovementSpeed: 500
+  MovementSpeed: 600
   JumpStrength: 20
   ImmunityFrameLength: 1
   TerminalVelocity: -20
@@ -184,6 +184,8 @@ MonoBehaviour:
   - {fileID: 0}
   MinDropCount: 0
   MaxDropCount: 0
+  DropItemPrefab: {fileID: 114396164653978710, guid: c20d6e587dfe83641a61f082941ad286,
+    type: 2}
   DropObjects: []
   WillDropItems: []
   MELEE_COLIDER: {fileID: 1186865307022662}

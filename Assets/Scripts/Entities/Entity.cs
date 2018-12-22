@@ -67,11 +67,15 @@ public class Entity : MonoBehaviour
     // The maximum amount of items this entity can drop on death.
     public int MaxDropCount;
 
+
+    // The base item object that should be spawned.
+    public ItemPickup DropItemPrefab;
+
     // Randomly selects X amount of objects to drop on death.
-    public GameObject[] DropObjects;
+    public ItemScript[] DropObjects;
 
     // The garenteed list of items this entity will drop.
-    public GameObject[] WillDropItems;
+    public ItemScript[] WillDropItems;
 
     // A reference to the animator class for the Entity.
     protected Animator Anim;
@@ -191,6 +195,7 @@ public class Entity : MonoBehaviour
                 StartCoroutine(DropItems());
                 Rigid.bodyType = RigidbodyType2D.Kinematic;
                 Col.isTrigger = true;
+                Rigid.velocity = new Vector2(0.0f, Rigid.velocity.y);
 
                 SFX.PlaySound(Sounds.DeathSound);
             }
@@ -225,8 +230,8 @@ public class Entity : MonoBehaviour
 
                 Dead = false;
                 Anim.SetBool("Dead", false);
-                DropObjects = new GameObject[0];
-                WillDropItems = new GameObject[0];
+                DropObjects = new ItemScript[0];
+                WillDropItems = new ItemScript[0];
 
                 // Unlock controls.
 
@@ -277,17 +282,25 @@ public class Entity : MonoBehaviour
         {
             int Direction = Random.Range(-500, 500);
             int Height = Random.Range(500, 1000);
-            GameObject SpawnedObject = Instantiate<GameObject>(WillDropItems[i], transform.position, transform.rotation);
+
+            ItemPickup SpawnedObject = Instantiate<ItemPickup>(DropItemPrefab, transform.position, transform.rotation);
+            SpawnedObject.Item = WillDropItems[i];
+            SpawnedObject.GetComponent<SpriteRenderer>().sprite = SpawnedObject.Item.Image;
+
             SpawnedObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(Direction, Height));
             yield return new WaitForSeconds(0.1f);
         }
+        
 
-        for (int i = 0; i < Random.Range(MinDropCount, MaxDropCount); ++i)
+        for (int i = 0; i < Random.Range(MinDropCount, MaxDropCount); i++)
         {
             int Direction = Random.Range(-500, 500);
             int Height = Random.Range(500, 1000);
 
-            GameObject SpawnedObject = Instantiate<GameObject>(DropObjects[Random.Range(0, DropObjects.Length)], transform.position, transform.rotation);
+            ItemPickup SpawnedObject = Instantiate<ItemPickup>(DropItemPrefab, transform.position, transform.rotation);
+            SpawnedObject.Item = DropObjects[Random.Range(0, DropObjects.Length)];
+            SpawnedObject.GetComponent<SpriteRenderer>().sprite = SpawnedObject.Item.Image;
+
             SpawnedObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(Direction, Height));
             yield return new WaitForSeconds(0.1f);
         }
@@ -331,25 +344,32 @@ public class Entity : MonoBehaviour
     // @param Value - The direction the chaeracter should move in (-1 to move left, 1 to move right).
     public void MoveSideways(float Value)
     {
-        Rigid.velocity = new Vector2(Value * MovementSpeed * Time.deltaTime, Rigid.velocity.y);
-
-
-        float Num = Value * ((Value >= 0.0f) ? 1 : -1);
-
-        if (Value > 0.0f)
+        if (!Attacking)
         {
-            transform.localScale = new Vector2(1.0f, transform.localScale.y);
+            Rigid.velocity = new Vector2(Value * MovementSpeed * Time.deltaTime, Rigid.velocity.y);
+
+
+            float Direction = Value * ((Value >= 0.0f) ? 1 : -1);
+
+            if (Value > 0.0f)
+            {
+                transform.localScale = new Vector2(1.0f, transform.localScale.y);
+            }
+            else if (Value < 0.0f)
+            {
+                transform.localScale = new Vector2(-1.0f, transform.localScale.y);
+            }
+
+            Anim.SetFloat("MovementSpeed", Direction);
+
+            if (Value > 0.0f)
+            {
+                Anim.speed = AnimSpeed * Value * ((Value > 0.0f) ? 1 : -1);
+            }
         }
-        else if (Value < 0.0f)
+        else
         {
-            transform.localScale = new Vector2(-1.0f, transform.localScale.y);
-        }
-
-        Anim.SetFloat("MovementSpeed", Num);
-
-        if (Value > 0.0f)
-        {
-            Anim.speed = AnimSpeed * Value * ((Value > 0.0f) ? 1 : -1);
+            Rigid.velocity = new Vector2(0.0f, Rigid.velocity.y);
         }
     }
 

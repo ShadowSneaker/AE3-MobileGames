@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1551791172322722}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.67, y: -2.286, z: 0}
+  m_LocalPosition: {x: 5.140448, y: 1.606313, z: 4.526263}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -123,13 +123,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  MinDropCount: 1
-  MaxDropCount: 2
-  DropObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  WillDropItems:
-  - {fileID: 0}
+  MinDropCount: 0
+  MaxDropCount: 0
+  DropItemPrefab: {fileID: 114396164653978710, guid: c20d6e587dfe83641a61f082941ad286,
+    type: 2}
+  DropObjects: []
+  WillDropItems: []
   MELEE_COLIDER: {fileID: 0}
 --- !u!212 &212744037807525886
 SpriteRenderer:

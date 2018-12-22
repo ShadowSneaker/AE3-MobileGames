@@ -8,6 +8,7 @@ ModelImporter:
     400000: //RootNode
     400002: SM_Gate
     2100000: lambert2
+    2100002: lambert3
     2300000: //RootNode
     2300002: SM_Gate
     3300000: //RootNode

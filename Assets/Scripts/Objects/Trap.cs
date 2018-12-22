@@ -14,7 +14,7 @@ public class Trap : MonoBehaviour
 
 	
 	// Damages all entities touching this trap.
-	void FixedUpdate ()
+	protected virtual void FixedUpdate ()
     {
         if (DamageEntities.Count > 0)
         {
