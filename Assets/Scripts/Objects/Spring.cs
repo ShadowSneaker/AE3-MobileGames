@@ -40,8 +40,7 @@ public class Spring : MonoBehaviour
     {
         if (Hit)
         {
-            Debug.Log(transform.up * Strength);
-            Hit.GetComponent<Rigidbody2D>().AddForce(transform.up * Strength);
+            Hit.GetComponent<Rigidbody2D>().velocity = (transform.up * Strength);
         }
     }
 

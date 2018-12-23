@@ -5991,7 +5991,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4890545419862052, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 26
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4890545419862052, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9658,7 +9658,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4890545419862052, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 26
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4890545419862052, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -12206,21 +12206,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 61121330933601502, guid: 370d47c4a13b67046b9a7f87f26310bd,
-        type: 2}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 61121330933601502, guid: 370d47c4a13b67046b9a7f87f26310bd,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 61121330933601502, guid: 370d47c4a13b67046b9a7f87f26310bd,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 0.70000005
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 370d47c4a13b67046b9a7f87f26310bd, type: 2}
   m_IsPrefabParent: 0
@@ -13370,6 +13355,11 @@ Prefab:
       propertyPath: m_Name
       value: Spring (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114822023268390180, guid: 370d47c4a13b67046b9a7f87f26310bd,
+        type: 2}
+      propertyPath: Strength
+      value: 35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 370d47c4a13b67046b9a7f87f26310bd, type: 2}
   m_IsPrefabParent: 0
@@ -13661,6 +13651,16 @@ Prefab:
     - target: {fileID: 1511333405021692, guid: e1416f20045b23148aa21192afd469de, type: 2}
       propertyPath: m_Name
       value: Exit Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901673287792866, guid: e1416f20045b23148aa21192afd469de,
+        type: 2}
+      propertyPath: GoToRoom
+      value: Room 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901673287792866, guid: e1416f20045b23148aa21192afd469de,
+        type: 2}
+      propertyPath: Activated
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1416f20045b23148aa21192afd469de, type: 2}
@@ -14392,7 +14392,7 @@ Prefab:
     - target: {fileID: 114822023268390180, guid: 370d47c4a13b67046b9a7f87f26310bd,
         type: 2}
       propertyPath: Strength
-      value: 2000
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 370d47c4a13b67046b9a7f87f26310bd, type: 2}
