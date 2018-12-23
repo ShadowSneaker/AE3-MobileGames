@@ -51,7 +51,7 @@ public class DoorScript : ActivatableObject
     }
 
 
-    public override void Activate()
+    public override void OnActivate()
     {
         base.Activate();
 

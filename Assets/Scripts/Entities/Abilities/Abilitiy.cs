@@ -18,6 +18,7 @@ public class Abilitiy : MonoBehaviour {
     // The sound this ability should play when attacking.
     public AudioClip SoundClip;
 
+    public bool OverrideAnimation = true;
 
 
     // A reference to the entity that casted this ability.
@@ -48,13 +49,12 @@ public class Abilitiy : MonoBehaviour {
 
         AOC = new AnimatorOverrideController(Anim.runtimeAnimatorController);
 
-        AbilityTime = Clip.length;
+        if (Anim && Clip)
+        {
+            AbilityTime = Clip.length;
+        }
 	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-	}
+
 
     private IEnumerator AbilityDuration()
     {
@@ -89,27 +89,34 @@ public class Abilitiy : MonoBehaviour {
                 Owner.Attacking = true;
             }
 
-            var Anims = new List<KeyValuePair<AnimationClip, AnimationClip>>();
-
-            for (int i = 0; i < AOC.animationClips.Length; i++)
+            if (Anim)
             {
-                if (AOC.animationClips[i].name == "AttackAnim")
+                if (OverrideAnimation && Clip)
                 {
-                    Anims.Add(new KeyValuePair<AnimationClip, AnimationClip>(AOC.animationClips[i], Clip));
-                    AOC.animationClips[i] = Clip;
-                    break;
+                    var Anims = new List<KeyValuePair<AnimationClip, AnimationClip>>();
+
+                    for (int i = 0; i < AOC.animationClips.Length; i++)
+                    {
+                        if (AOC.animationClips[i].name == "AttackAnim")
+                        {
+                            Anims.Add(new KeyValuePair<AnimationClip, AnimationClip>(AOC.animationClips[i], Clip));
+                            AOC.animationClips[i] = Clip;
+                            break;
+                        }
+                    }
+                    AOC.ApplyOverrides(Anims);
+                    Anim.runtimeAnimatorController = AOC;
+                    Anim.SetLayerWeight(2, 1.0f);
+                    AOC.animationClips[0] = Clip;
                 }
+
+                Anim.SetBool("Attack", true);
             }
 
-            AOC.ApplyOverrides(Anims);
-            Anim.runtimeAnimatorController = AOC;
-
-
-            Anim.SetLayerWeight(2, 1.0f);
-            Anim.SetBool("Attack", true);
-
-            
-            AOC.animationClips[0] = Clip;
+            if (SoundClip)
+            {
+                
+            }
 
             StartCoroutine(AbilityDuration());
         }
@@ -118,8 +125,6 @@ public class Abilitiy : MonoBehaviour {
 
     public virtual void EndAbility()
     {
-        Anim = GetComponent<Animator>();
-
         StartCoroutine(StartCountdown());
         Anim.SetBool("Attack", false);
         Anim.SetLayerWeight(2, 0.0f);

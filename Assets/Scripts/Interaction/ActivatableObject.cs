@@ -10,7 +10,7 @@ public class ActivatableObject : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-		
+        OnActivate();
 	}
 	
 	// Update is called once per frame
@@ -20,9 +20,15 @@ public class ActivatableObject : MonoBehaviour
 	}
 
 
-    public virtual void Activate()
+    public void Activate()
     {
         Activated = !Activated;
+        OnActivate();
+    }
+
+
+    public virtual void OnActivate()
+    {
 
     }
 }
