@@ -9,45 +9,47 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1267588727996286}
+  m_RootGameObject: {fileID: 1153092115999494}
   m_IsPrefabParent: 1
---- !u!1 &1267588727996286
+--- !u!1 &1153092115999494
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4462176553428480}
-  - component: {fileID: 33798682874263574}
-  - component: {fileID: 23457668615019168}
-  - component: {fileID: 61113651942311838}
+  - component: {fileID: 4174375098762412}
+  - component: {fileID: 33019572282194864}
+  - component: {fileID: 23703936818193202}
+  - component: {fileID: 95957614329931574}
+  - component: {fileID: 61549511564394242}
+  - component: {fileID: 114645064213467284}
   m_Layer: 0
-  m_Name: SM_Platform2
+  m_Name: CollapsePlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4462176553428480
+--- !u!4 &4174375098762412
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1267588727996286}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20, y: 1.5, z: 0}
+  m_GameObject: {fileID: 1153092115999494}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12, y: 30.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23457668615019168
+--- !u!23 &23703936818193202
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1267588727996286}
+  m_GameObject: {fileID: 1153092115999494}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -77,26 +79,26 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33798682874263574
+--- !u!33 &33019572282194864
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1267588727996286}
-  m_Mesh: {fileID: 4300002, guid: d71824b39405cc94d94851f3d7220f23, type: 3}
---- !u!61 &61113651942311838
+  m_GameObject: {fileID: 1153092115999494}
+  m_Mesh: {fileID: 4300000, guid: 326d0af43c2f1a444bcbcf821500d72a, type: 3}
+--- !u!61 &61549511564394242
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1267588727996286}
+  m_GameObject: {fileID: 1153092115999494}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.5}
+  m_Offset: {x: 0, y: -0.14999999}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -107,5 +109,34 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.8125, y: 0.3}
+  m_Size: {x: 2.8125, y: 0.29999998}
   m_EdgeRadius: 0
+--- !u!95 &95957614329931574
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1153092115999494}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fb2e350c172f7974b98109d00ed25eaa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114645064213467284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1153092115999494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e42c3e81d4690c4199ee8a90c96cb6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

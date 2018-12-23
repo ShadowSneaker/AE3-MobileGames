@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33656629709735442}
   - component: {fileID: 23605733867548910}
   - component: {fileID: 61958503709569500}
+  - component: {fileID: 114658713747181194}
   - component: {fileID: 114804121127710264}
   - component: {fileID: 198820917447454086}
   - component: {fileID: 199607237347729070}
@@ -38,7 +39,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1211177626937422}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 15, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -60,7 +61,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100002, guid: d71824b39405cc94d94851f3d7220f23, type: 3}
+  - {fileID: 2100000, guid: 507f8ec8bcb5f9a4a90ee222c3043fb2, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,6 +113,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.8125, y: 0.3}
   m_EdgeRadius: 0
+--- !u!114 &114658713747181194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1211177626937422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d28c359e76bdc740ac588c7c6874231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 9999
+  TickTime: 1
 --- !u!114 &114804121127710264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -123,10 +137,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cca633a265a6a0c41a43f614ba6c179c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 9999
-  TickTime: 1
   Active: 1
   Duration: 1
+  BoundTrap: {fileID: 114658713747181194}
 --- !u!198 &198820917447454086
 ParticleSystem:
   m_ObjectHideFlags: 1
