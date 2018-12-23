@@ -341,6 +341,7 @@ public class Entity : MonoBehaviour
 
     // Moves the entity left or right based off a value.
     // The value ranges from -1 to 1.
+    // Problem if forced in a direciton this will lock the X movements.
     // @param Value - The direction the chaeracter should move in (-1 to move left, 1 to move right).
     public void MoveSideways(float Value)
     {
