@@ -562,7 +562,7 @@ MonoBehaviour:
     type: 2}
   Lifetime: 5
   SpawnDelay: 0
-  ArrowSpeed: 0
+  ArrowSpeed: 1000
 --- !u!114 &384232659
 MonoBehaviour:
   m_ObjectHideFlags: 0

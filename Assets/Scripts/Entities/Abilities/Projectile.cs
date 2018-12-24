@@ -21,8 +21,7 @@ public class Projectile : MonoBehaviour
 
     private void Update()
     {
-        //Rigid.velocity = transform.forward * Speed * Time.deltaTime;
-        transform.position += transform.right * Speed * Time.deltaTime;
+        Rigid.velocity = transform.right * Speed * Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
