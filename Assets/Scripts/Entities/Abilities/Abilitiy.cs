@@ -7,7 +7,11 @@ using UnityEngine;
  * Handles all the animations, timers and effects of the ability, and has overrideable functions for childeren to set the specific effects.
  * Note: This does not need to be placed on an entity but the game object should have an animator component attached.
  */
-public class Abilitiy : MonoBehaviour {
+public class Abilitiy : MonoBehaviour
+{
+
+    // Should this ability be on cooldown at the start of the game?
+    public bool StartOnCooldown;
 
     // How long the ability takes to be active again (Counts in seconds);
     public float Cooldown = 5f;
@@ -53,6 +57,11 @@ public class Abilitiy : MonoBehaviour {
         {
             AbilityTime = Clip.length;
         }
+
+        if (StartOnCooldown)
+        {
+            StartCoroutine(StartCountdown());
+        }
 	}
 
 
@@ -66,7 +75,6 @@ public class Abilitiy : MonoBehaviour {
     private IEnumerator StartCountdown()
     {
         AbilityUp = false;
-
 
         yield return new WaitForSeconds(Cooldown);
 
@@ -84,6 +92,7 @@ public class Abilitiy : MonoBehaviour {
     {
         if (AbilityUp)
         {
+            AbilityUp = false;
             if (Owner)
             {
                 Owner.Attacking = true;

@@ -9,6 +9,10 @@ public class DartTrap : ActivatableObject
 
     public override void OnActivate()
     {
-        ArrowAbility.CastAbility();
+        if (Activated)
+        {
+            Activated = false;
+            ArrowAbility.CastAbility();
+        }
     }
 }

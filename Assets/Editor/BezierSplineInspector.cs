@@ -134,7 +134,7 @@ public class BezierSplineInspector : Editor
         }
 
         Handles.color = ModeColors[(int)Spline.GetControlPointMode(Index)];
-        if (Handles.Button(Point, HandleRotation, Size * HandleSize, Size * PickSize, Handles.DotCap)) // Use Handles.CapFunction instead of dot cap
+        if (Handles.Button(Point, HandleRotation, Size * HandleSize, Size * PickSize, Handles.DotHandleCap))
         {
             SelectedIndex = Index;
             Repaint();

@@ -53,8 +53,6 @@ public class DoorScript : ActivatableObject
 
     public override void OnActivate()
     {
-        base.Activate();
-
         Anim.SetBool("Open", Activated);
     }
 }

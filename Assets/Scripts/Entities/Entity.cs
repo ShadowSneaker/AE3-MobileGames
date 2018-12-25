@@ -5,7 +5,8 @@ using UnityEngine;
 public enum EntityTypes
 {
     Normal,
-    Undead
+    Undead,
+    Object
 }
 
 public class Entity : MonoBehaviour
@@ -56,7 +57,7 @@ public class Entity : MonoBehaviour
     public float GroundOffset = 0.15f;
     
     // The list of abilities this Entity has.
-    public Abilitiy[] Abilities = new Abilitiy[6];
+    public Abilitiy[] Abilities;
 
     // Refernce to the UI Script
     //public UserInterface UI;
@@ -66,6 +67,7 @@ public class Entity : MonoBehaviour
 
     // The maximum amount of items this entity can drop on death.
     public int MaxDropCount;
+ 
 
 
     // The base item object that should be spawned.
@@ -117,6 +119,8 @@ public class Entity : MonoBehaviour
     private AudioManager SFX;
 
 
+
+
     /// TEMP VARIABLES DO NOT RELAY OF THESE VARIABLES THEY WILL BE REMOVED
 
     // Warning: Temporary Variable.
@@ -140,9 +144,12 @@ public class Entity : MonoBehaviour
         CurrentHealth = MaxHealth;
 
         Col = GetComponent<CapsuleCollider2D>();
-        DistanceToGround = (Col.bounds.extents.y) + GroundOffset;
-        Offset = Col.bounds.extents.x / 2;
-        
+        if (Col)
+        {
+            DistanceToGround = (Col.bounds.extents.y) + GroundOffset;
+            Offset = Col.bounds.extents.x / 2;
+        }
+
 
         if (CanFly)
         {
@@ -154,8 +161,10 @@ public class Entity : MonoBehaviour
     // Test Info and animations
     private void Update()
     {
-        Anim.SetBool("Falling", Rigid.velocity.y < 0.0f);
-
+        if (Type != EntityTypes.Object)
+        {
+            Anim.SetBool("Falling", Rigid.velocity.y < 0.0f);
+        }
         // Prevent Sliding
 
     }
@@ -187,17 +196,27 @@ public class Entity : MonoBehaviour
 
             Anim.SetBool("Damaged", true);
             StartCoroutine(StartImmunityFrames());
-
+            Debug.Log(CurrentHealth);
             if (CurrentHealth <= 0)
             {
                 Dead = true;
                 Anim.SetBool("Dead", true);
                 StartCoroutine(DropItems());
-                Rigid.bodyType = RigidbodyType2D.Kinematic;
-                Col.isTrigger = true;
-                Rigid.velocity = new Vector2(0.0f, Rigid.velocity.y);
+
+                if (Col)
+                {
+                    Col.isTrigger = true;
+                }
+
+                if (Rigid)
+                {
+                    Rigid.bodyType = RigidbodyType2D.Kinematic;
+                    Rigid.velocity = new Vector2(0.0f, Rigid.velocity.y);
+                }
 
                 SFX.PlaySound(Sounds.DeathSound);
+
+                OnDeath();
             }
             else
             {
@@ -225,8 +244,15 @@ public class Entity : MonoBehaviour
 
             if (CanRevive && Dead)
             {
-                Rigid.bodyType = RigidbodyType2D.Kinematic;
-                Col.isTrigger = false;
+                if (Rigid)
+                {
+                    Rigid.bodyType = RigidbodyType2D.Kinematic;
+                }
+
+                if (Col)
+                {
+                    Col.isTrigger = false;
+                }
 
                 Dead = false;
                 Anim.SetBool("Dead", false);
@@ -307,6 +333,11 @@ public class Entity : MonoBehaviour
     }
 
 
+    // Called when this entity dies.
+    public virtual void OnDeath()
+    {}
+
+
     // Casts an ability based off the index.
     // Puts the ability on cooldown when casted.
     // @param - What ability should be casted in the ability array
@@ -328,7 +359,7 @@ public class Entity : MonoBehaviour
     // Flying entities cannot jump.
     public virtual void Jump()
     {
-        if (OnGround() && !Flying)
+        if (OnGround() && !Flying && Rigid)
         {
             Rigid.velocity = new Vector3(Rigid.velocity.x, JumpStrength, 0.0f);
 
@@ -345,7 +376,7 @@ public class Entity : MonoBehaviour
     // @param Value - The direction the chaeracter should move in (-1 to move left, 1 to move right).
     public void MoveSideways(float Value)
     {
-        if (!Attacking)
+        if (!Attacking && Rigid)
         {
             Rigid.velocity = new Vector2(Value * MovementSpeed * Time.deltaTime, Rigid.velocity.y);
 

@@ -17,7 +17,7 @@ public class TempMelee : MonoBehaviour {
 	}
 
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         Entity Hit = collision.GetComponent<Entity>();
         if (Hit && !collision.CompareTag("Player"))
