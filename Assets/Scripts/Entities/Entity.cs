@@ -44,6 +44,9 @@ public class Entity : MonoBehaviour
     // How fast this entity should move.
     public float MovementSpeed = 500.0f;
 
+    // The amount of damage other entities take when they collide with this object.
+    public int ContactDamage;
+
     // How high the entity will jump.
     public float JumpStrength = 10.0f;
 
@@ -85,6 +88,8 @@ public class Entity : MonoBehaviour
     // A reference to the rigid body attached to the Entity.
     protected Rigidbody2D Rigid;
 
+    // The distance between the left side and the right side of the collider extents.
+    protected float Offset;
 
 
     // Determins if the entity is attacking or not.
@@ -110,8 +115,6 @@ public class Entity : MonoBehaviour
     // How large the Collider extents are for this entity (used for calculating if the entity is on the ground).
     private float DistanceToGround;
 
-    // The distance between the left side and the right side of the collider extents.
-    private float Offset;
 
     // A reference to the collider around the Entity
     private CapsuleCollider2D Col;
@@ -172,13 +175,30 @@ public class Entity : MonoBehaviour
 
     // Triggers when the object collides with another object.
     // Disables the falling animation.
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         if (OnGround() && !Flying)
         {
             Anim.SetLayerWeight(1, 0);
             Anim.ResetTrigger("Jump");
             Anim.SetBool("Falling", false);
+        }
+
+        Entity Other = collision.gameObject.GetComponent<Entity>();
+        if (Other)
+        {
+            Other.ApplyDamage(ContactDamage);
+        }
+    }
+
+
+    // Triggers when the object overlaps with another object.
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
+    {
+        Entity Other = collision.GetComponent<Entity>();
+        if (Other)
+        {
+            Other.ApplyDamage(ContactDamage);
         }
     }
 
@@ -190,13 +210,12 @@ public class Entity : MonoBehaviour
     // @return - The total amount of damage this entity recieved.
     public int ApplyDamage(int Damage)
     {
-        if (!Immune && !Dead)
+        if (!Immune && !Dead && Damage > 0)
         {
             CurrentHealth -= Damage;
 
             Anim.SetBool("Damaged", true);
             StartCoroutine(StartImmunityFrames());
-            Debug.Log(CurrentHealth);
             if (CurrentHealth <= 0)
             {
                 Dead = true;

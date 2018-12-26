@@ -75,15 +75,15 @@ public class Abilitiy : MonoBehaviour
     private IEnumerator StartCountdown()
     {
         AbilityUp = false;
+        if (Owner)
+        {
+            Owner.Attacking = false;
+        }
 
         yield return new WaitForSeconds(Cooldown);
 
         AbilityUp = true;
 
-        if (Owner)
-        {
-            Owner.Attacking = false;
-        }
     }
 
 

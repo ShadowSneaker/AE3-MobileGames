@@ -31,6 +31,15 @@ public struct SpawnParams
 
     // Determines how long it will wait before firing a projectile.
     public float SpawnDelay;
+
+    // Should the projectile apply damage based off a range.
+    public bool UseDamageRange;
+
+    // The minimum damage the projectile will apply.
+    public int MinDamage;
+
+    // The maximum damage the projectile will apply.
+    public int MaxDamage;
 }
 
 
@@ -82,11 +91,18 @@ public class FireProjectile : Abilitiy
             }
 
 
+            if (Projectiles[i].UseDamageRange)
+            {
+                Spawned.Damage = Random.Range(Projectiles[i].MinDamage, Projectiles[i].MaxDamage);
+            }
+
+
             // Override Speed
             Spawned.Speed = (Projectiles[i].OverrideProjectileSpeed) ? Projectiles[i].ProjectileSpeed : Spawned.Speed;
 
 
             //Spawned.OverrideSpeed = Projectiles[i].OverrideProjectileSpeed;
+            Spawned.Reverse = (transform.localScale.x < 0.0f);
             Spawned.Owner = gameObject;
             Destroy(Spawned.gameObject, Projectiles[i].Lifetime);
         }
