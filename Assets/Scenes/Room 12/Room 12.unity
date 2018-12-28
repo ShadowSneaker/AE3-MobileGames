@@ -1393,16 +1393,6 @@ Prefab:
       propertyPath: m_Name
       value: ArrowDespenser (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 114619103049050080, guid: 1c7658ca8eaa3f747a3dd1f737efc8a9,
-        type: 2}
-      propertyPath: SpawnDelay
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 114619103049050080, guid: 1c7658ca8eaa3f747a3dd1f737efc8a9,
-        type: 2}
-      propertyPath: ArrowSpeed
-      value: 1200
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c7658ca8eaa3f747a3dd1f737efc8a9, type: 2}
   m_IsPrefabParent: 0
@@ -2328,7 +2318,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114619103049050080, guid: 1c7658ca8eaa3f747a3dd1f737efc8a9,
         type: 2}
-      propertyPath: SpawnDelay
+      propertyPath: Projectiles.Array.data[0].SpawnDelay
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -2,25 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Teleporter : MonoBehaviour
+public class Teleporter : InteractableObject
 {
+    public bool Interactable;
+
     public Teleporter Destination;
 
-    private bool CanTeleport = true;
-
     private float YOffset;
+
+    private Entity EntityToTeleport;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (CanTeleport)
+        if (Active)
         {
             Entity Other = collision.gameObject.GetComponent<Entity>();
             if (Other)
             {
-                Destination.CanTeleport = false;
-                YOffset = Other.transform.position.y - transform.position.y;
-                Other.transform.position = Destination.transform.position + new Vector3(0.0f, YOffset, 0.0f);
+                EntityToTeleport = Other;
+
+                if (!Interactable)
+                {
+                    Teleport();
+                }
             }
         }
     }
@@ -31,7 +36,25 @@ public class Teleporter : MonoBehaviour
         Entity Other = collision.gameObject.GetComponent<Entity>();
         if (Other)
         {
-            CanTeleport = true;
+            Active = true;
         }
+    }
+
+
+    public override void Interact()
+    {
+        if (Interactable)
+        {
+            base.Interact();
+            Teleport();
+        }
+    }
+
+
+    public void Teleport()
+    {
+        Destination.Active = false;
+        YOffset = EntityToTeleport.transform.position.y - transform.position.y;
+        EntityToTeleport.transform.position = Destination.transform.position + new Vector3(0.0f, YOffset, 0.0f);
     }
 }

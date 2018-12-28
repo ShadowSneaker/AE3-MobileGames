@@ -52,4 +52,11 @@ public class Sight : Entity
             }
         }
     }
+
+
+    public override void OnDeath()
+    {
+        base.OnDeath();
+        UseAbility(Abilities.Length - 1);
+    }
 }

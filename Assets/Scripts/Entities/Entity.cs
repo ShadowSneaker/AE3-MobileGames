@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum EntityTypes
 {
@@ -158,6 +159,17 @@ public class Entity : MonoBehaviour
         {
             SetFlying(true);
         }
+
+
+        // Enable abilities.
+        int CurrentRoom = SceneManager.GetActiveScene().buildIndex;
+        for (int i = 0; i < Abilities.Length; ++i)
+        {
+            if (!Abilities[i].Obtained && CurrentRoom >= Abilities[i].ObtainLevel)
+            {
+                Abilities[i].Obtained = true;
+            }
+        }
     }
 
 
@@ -234,7 +246,6 @@ public class Entity : MonoBehaviour
                 }
 
                 SFX.PlaySound(Sounds.DeathSound);
-
                 OnDeath();
             }
             else
@@ -362,13 +373,16 @@ public class Entity : MonoBehaviour
     // @param - What ability should be casted in the ability array
     public void UseAbility(int AbilityIndex)
     {
-        if (Abilities[AbilityIndex])
+        if (Abilities[AbilityIndex].Obtained)
         {
-            Abilities[AbilityIndex].CastAbility();
-        }
-        else
-        {
-            Debug.Log("Ability " + AbilityIndex.ToString() + " is not set!");
+            if (Abilities[AbilityIndex])
+            {
+                Abilities[AbilityIndex].CastAbility();
+            }
+            else
+            {
+                Debug.Log("Ability " + AbilityIndex.ToString() + " is not set!");
+            }
         }
     }
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Destructable : Entity
 {
@@ -8,6 +9,8 @@ public class Destructable : Entity
     private ParticleSystem Particle;
     private BoxCollider2D Box;
     private MeshRenderer Rend;
+
+    public UnityEvent DestroyEvent;
 
     protected override void Start()
     {
@@ -23,5 +26,10 @@ public class Destructable : Entity
         Rend.enabled = false;
         Box.enabled = false;
         Particle.Play();
+
+        if (DestroyEvent != null)
+        {
+            DestroyEvent.Invoke();
+        }
     }
 }

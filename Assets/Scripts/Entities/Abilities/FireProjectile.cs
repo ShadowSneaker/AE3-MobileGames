@@ -76,7 +76,7 @@ public class FireProjectile : Abilitiy
             }
             else
             {
-                Spawned.transform.position += Projectiles[i].SpawnOffset;
+                Spawned.transform.position = Projectiles[i].SpawnOffset;
             }
 
 

@@ -38,8 +38,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1031833925364740}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46, y: 11, z: 0}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 46, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -154,12 +154,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d5dfdbbb7cb5ea438ff6ded368818af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Obtained: 1
+  ObtainLevel: 0
+  StartOnCooldown: 0
+  RandomCoolDownTime: 0
+  MinCooldown: 0
   Cooldown: 5
   Clip: {fileID: 0}
   SoundClip: {fileID: 0}
   OverrideAnimation: 1
-  SpawnProjectile: {fileID: 114734496609932274, guid: 0d4ce584a5414ea46ba166f6a3fa03d7,
-    type: 2}
-  Lifetime: 5
-  SpawnDelay: 0
-  ArrowSpeed: 1000
+  Projectiles:
+  - SpawnProjectile: {fileID: 114734496609932274, guid: 0d4ce584a5414ea46ba166f6a3fa03d7,
+      type: 2}
+    OverrideProjectileSpeed: 1
+    ProjectileSpeed: 1500
+    UseParentRotation: 1
+    RotationOffset: {x: 0, y: 0, z: 0}
+    UseParentPosition: 1
+    SpawnOffset: {x: 0, y: 0, z: 0}
+    Lifetime: 5
+    SpawnDelay: 0
+    UseDamageRange: 0
+    MinDamage: 0
+    MaxDamage: 0
+  DelayBetweenProjectiles: 0

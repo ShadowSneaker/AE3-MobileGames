@@ -9,9 +9,19 @@ using UnityEngine;
  */
 public class Abilitiy : MonoBehaviour
 {
+    // Should this ability be locked until a specific level is reached?
+    public bool Obtained = true;
+
+    // The level this ability is unlocked.
+    public int ObtainLevel;
 
     // Should this ability be on cooldown at the start of the game?
     public bool StartOnCooldown;
+
+    // Should the ability have a random timer for the Cooldown - If disabled always use Cooldown.
+    public bool RandomCoolDownTime;
+
+    public float MinCooldown;
 
     // How long the ability takes to be active again (Counts in seconds);
     public float Cooldown = 5f;
@@ -79,8 +89,9 @@ public class Abilitiy : MonoBehaviour
         {
             Owner.Attacking = false;
         }
-
-        yield return new WaitForSeconds(Cooldown);
+        
+        float CooldownTime = (RandomCoolDownTime) ? Random.Range(MinCooldown, Cooldown) : Cooldown;
+        yield return new WaitForSeconds(CooldownTime);
 
         AbilityUp = true;
 
