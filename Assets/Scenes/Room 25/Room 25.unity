@@ -222,7 +222,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (31)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &17419107 stripped
@@ -374,7 +375,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (30)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &40483710 stripped
@@ -635,7 +637,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &87807971 stripped
@@ -706,7 +709,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (70)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &96429425 stripped
@@ -777,7 +781,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (36)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &98564091
@@ -843,7 +848,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (72)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &111887420 stripped
@@ -924,7 +930,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (28)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &159881880
@@ -990,7 +997,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (86)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &162795598
@@ -1056,7 +1064,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (80)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &165218385
@@ -1122,7 +1131,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (73)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &169536056 stripped
@@ -1203,7 +1213,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (64)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &211054540
@@ -1269,7 +1280,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (78)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &218603656
@@ -1335,7 +1347,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (55)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &219594957
@@ -1401,7 +1414,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &223846009 stripped
@@ -1472,7 +1486,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (83)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &227703531
@@ -1538,7 +1553,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (48)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &242190223 stripped
@@ -1614,7 +1630,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (42)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &269101282
@@ -1680,7 +1697,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &272478130 stripped
@@ -1802,7 +1820,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (18)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &304708338
@@ -1930,7 +1949,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (20)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &361859552
@@ -1996,7 +2016,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &362542845 stripped
@@ -2082,7 +2103,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (10)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &381978814
@@ -2195,7 +2217,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &410353826
@@ -2253,7 +2276,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4787109785456138, guid: e41f366864c952e469e368caa8fbea94, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 62.25
+      value: 62
       objectReference: {fileID: 0}
     - target: {fileID: 4787109785456138, guid: e41f366864c952e469e368caa8fbea94, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2281,11 +2304,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4787109785456138, guid: e41f366864c952e469e368caa8fbea94, type: 2}
       propertyPath: m_RootOrder
-      value: 103
+      value: 101
       objectReference: {fileID: 0}
     - target: {fileID: 1342374080641980, guid: e41f366864c952e469e368caa8fbea94, type: 2}
       propertyPath: m_Name
       value: SideWallBasic (94)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787109785456138, guid: e41f366864c952e469e368caa8fbea94, type: 2}
+      propertyPath: m_LocalScale.x
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
@@ -2409,7 +2436,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (12)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &490352902 stripped
@@ -2530,7 +2558,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (25)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &538192922 stripped
@@ -2601,7 +2630,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &557821843 stripped
@@ -2672,7 +2702,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (15)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &578488878 stripped
@@ -2743,7 +2774,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (66)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &608370545
@@ -2809,7 +2841,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (61)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &612787667 stripped
@@ -2881,7 +2914,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &642684174 stripped
@@ -2957,7 +2991,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (87)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &667463911
@@ -2969,7 +3004,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4787109785456138, guid: e41f366864c952e469e368caa8fbea94, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 62.25
+      value: 62
       objectReference: {fileID: 0}
     - target: {fileID: 4787109785456138, guid: e41f366864c952e469e368caa8fbea94, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2997,11 +3032,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4787109785456138, guid: e41f366864c952e469e368caa8fbea94, type: 2}
       propertyPath: m_RootOrder
-      value: 101
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1342374080641980, guid: e41f366864c952e469e368caa8fbea94, type: 2}
       propertyPath: m_Name
       value: SideWallBasic (92)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787109785456138, guid: e41f366864c952e469e368caa8fbea94, type: 2}
+      propertyPath: m_LocalScale.x
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
@@ -3069,7 +3108,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (54)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &670419806
@@ -3135,7 +3175,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (56)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &678956727 stripped
@@ -3206,7 +3247,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (27)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &689798415 stripped
@@ -3329,7 +3371,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (38)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &716597822 stripped
@@ -3410,7 +3453,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (59)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &765321261
@@ -3476,7 +3520,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (39)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &769592861 stripped
@@ -3720,7 +3765,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (50)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &814232818 stripped
@@ -3860,7 +3906,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (33)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &861180507
@@ -3926,7 +3973,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (8)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &876521940
@@ -3992,7 +4040,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (84)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &902058419 stripped
@@ -4060,7 +4109,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4787109785456138, guid: e41f366864c952e469e368caa8fbea94, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 62.25
+      value: 62
       objectReference: {fileID: 0}
     - target: {fileID: 4787109785456138, guid: e41f366864c952e469e368caa8fbea94, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4088,11 +4137,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4787109785456138, guid: e41f366864c952e469e368caa8fbea94, type: 2}
       propertyPath: m_RootOrder
-      value: 100
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 1342374080641980, guid: e41f366864c952e469e368caa8fbea94, type: 2}
       propertyPath: m_Name
       value: SideWallBasic (91)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787109785456138, guid: e41f366864c952e469e368caa8fbea94, type: 2}
+      propertyPath: m_LocalScale.x
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
@@ -4160,7 +4213,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (71)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &943526581
@@ -4226,7 +4280,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (82)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &954328189 stripped
@@ -4307,7 +4362,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &976500560 stripped
@@ -4383,7 +4439,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (17)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1019801585
@@ -4449,7 +4506,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (23)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1039599945 stripped
@@ -4525,7 +4583,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (68)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1052338579
@@ -4591,7 +4650,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (41)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1059349139 stripped
@@ -4789,7 +4849,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (45)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1150784289
@@ -4855,7 +4916,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (69)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1164645231 stripped
@@ -4926,7 +4988,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (76)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1182600111
@@ -4992,7 +5055,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (21)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1199836819
@@ -5058,7 +5122,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (35)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1203366409 stripped
@@ -5134,7 +5199,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (81)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1230284220 stripped
@@ -5210,7 +5276,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (40)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1242760807 stripped
@@ -5281,7 +5348,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (67)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1265792204 stripped
@@ -5460,7 +5528,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (9)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1313896289 stripped
@@ -5536,7 +5605,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (57)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1358581900
@@ -5602,7 +5672,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (34)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1360022147 stripped
@@ -5678,7 +5749,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (51)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1395584807 stripped
@@ -5930,7 +6002,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (62)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1419050520 stripped
@@ -6134,7 +6207,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (74)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1474257033
@@ -6200,7 +6274,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (47)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1474706115 stripped
@@ -6271,7 +6346,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1500880300 stripped
@@ -6382,7 +6458,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (65)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1543113486 stripped
@@ -6458,7 +6535,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (79)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1561503953 stripped
@@ -6583,7 +6661,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (44)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1576031746
@@ -6695,7 +6774,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (14)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1590176617 stripped
@@ -6766,7 +6846,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (37)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1604265575
@@ -6878,7 +6959,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1631753100
@@ -6944,8 +7026,75 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (52)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1678262815
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4092907967068644, guid: cf4cf55e8204bc7489dd6f130925423f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092907967068644, guid: cf4cf55e8204bc7489dd6f130925423f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092907967068644, guid: cf4cf55e8204bc7489dd6f130925423f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092907967068644, guid: cf4cf55e8204bc7489dd6f130925423f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092907967068644, guid: cf4cf55e8204bc7489dd6f130925423f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092907967068644, guid: cf4cf55e8204bc7489dd6f130925423f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092907967068644, guid: cf4cf55e8204bc7489dd6f130925423f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092907967068644, guid: cf4cf55e8204bc7489dd6f130925423f, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107832177436420, guid: cf4cf55e8204bc7489dd6f130925423f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -54
+      objectReference: {fileID: 0}
+    - target: {fileID: 114459883666276418, guid: cf4cf55e8204bc7489dd6f130925423f,
+        type: 2}
+      propertyPath: LeftSpawnPos.x
+      value: -16
+      objectReference: {fileID: 0}
+    - target: {fileID: 114459883666276418, guid: cf4cf55e8204bc7489dd6f130925423f,
+        type: 2}
+      propertyPath: LeftSpawnPos.y
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 114459883666276418, guid: cf4cf55e8204bc7489dd6f130925423f,
+        type: 2}
+      propertyPath: RightSpawnPos.y
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 114459883666276418, guid: cf4cf55e8204bc7489dd6f130925423f,
+        type: 2}
+      propertyPath: RightSpawnPos.x
+      value: 63
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: cf4cf55e8204bc7489dd6f130925423f, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1694367163
 GameObject:
@@ -7039,7 +7188,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (16)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1730379373
@@ -7105,7 +7255,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (32)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1751390949
@@ -7171,7 +7322,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (53)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1755653003
@@ -7237,7 +7389,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (26)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1760969204
@@ -7303,7 +7456,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (63)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1776580412
@@ -7369,7 +7523,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1787437287 stripped
@@ -7599,7 +7754,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1841535778 stripped
@@ -7670,7 +7826,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (19)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1857289304 stripped
@@ -7746,7 +7903,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (11)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1870010293
@@ -7812,7 +7970,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (77)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1872042621
@@ -7874,7 +8033,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1872292771
@@ -7996,7 +8156,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (43)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1908534673
@@ -8062,7 +8223,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (46)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1918121574
@@ -8128,7 +8290,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (24)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1921182050 stripped
@@ -8214,7 +8377,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1958940409 stripped
@@ -8285,7 +8449,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (29)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1964258828
@@ -8398,7 +8563,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (85)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1988348378
@@ -8464,7 +8630,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (60)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1991042325 stripped
@@ -8535,7 +8702,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1995549164 stripped
@@ -8560,7 +8728,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4111464258048178, guid: a4b7274db4cc44e499ab92233cbfbcdd, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -2
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 4111464258048178, guid: a4b7274db4cc44e499ab92233cbfbcdd, type: 2}
       propertyPath: m_LocalRotation.x
@@ -8667,7 +8835,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (49)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &2021906443 stripped
@@ -8738,7 +8907,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (75)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &2042315208 stripped
@@ -8824,7 +8994,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (58)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &2098014862
@@ -8890,7 +9061,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (13)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &2100308632
@@ -8956,7 +9128,8 @@ Prefab:
       propertyPath: m_Name
       value: SideWallBasic (22)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61055086210060564, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e41f366864c952e469e368caa8fbea94, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &2107154862 stripped

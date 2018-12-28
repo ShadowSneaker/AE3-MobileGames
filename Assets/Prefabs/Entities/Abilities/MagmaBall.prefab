@@ -182,10 +182,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyHitPlayer: 1
-  Speed: 400
+  Speed: 600
   Damage: 1
   CanBounce: 1
-  BounceCount: 7
+  BounceCount: 8
   BounceIndex: 0
 --- !u!198 &198157551126821160
 ParticleSystem:
