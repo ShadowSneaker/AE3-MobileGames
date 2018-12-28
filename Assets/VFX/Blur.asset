@@ -45,7 +45,7 @@ MonoBehaviour:
       intensity: 3
       radius: 0.75
       sampleCount: 6
-      downsampling: 0
+      downsampling: 1
       forceForwardCompatibility: 0
       ambientOnly: 0
       highPrecision: 0
@@ -73,7 +73,7 @@ MonoBehaviour:
     m_Settings:
       focusDistance: 1
       aperture: 2
-      focalLength: 0
+      focalLength: 1
       useCameraFov: 1
       kernelSize: 0
   motionBlur:
@@ -132,7 +132,7 @@ MonoBehaviour:
         blue: {x: 0, y: 0, z: 1}
         currentEditingChannel: 0
       colorWheels:
-        mode: 1
+        mode: 0
         log:
           slope: {r: 1, g: 1, b: 1, a: 0}
           power: {r: 1, g: 1, b: 1, a: 0}
@@ -305,10 +305,10 @@ MonoBehaviour:
       lut: {fileID: 0}
       contribution: 1
   chromaticAberration:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       spectralTexture: {fileID: 0}
-      intensity: 0.2
+      intensity: 0
   grain:
     m_Enabled: 0
     m_Settings:

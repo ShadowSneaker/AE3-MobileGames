@@ -165,9 +165,12 @@ public class Entity : MonoBehaviour
         int CurrentRoom = SceneManager.GetActiveScene().buildIndex;
         for (int i = 0; i < Abilities.Length; ++i)
         {
-            if (!Abilities[i].Obtained && CurrentRoom >= Abilities[i].ObtainLevel)
+            if (Abilities[i])
             {
-                Abilities[i].Obtained = true;
+                if (!Abilities[i].Obtained && CurrentRoom >= Abilities[i].ObtainLevel)
+                {
+                    Abilities[i].Obtained = true;
+                }
             }
         }
     }

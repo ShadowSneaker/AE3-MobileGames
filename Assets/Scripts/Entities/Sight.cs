@@ -5,9 +5,16 @@ using UnityEngine;
 public class Sight : Entity
 {
     public bool AlwaysAttack;
+    public int AlwaysAttackAbility;
+
+    private bool EnableAlways;
 
     public bool SearchBehind = true;
     public float RaycastLength = Mathf.Infinity;
+    public int RaycastAttackAbility;
+
+    // Should it disable Always attack when Raycast hits the player?
+    public bool CancleAlwaysWhenRaycastHit;
 
 
 	// Use this for initialization
@@ -21,20 +28,25 @@ public class Sight : Entity
 
     private void Update()
     {
-        if (Abilities[0].GetAbilityUp)
+        if (Abilities[AlwaysAttackAbility].GetAbilityUp)
         {
-            if (AlwaysAttack)
+            if (AlwaysAttack && EnableAlways)
             {
                 UseAbility(0);
             }
-            else
+        }
+
+        if (CancleAlwaysWhenRaycastHit)
+        {
+            if (Abilities[RaycastAttackAbility].GetAbilityUp)
             {
-                RaycastHit2D Hit = Physics2D.Raycast(transform.position + (new Vector3(Offset + 0.2f, 0.0f, 0.0f) * transform.localScale.x), Vector2.right * transform.localScale.x);
+                RaycastHit2D Hit = Physics2D.Raycast(transform.position + (new Vector3(Offset + 0.2f, 0.0f, 0.0f) * transform.localScale.x), Vector2.right * transform.localScale.x, RaycastLength);
                 if (Hit)
                 {
                     if (Hit.collider.CompareTag("Player"))
                     {
-                        UseAbility(0);
+                        UseAbility(RaycastAttackAbility);
+                        EnableAlways = false;
                     }
                     else if (SearchBehind)
                     {
@@ -44,9 +56,18 @@ public class Sight : Entity
                             if (BehindHit.collider.CompareTag("Player"))
                             {
                                 transform.localScale *= new Vector2(-1.0f, 1.0f);
-                                UseAbility(0);
+                                UseAbility(RaycastAttackAbility);
+                                EnableAlways = false;
                             }
                         }
+                        else
+                        {
+                            EnableAlways = true;
+                        }
+                    }
+                    else
+                    {
+                        EnableAlways = true;
                     }
                 }
             }

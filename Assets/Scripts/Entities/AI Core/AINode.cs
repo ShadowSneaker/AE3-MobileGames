@@ -8,7 +8,10 @@ public enum PointInstruction
     None,
 
     // The entity jumps when it reaches this node.
-    Jump
+    Jump,
+
+    // Kills the entity on contact
+    Die
 }
 
 
@@ -88,6 +91,14 @@ public class AINode : MonoBehaviour
                     ENT.Jump();
                 Owner.GoToNextPoint();
                 break;
+
+
+            case PointInstruction.Die:
+                if (ShouldPerform())
+                    ENT.ApplyDamage(9999);
+                Owner.GoToNextPoint();
+                break;
+                
         }
     }
 

@@ -47,7 +47,7 @@ public class Abilitiy : MonoBehaviour
     private AnimatorOverrideController AOC;
 
     // A reference to the animator used to play this ability's animation.
-    private Animator Anim;
+    protected Animator Anim;
 
     // The amount of time this ability's animation takes.
     private float AbilityTime;
@@ -82,7 +82,7 @@ public class Abilitiy : MonoBehaviour
     }
 
 
-    private IEnumerator StartCountdown()
+    protected IEnumerator StartCountdown()
     {
         AbilityUp = false;
         if (Owner)

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CloudElemental : Entity
 {
-    public int ContactDamage = 1;
+    //public int ContactDamage = 1;
     public float AbilityDelay = 5.0f;
 
 
@@ -31,16 +31,6 @@ public class CloudElemental : Entity
             Abil.Projectiles[0].RotationOffset = new Vector3(Abil.Projectiles[0].RotationOffset.x, Abil.Projectiles[0].RotationOffset.y, Random.Range(-FireRange, FireRange));
             Abil.Projectiles[1].RotationOffset = new Vector3(Abil.Projectiles[0].RotationOffset.x, Abil.Projectiles[0].RotationOffset.y, Random.Range(-FireRange, FireRange));
             UseAbility(0);
-        }
-    }
-
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Entity Other = collision.GetComponent<Entity>();
-        if (Other)
-        {
-            Other.ApplyDamage(ContactDamage);
         }
     }
 
