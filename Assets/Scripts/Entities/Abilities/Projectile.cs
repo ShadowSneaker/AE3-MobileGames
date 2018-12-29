@@ -48,7 +48,6 @@ public class Projectile : MonoBehaviour
 
     private void CollisionHit(Collider2D collision)
     {
-       
         Entity Other = collision.gameObject.GetComponent<Entity>();
         if (Owner && Other && Owner != Other.gameObject)
         {

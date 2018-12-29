@@ -18,6 +18,7 @@ public class Wind : Abilitiy
 	// Use this for initialization
 	protected override void Start ()
     {
+        base.Start();
         Entities = FindObjectsOfType<Entity>();
         This = GetComponent<Entity>();
 	}
@@ -58,5 +59,12 @@ public class Wind : Abilitiy
         base.CastAbility();
         EnableTime = true;
         CurrentTime = Duration;
+    }
+
+
+
+    public void Stop()
+    {
+        EnableTime = false;
     }
 }

@@ -146,6 +146,7 @@ public class Abilitiy : MonoBehaviour
     public virtual void EndAbility()
     {
         StartCoroutine(StartCountdown());
+        
         Anim.SetBool("Attack", false);
         Anim.SetLayerWeight(2, 0.0f);
     }
