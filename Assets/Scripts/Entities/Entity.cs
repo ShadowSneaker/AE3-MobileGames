@@ -87,7 +87,7 @@ public class Entity : MonoBehaviour
     protected Animator Anim;
 
     // A reference to the rigid body attached to the Entity.
-    protected Rigidbody2D Rigid;
+    internal Rigidbody2D Rigid;
 
     // The distance between the left side and the right side of the collider extents.
     protected float Offset;

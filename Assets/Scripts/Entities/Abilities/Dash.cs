@@ -7,6 +7,8 @@ public class Dash : Abilitiy
     // The speed the entity dashes
     public float DashSpeed;
 
+    public int Damage;
+
     // How long the dash takes.
     public float DashDuration;
 
@@ -19,6 +21,8 @@ public class Dash : Abilitiy
     public bool ReturnOnEnd;
 
     public float WaitDelay = 0.5f;
+
+    public bool TurnOnEnd;
 
 
 
@@ -36,6 +40,10 @@ public class Dash : Abilitiy
 
     private int StartDir;
 
+    private int CurrentDir;
+
+
+
 	// Use this for initialization
 	protected override void Start ()
     {
@@ -48,7 +56,8 @@ public class Dash : Abilitiy
             This = GetComponent<Entity>();
             StartDir = (transform.localScale.x > 0.0f) ? 1 : -1;
         }
-	}
+        CurrentDir = (transform.localScale.x > 0.0f) ? 1 : -1;
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -58,6 +67,8 @@ public class Dash : Abilitiy
             int Direction;
             Direction = (transform.position.x < StartPos.x) ? 1 : -1;
             This.MoveSideways(Direction);
+            StartDir = Direction;
+            CurrentDir = Direction;
 
             if ((Direction < 0 && transform.position.x - 0.01 <= StartPos.x) || (Direction > 0 && transform.position.x + 0.01 >= StartPos.x))
             {
@@ -68,7 +79,18 @@ public class Dash : Abilitiy
         }
         else
         {
-            transform.localScale = new Vector3(StartDir, transform.localScale.y, transform.localScale.z);
+            if (TurnOnEnd)
+            {
+                if (StartDir == CurrentDir)
+                {
+                    CurrentDir = -CurrentDir;
+                    transform.localScale = new Vector3(CurrentDir, transform.localScale.y, transform.localScale.z);
+                }
+            }
+            else
+            {
+                transform.localScale = new Vector3(StartDir, transform.localScale.y, transform.localScale.z);
+            }
         }
 
         if (EnableTimer)
@@ -85,6 +107,16 @@ public class Dash : Abilitiy
             }
         }
 	}
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Entity Other = collision.gameObject.GetComponent<Entity>();
+        if (Other && EnableTimer)
+        {
+            Other.ApplyDamage(Damage);
+        }
+    }
 
 
     public override void CastAbility()
