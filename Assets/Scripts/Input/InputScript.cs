@@ -11,8 +11,8 @@ public enum EDragDirection { Left, Right, Up, Down }
 public class InputScript : MonoBehaviour
 {
 
-#if UNITY_EDITOR
-#elif UNITY_ANDROID
+//#if UNITY_EDITOR
+//#elif UNITY_ANDROID
     private Vector3 FirstTouchPos;
     private Vector3 LastTouchPos;
 
@@ -23,7 +23,7 @@ public class InputScript : MonoBehaviour
     private Joystick Stick;
 
     private EDragDirection DragDirection;
-#endif
+//#endif
 
     public UnityEvent DragUp;
     public UnityEvent DragDown;
@@ -46,43 +46,43 @@ public class InputScript : MonoBehaviour
     {
         Player = GetComponent<Entity>();
 
-#if UNITY_EDITOR
-#elif UNITY_ANDROID
+//#if UNITY_EDITOR
+//#elif UNITY_ANDROID
         DragDistance = Screen.height * ScreenPercentForSwipe / 100;
-#endif
+//#endif
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
-#if UNITY_EDITOR
-        if (!Player.IsDead())
-        {
-            Player.MoveSideways(Input.GetAxisRaw("Horizontal"));
+//#if UNITY_EDITOR
+        //if (!Player.IsDead())
+        //{
+        //    Player.MoveSideways(Input.GetAxisRaw("Horizontal"));
+        //
+        //    if (Input.GetButtonDown("Jump"))
+        //    {
+        //        Player.Jump();
+        //    }
+        //
+        //    if (Input.GetKeyDown("q") && TEMP_ATTACK)
+        //    {
+        //        Player.UseAbility(0);
+        //    }
+        //
+        //    if (Input.GetKeyDown("1"))
+        //    {
+        //        Player.ApplyDamage(1);
+        //    }
+        //}
 
-            if (Input.GetButtonDown("Jump"))
-            {
-                Player.Jump();
-            }
 
-            if (Input.GetKeyDown("q") && TEMP_ATTACK)
-            {
-                Player.UseAbility(0);
-            }
-
-            if (Input.GetKeyDown("1"))
-            {
-                Player.ApplyDamage(1);
-            }
-        }
-
-
-#elif UNITY_ANDROID
+//#elif UNITY_ANDROID
         /// Joystick Inputs
 
         if (!Player.IsDead())
         {
-            Player.MoveSideways(CrossPlatformInputManager.GetAxis("Horizontal"));
+            Player.MoveSideways(CrossPlatformInputManager.GetAxisRaw("Horizontal"));
 
 
             /// Touch Inputs
@@ -209,14 +209,14 @@ public class InputScript : MonoBehaviour
             }
         }
         return DragDirection;
-#endif
+//#endif
     }
 
-#if UNITY_EDITOR
-#elif UNITY_ANDROID
+//#if UNITY_EDITOR
+//#elif UNITY_ANDROID
     public EDragDirection GetDirection()
     {
         return DragDirection;
     }
-#endif
+//#endif
 }

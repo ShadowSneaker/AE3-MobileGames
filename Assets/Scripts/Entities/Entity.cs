@@ -412,33 +412,32 @@ public class Entity : MonoBehaviour
     // @param Value - The direction the chaeracter should move in (-1 to move left, 1 to move right).
     public void MoveSideways(float Value)
     {
+
         if (!Attacking && Rigid)
         {
-            Rigid.velocity = new Vector2(Value * MovementSpeed * Time.deltaTime, Rigid.velocity.y);
+            Rigid.velocity = new Vector2((Value * MovementSpeed) * Time.deltaTime, Rigid.velocity.y);
+            float Normalised = Value * ((Value >= 0.0f) ? 1 : -1);
 
-
-            float Direction = Value * ((Value >= 0.0f) ? 1 : -1);
-
-            if (Value > 0.0f)
+            if (Value > 0.0f && transform.localScale.x != 1.0f)
             {
                 transform.localScale = new Vector2(1.0f, transform.localScale.y);
             }
-            else if (Value < 0.0f)
+            else if (Value < 0.0f && transform.localScale.x != -1.0f)
             {
                 transform.localScale = new Vector2(-1.0f, transform.localScale.y);
             }
 
-            Anim.SetFloat("MovementSpeed", Direction);
+            Anim.SetFloat("MovementSpeed", Normalised);
 
-            if (Value > 0.0f)
+            if (Normalised > 0.01f)
             {
-                Anim.speed = AnimSpeed * Value * ((Value > 0.0f) ? 1 : -1);
+                Anim.speed = AnimSpeed * Normalised;
             }
         }
-        else
-        {
-            Rigid.velocity = new Vector2(0.0f, Rigid.velocity.y);
-        }
+        //else
+        //{
+        //    Rigid.velocity = new Vector2(0.0f, Rigid.velocity.y);
+        //}
     }
 
 

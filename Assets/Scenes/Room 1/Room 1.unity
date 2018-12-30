@@ -13457,21 +13457,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114109051874894210, guid: 9f7f28360e203764d92c6f23a91232ac,
-        type: 2}
-      propertyPath: DropObjects.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114109051874894210, guid: 9f7f28360e203764d92c6f23a91232ac,
-        type: 2}
-      propertyPath: DropObjects.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114109051874894210, guid: 9f7f28360e203764d92c6f23a91232ac,
-        type: 2}
-      propertyPath: WillDropItems.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f7f28360e203764d92c6f23a91232ac, type: 2}
   m_IsPrefabParent: 0
