@@ -9,6 +9,7 @@ ModelImporter:
     400002: SM_Gate
     2100000: lambert2
     2100002: lambert3
+    2100004: lambert1
     2300000: //RootNode
     2300002: SM_Gate
     3300000: //RootNode
@@ -17,7 +18,17 @@ ModelImporter:
     4300002: SM_Gate
     7400000: Take 001
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 7a97d16a9d42fc6468a812589208f163, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert3
+    second: {fileID: 2100000, guid: 65246c475cc9c554aad179d4d0437e0e, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

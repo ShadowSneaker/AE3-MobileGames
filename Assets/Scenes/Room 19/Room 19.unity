@@ -1284,12 +1284,20 @@ Prefab:
       propertyPath: GoToRoom
       value: Room 20
       objectReference: {fileID: 0}
+    - target: {fileID: 4906355618425646, guid: e1416f20045b23148aa21192afd469de, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906355618425646, guid: e1416f20045b23148aa21192afd469de, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1416f20045b23148aa21192afd469de, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &308543730 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 4451535672983768, guid: e1416f20045b23148aa21192afd469de,
+  m_PrefabParentObject: {fileID: 4906355618425646, guid: e1416f20045b23148aa21192afd469de,
     type: 2}
   m_PrefabInternal: {fileID: 308543729}
 --- !u!1001 &313411224
@@ -4746,7 +4754,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1267935458}
+  - {fileID: 2133906163}
   - {fileID: 308543730}
   m_Father: {fileID: 1720338848}
   m_RootOrder: 3
@@ -6046,11 +6054,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 266df03ee8878b2468f06a32f2a0787b, type: 3}
   m_PrefabInternal: {fileID: 1262725690}
---- !u!4 &1267935458 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4451535672983768, guid: e1416f20045b23148aa21192afd469de,
-    type: 2}
-  m_PrefabInternal: {fileID: 2133906162}
 --- !u!1001 &1272945847
 Prefab:
   m_ObjectHideFlags: 0
@@ -10082,23 +10085,23 @@ Transform:
   - {fileID: 690892015}
   - {fileID: 1460580517}
   - {fileID: 968859767}
+  - {fileID: 1003887567}
   - {fileID: 1497737025}
   - {fileID: 341655668}
   - {fileID: 526266430}
   - {fileID: 313411225}
-  - {fileID: 1716871193}
-  - {fileID: 1003887567}
-  - {fileID: 460505594}
   - {fileID: 1382337920}
-  - {fileID: 802046495}
-  - {fileID: 1743322501}
-  - {fileID: 2002243844}
+  - {fileID: 1716871193}
   - {fileID: 318633286}
-  - {fileID: 1879514411}
+  - {fileID: 2002243844}
+  - {fileID: 460505594}
   - {fileID: 809766241}
+  - {fileID: 1879514411}
+  - {fileID: 802046495}
   - {fileID: 1719691761}
   - {fileID: 86828674}
   - {fileID: 166280520}
+  - {fileID: 1743322501}
   - {fileID: 1262725691}
   - {fileID: 483389445}
   - {fileID: 450024297}
@@ -10367,6 +10370,33 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4906355618425646, guid: e1416f20045b23148aa21192afd469de, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 62.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906355618425646, guid: e1416f20045b23148aa21192afd469de, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915908907220672, guid: e1416f20045b23148aa21192afd469de, type: 2}
+      propertyPath: m_Name
+      value: Exit Dor
+      objectReference: {fileID: 0}
+    - target: {fileID: 114371493713891856, guid: e1416f20045b23148aa21192afd469de,
+        type: 2}
+      propertyPath: Activated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114371493713891856, guid: e1416f20045b23148aa21192afd469de,
+        type: 2}
+      propertyPath: GoToRoom
+      value: Room 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1416f20045b23148aa21192afd469de, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &2133906163 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4906355618425646, guid: e1416f20045b23148aa21192afd469de,
+    type: 2}
+  m_PrefabInternal: {fileID: 2133906162}

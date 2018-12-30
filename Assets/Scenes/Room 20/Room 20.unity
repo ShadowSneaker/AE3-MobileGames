@@ -491,11 +491,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 266df03ee8878b2468f06a32f2a0787b, type: 3}
   m_PrefabInternal: {fileID: 68393752}
---- !u!4 &74411939 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4451535672983768, guid: e1416f20045b23148aa21192afd469de,
-    type: 2}
-  m_PrefabInternal: {fileID: 1690933144}
 --- !u!1001 &80325854
 Prefab:
   m_ObjectHideFlags: 0
@@ -6727,11 +6722,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: d61db3fa22162da46b467672e856eccf, type: 3}
   m_PrefabInternal: {fileID: 1283499431}
---- !u!4 &1284553500 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4451535672983768, guid: e1416f20045b23148aa21192afd469de,
-    type: 2}
-  m_PrefabInternal: {fileID: 2004953885}
 --- !u!1001 &1291351249
 Prefab:
   m_ObjectHideFlags: 0
@@ -8525,6 +8515,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1416f20045b23148aa21192afd469de, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1690933145 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4906355618425646, guid: e1416f20045b23148aa21192afd469de,
+    type: 2}
+  m_PrefabInternal: {fileID: 1690933144}
 --- !u!1001 &1696159571
 Prefab:
   m_ObjectHideFlags: 0
@@ -9169,16 +9164,13 @@ Transform:
   - {fileID: 845529844}
   - {fileID: 2009232960}
   - {fileID: 1198706947}
-  - {fileID: 226624589}
-  - {fileID: 1814374653}
-  - {fileID: 1786466173}
-  - {fileID: 499842561}
+  - {fileID: 591851472}
   - {fileID: 649654212}
   - {fileID: 1544247934}
-  - {fileID: 1210575906}
+  - {fileID: 226624589}
   - {fileID: 1730907225}
   - {fileID: 1744021337}
-  - {fileID: 591851472}
+  - {fileID: 499842561}
   - {fileID: 1696159572}
   - {fileID: 660924306}
   - {fileID: 1025453507}
@@ -9186,12 +9178,15 @@ Transform:
   - {fileID: 1999024950}
   - {fileID: 612879581}
   - {fileID: 1968500124}
+  - {fileID: 1210575906}
   - {fileID: 68393753}
   - {fileID: 1061001697}
   - {fileID: 812395969}
   - {fileID: 1936742610}
+  - {fileID: 1814374653}
   - {fileID: 349567008}
   - {fileID: 1291351250}
+  - {fileID: 1786466173}
   - {fileID: 137985244}
   - {fileID: 1506267301}
   - {fileID: 1529899186}
@@ -9859,8 +9854,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1944265277}
-  - {fileID: 1284553500}
-  - {fileID: 74411939}
+  - {fileID: 2004953886}
+  - {fileID: 1690933145}
   m_Father: {fileID: 643820665}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10131,12 +10126,22 @@ Prefab:
       propertyPath: m_Name
       value: Entrance Door
       objectReference: {fileID: 0}
+    - target: {fileID: 4906355618425646, guid: e1416f20045b23148aa21192afd469de, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 34.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114371493713891856, guid: e1416f20045b23148aa21192afd469de,
+        type: 2}
+      propertyPath: UnlockItem
+      value: 
+      objectReference: {fileID: 11400000, guid: ce794c6d1eded264396d095bf9f43a00,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1416f20045b23148aa21192afd469de, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1944265277 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 4451535672983768, guid: e1416f20045b23148aa21192afd469de,
+  m_PrefabParentObject: {fileID: 4906355618425646, guid: e1416f20045b23148aa21192afd469de,
     type: 2}
   m_PrefabInternal: {fileID: 1944265276}
 --- !u!1001 &1964015494
@@ -10512,9 +10517,36 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: ce794c6d1eded264396d095bf9f43a00,
         type: 2}
+    - target: {fileID: 4906355618425646, guid: e1416f20045b23148aa21192afd469de, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 42.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906355618425646, guid: e1416f20045b23148aa21192afd469de, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915908907220672, guid: e1416f20045b23148aa21192afd469de, type: 2}
+      propertyPath: m_Name
+      value: Exit Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 114371493713891856, guid: e1416f20045b23148aa21192afd469de,
+        type: 2}
+      propertyPath: Activated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114371493713891856, guid: e1416f20045b23148aa21192afd469de,
+        type: 2}
+      propertyPath: GoToRoom
+      value: Room 21
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1416f20045b23148aa21192afd469de, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &2004953886 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4906355618425646, guid: e1416f20045b23148aa21192afd469de,
+    type: 2}
+  m_PrefabInternal: {fileID: 2004953885}
 --- !u!1001 &2009232959
 Prefab:
   m_ObjectHideFlags: 0
