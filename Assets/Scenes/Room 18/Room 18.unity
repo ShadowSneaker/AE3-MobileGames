@@ -6975,16 +6975,6 @@ Prefab:
       propertyPath: m_Name
       value: Lever 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114999880647059784, guid: 39957a3464a0f8046b50f230762966ea,
-        type: 2}
-      propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Input
-      objectReference: {fileID: 0}
-    - target: {fileID: 114999880647059784, guid: 39957a3464a0f8046b50f230762966ea,
-        type: 2}
-      propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 39957a3464a0f8046b50f230762966ea, type: 2}
   m_IsPrefabParent: 0
