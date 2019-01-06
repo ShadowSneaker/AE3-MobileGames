@@ -13,7 +13,7 @@ public class Artifact : MonoBehaviour
         {
             if (!Enemies[i].CompareTag("Player"))
             {
-                Enemies[i].ApplyDamage(9999);
+                Enemies[i].ApplyDamage(9999, null);
                 Enemies[i].transform.parent = null;
                 Destroy(Enemies[i].gameObject, 3);
             }

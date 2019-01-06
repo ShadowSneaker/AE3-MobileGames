@@ -34,6 +34,65 @@ public class Player : Entity
             return;
         }
 
-        base.Jump();
+        if (OnGround())
+        {
+            base.Jump();
+        }
+        else
+        {
+            UseAbility(5);
+        }
+    }
+
+
+    public void ActionRegistered(EDragDirection Action)
+    {
+        switch (Action)
+        {
+            case EDragDirection.Left:
+                // If user is looking left.
+                if (transform.localScale.x < 0.0f)
+                {
+                    if (OnGround())
+                    {
+                        UseAbility(1);
+                    }
+                }
+                else
+                {
+                    UseAbility(3);
+                }
+                break;
+
+
+            case EDragDirection.Right:
+                // If user is looking Right.
+                if (transform.localScale.x > 0.0f)
+                {
+                    if (OnGround())
+                    {
+                        UseAbility(1);
+                    }
+                }
+                else
+                {
+                    UseAbility(3);
+                }
+                break;
+
+
+            case EDragDirection.Up:
+                UseAbility(2);
+                break;
+
+
+            case EDragDirection.Down:
+                UseAbility(4);
+                break;
+
+
+            case EDragDirection.Tap:
+                break;
+        }
     }
 }

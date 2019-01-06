@@ -7,7 +7,9 @@ public class Dash : Abilitiy
     // The speed the entity dashes
     public float DashSpeed;
 
+    public bool UseDamageRange;
     public int Damage;
+    public int MaxDamage;
 
     // How long the dash takes.
     public float DashDuration;
@@ -24,11 +26,14 @@ public class Dash : Abilitiy
 
     public bool TurnOnEnd;
 
+    public bool StunOnWallHit;
+    public float StunDuration;
+
+
+    protected Entity This;
 
 
     private Vector3 StartPos;
-
-    private Entity This;
 
     private bool EnableTimer;
 
@@ -114,7 +119,11 @@ public class Dash : Abilitiy
         Entity Other = collision.gameObject.GetComponent<Entity>();
         if (Other && EnableTimer)
         {
-            Other.ApplyDamage(Damage);
+            Other.ApplyDamage((UseDamageRange) ? Random.Range(Damage, MaxDamage) : Damage, This);
+        }
+        else if (StunOnWallHit && collision.gameObject.CompareTag("Untagged"))
+        {
+            StartCoroutine(This.StartStunned(StunDuration));
         }
     }
 

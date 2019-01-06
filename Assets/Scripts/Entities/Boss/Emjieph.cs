@@ -49,7 +49,7 @@ public class Emjieph : MonoBehaviour
             Entity Other = collision.GetComponent<Entity>();
             if (Other)
             {
-                Other.ApplyDamage(DashDamage);
+                Other.ApplyDamage(DashDamage, This);
             }
         }
     }

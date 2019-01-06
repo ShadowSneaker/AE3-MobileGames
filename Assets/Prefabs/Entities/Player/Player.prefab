@@ -169,8 +169,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   CanFly: 0
-  MaxHealth: 3
+  MaxHealth: 5
   MovementSpeed: 600
+  ContactDamage: 0
   JumpStrength: 20
   ImmunityFrameLength: 1
   TerminalVelocity: -20
@@ -212,9 +213,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9837a6467c0d1bf4e85d2d0c46dc76f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Obtained: 1
+  ObtainLevel: 0
+  StartOnCooldown: 0
+  RandomCoolDownTime: 0
+  MinCooldown: 0
   Cooldown: 5
   Clip: {fileID: 7400000, guid: 3b8e05f619b5eb44091664dadd02c281, type: 2}
   SoundClip: {fileID: 0}
+  OverrideAnimation: 1
+  Owner: {fileID: 0}
+  AbilityUp: 1
+  AOC: {fileID: 0}
+  Anim: {fileID: 0}
+  AbilityTime: 0
 --- !u!114 &114888507769027496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -226,41 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19f0b363e43ca2142aabaa29dd9198a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DragUp:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  DragDown:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  DragLeft:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  DragRight:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  Pressed:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  Dragging:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  Released:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  ScreenPercentForSwipe: 5
 --- !u!114 &114915115993682650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -272,9 +250,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27a283bcb7f9c6f448d5a1c2e4b1d3e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Obtained: 1
+  ObtainLevel: 0
+  StartOnCooldown: 0
+  RandomCoolDownTime: 0
+  MinCooldown: 0
   Cooldown: 0.25
   Clip: {fileID: 7400000, guid: da751ce266486b9468cefa4c83d80b42, type: 2}
   SoundClip: {fileID: 0}
+  OverrideAnimation: 1
+  UseDamageRange: 0
+  Damage: 1
+  MaxDamage: 3
 --- !u!212 &212213025882455106
 SpriteRenderer:
   m_ObjectHideFlags: 1

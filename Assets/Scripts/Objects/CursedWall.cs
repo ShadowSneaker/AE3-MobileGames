@@ -10,7 +10,7 @@ public class CursedWall : MonoBehaviour
         Entity Other = collision.GetComponent<Entity>();
         if (Other)
         {
-            Other.ApplyDamage(9999);
+            Other.ApplyDamage(9999, null);
         }
     }
 }

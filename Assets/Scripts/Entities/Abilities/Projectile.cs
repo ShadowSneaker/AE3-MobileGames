@@ -55,7 +55,7 @@ public class Projectile : MonoBehaviour
             {
                 return;
             }
-            Other.ApplyDamage(Damage);
+            Other.ApplyDamage(Damage, null);
             Destroy(gameObject);
         }
         else if (CanBounce && collision.CompareTag("Floor"))

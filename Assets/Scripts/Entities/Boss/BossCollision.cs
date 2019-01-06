@@ -7,8 +7,12 @@ public class BossCollision : MonoBehaviour {
     public int DashDamage;
 
     private bool Dashing;
+    private Entity This;
 
-
+    private void Start()
+    {
+        This = GetComponent<Entity>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,7 +21,7 @@ public class BossCollision : MonoBehaviour {
             Entity Other = collision.GetComponent<Entity>();
             if (Other)
             {
-                Other.ApplyDamage(DashDamage);
+                Other.ApplyDamage(DashDamage, This);
             }
         }
 

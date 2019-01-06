@@ -20,7 +20,7 @@ public class Trap : MonoBehaviour
         {
             for (int i = 0; i < DamageEntities.Count; ++i)
             {
-                DamageEntities[i].ApplyDamage(Damage);
+                DamageEntities[i].ApplyDamage(Damage, null);
 
                 if (DamageEntities[i].IsDead())
                 {

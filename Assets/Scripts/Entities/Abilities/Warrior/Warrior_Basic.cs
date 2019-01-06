@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Warrior_Basic : Abilitiy
 {
+    public bool UseDamageRange = false;
+    public int Damage = 1;
 
-
+    public int MaxDamage = 3;
 
 	// Use this for initialization
 	protected override void Start ()

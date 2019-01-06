@@ -27,7 +27,7 @@ public class RedMushroom : Entity
 
             if (Distance <= Range)
             {
-                Entities[i].ApplyDamage(Damage);
+                Entities[i].ApplyDamage(Damage, null);
             }
         }
     }

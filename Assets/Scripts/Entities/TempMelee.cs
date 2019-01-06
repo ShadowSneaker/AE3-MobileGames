@@ -22,7 +22,7 @@ public class TempMelee : MonoBehaviour {
         Entity Hit = collision.GetComponent<Entity>();
         if (Hit && !collision.CompareTag("Player"))
         {
-            Hit.ApplyDamage(Damage);
+            Hit.ApplyDamage(Damage, Hit);
         }
     }
 }

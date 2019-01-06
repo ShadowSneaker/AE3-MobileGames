@@ -7,7 +7,7 @@ public class Sight : Entity
     public bool AlwaysAttack;
     public int AlwaysAttackAbility;
 
-    private bool EnableAlways;
+    //private bool EnableAlways;
 
     public bool SearchBehind = true;
     public float RaycastLength = Mathf.Infinity;
@@ -28,9 +28,9 @@ public class Sight : Entity
 
     private void Update()
     {
-        if (Abilities[AlwaysAttackAbility].GetAbilityUp)
+        if (AlwaysAttack)
         {
-            if (AlwaysAttack && EnableAlways)
+            if (Abilities[AlwaysAttackAbility].GetAbilityUp)
             {
                 UseAbility(0);
             }
@@ -46,7 +46,7 @@ public class Sight : Entity
                     if (Hit.collider.CompareTag("Player"))
                     {
                         UseAbility(RaycastAttackAbility);
-                        EnableAlways = false;
+                        //EnableAlways = false;
                     }
                     else if (SearchBehind)
                     {
@@ -57,17 +57,17 @@ public class Sight : Entity
                             {
                                 transform.localScale *= new Vector2(-1.0f, 1.0f);
                                 UseAbility(RaycastAttackAbility);
-                                EnableAlways = false;
+                                //EnableAlways = false;
                             }
                         }
                         else
                         {
-                            EnableAlways = true;
+                            //EnableAlways = true;
                         }
                     }
                     else
                     {
-                        EnableAlways = true;
+                        //EnableAlways = true;
                     }
                 }
             }

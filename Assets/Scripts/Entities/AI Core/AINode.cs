@@ -95,7 +95,7 @@ public class AINode : MonoBehaviour
 
             case PointInstruction.Die:
                 if (ShouldPerform())
-                    ENT.ApplyDamage(9999);
+                    ENT.ApplyDamage(9999, null);
                 Owner.GoToNextPoint();
                 break;
                 

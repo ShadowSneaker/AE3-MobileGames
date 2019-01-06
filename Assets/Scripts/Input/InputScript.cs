@@ -5,14 +5,14 @@ using UnityEngine.Events;
 using UnityStandardAssets.CrossPlatformInput;
 
 
-public enum EDragDirection { Left, Right, Up, Down }
+public enum EDragDirection { Left, Right, Up, Down, Tap, None }
 
 
 public class InputScript : MonoBehaviour
 {
 
-#if UNITY_EDITOR
-#elif UNITY_ANDROID
+//#if UNITY_EDITOR
+//#elif UNITY_ANDROID
     private Vector3 FirstTouchPos;
     private Vector3 LastTouchPos;
 
@@ -23,66 +23,37 @@ public class InputScript : MonoBehaviour
     private Joystick Stick;
 
     private EDragDirection DragDirection;
-#endif
+//#endif
 
-    public UnityEvent DragUp;
-    public UnityEvent DragDown;
-    public UnityEvent DragLeft;
-    public UnityEvent DragRight;
-    public UnityEvent Pressed;
-    public UnityEvent Dragging;
-    public UnityEvent Released;
+    private Player User;
 
 
-
-    private Entity Player;
-
-
-
-    bool TEMP_ATTACK = true;
+    //bool TEMP_ATTACK = true;
 
 
     private void Start()
     {
-        Player = GetComponent<Entity>();
+        User = GetComponent<Player>();
 
-#if UNITY_EDITOR
-#elif UNITY_ANDROID
+//#if UNITY_EDITOR
+//#elif UNITY_ANDROID
       DragDistance = Screen.height * ScreenPercentForSwipe / 100;
-#endif
+//#endif
     }
 
 
     void FixedUpdate()
     {
-#if UNITY_EDITOR
-        if (!Player.IsDead())
-        {
-            Player.MoveSideways(Input.GetAxisRaw("Horizontal"));
+//#if UNITY_EDITOR
         
-            if (Input.GetButtonDown("Jump"))
-            {
-                Player.Jump();
-            }
-        
-            if (Input.GetKeyDown("q") && TEMP_ATTACK)
-            {
-                Player.UseAbility(0);
-            }
-        
-            if (Input.GetKeyDown("1"))
-            {
-                Player.ApplyDamage(1);
-            }
-        }
 
 
-#elif UNITY_ANDROID
+//#elif UNITY_ANDROID
         /// Joystick Inputs
 
-        if (!Player.IsDead())
+        if (!User.IsDead())
         {
-            Player.MoveSideways(CrossPlatformInputManager.GetAxisRaw("Horizontal"));
+            User.MoveSideways(CrossPlatformInputManager.GetAxisRaw("Horizontal"));
 
 
             /// Touch Inputs
@@ -96,82 +67,47 @@ public class InputScript : MonoBehaviour
                     case TouchPhase.Began:
                         FirstTouchPos = To.position;
                         LastTouchPos = To.position;
-                        if (Pressed != null)
-                        {
-                            Pressed.Invoke();
-                        }
-
                         break;
 
 
                     case TouchPhase.Moved:
                         LastTouchPos = To.position;
-
-
-
                         CalculateDirection();
-
-
-
-                        if (Dragging != null)
-                        {
-                            Dragging.Invoke();
-                        }
-
-
-
                         break;
 
 
                     case TouchPhase.Ended:
                         LastTouchPos = To.position;
-
-                        if (Released != null)
-                        {
-                            Released.Invoke();
-                        }
-
                         CalculateDirection();
-
-                        switch (DragDirection)
-                        {
-                            case EDragDirection.Left:
-                                if (DragLeft != null)
-                                {
-                                    DragLeft.Invoke();
-                                }
-                                break;
-
-
-                            case EDragDirection.Right:
-                                if (DragRight != null)
-                                {
-                                    DragRight.Invoke();
-                                }
-                                break;
-
-
-                            case EDragDirection.Up:
-                                if (DragUp != null)
-                                {
-                                    DragUp.Invoke();
-                                }
-                                break;
-
-
-                            case EDragDirection.Down:
-                                if (DragDown != null)
-                                {
-                                    DragDown.Invoke();
-                                }
-                                break;
-                        }
-
                         break;
                 }
             }
+
+
+            User.ActionRegistered(DragDirection);
+
         }
 
+        /*if (!Player.IsDead())
+        {
+            Player.MoveSideways(Input.GetAxisRaw("Horizontal"));
+
+
+            if (Input.GetButtonDown("Jump"))
+            {
+                Player.Jump();
+            }
+            
+            if (Input.GetKeyDown("q") && TEMP_ATTACK)
+            {
+                Player.UseAbility(0);
+            }
+            
+            if (Input.GetKeyDown("1"))
+            {
+                Player.ApplyDamage(1);
+            }
+        }*/
     }
 
 
@@ -209,14 +145,14 @@ public class InputScript : MonoBehaviour
             }
         }
         return DragDirection;
-#endif
+//#endif
     }
 
-#if UNITY_EDITOR
-#elif UNITY_ANDROID
+//#if UNITY_EDITOR
+//#elif UNITY_ANDROID
   public EDragDirection GetDirection()
   {
       return DragDirection;
   }
-#endif
+//#endif
 }

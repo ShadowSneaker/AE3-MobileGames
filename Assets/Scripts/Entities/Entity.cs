@@ -83,18 +83,22 @@ public class Entity : MonoBehaviour
     // The garenteed list of items this entity will drop.
     public ItemScript[] WillDropItems;
 
+
+
     // A reference to the animator class for the Entity.
     protected Animator Anim;
-
-    // A reference to the rigid body attached to the Entity.
-    internal Rigidbody2D Rigid;
 
     // The distance between the left side and the right side of the collider extents.
     protected float Offset;
 
+    
+    // A reference to the rigid body attached to the Entity.
+    internal Rigidbody2D Rigid;
 
     // Determins if the entity is attacking or not.
     internal bool Attacking = false;
+
+    internal bool Reflect;
 
 
 
@@ -115,6 +119,9 @@ public class Entity : MonoBehaviour
 
     // How large the Collider extents are for this entity (used for calculating if the entity is on the ground).
     private float DistanceToGround;
+
+    // Determines if the unit can do anything.
+    private bool Stunned;
 
 
     // A reference to the collider around the Entity
@@ -192,17 +199,30 @@ public class Entity : MonoBehaviour
     // Disables the falling animation.
     protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
-        if (OnGround() && !Flying)
+        if (!Dead)
         {
-            Anim.SetLayerWeight(1, 0);
-            Anim.ResetTrigger("Jump");
-            Anim.SetBool("Falling", false);
-        }
+            if (OnGround() && !Flying)
+            {
+                Anim.SetLayerWeight(1, 0);
+                Anim.ResetTrigger("Jump");
+                Anim.SetBool("Falling", false);
+            }
 
-        Entity Other = collision.gameObject.GetComponent<Entity>();
-        if (Other)
+            Entity Other = collision.gameObject.GetComponent<Entity>();
+            if (Other)
+            {
+                Other.ApplyDamage(ContactDamage, this);
+            }
+        }
+        else
         {
-            Other.ApplyDamage(ContactDamage);
+            if (collision.gameObject.CompareTag("Floor"))
+            {
+                Col.isTrigger = true;
+
+                Rigid.bodyType = RigidbodyType2D.Kinematic;
+                Rigid.velocity = Vector2.zero;
+            }
         }
     }
 
@@ -210,10 +230,13 @@ public class Entity : MonoBehaviour
     // Triggers when the object overlaps with another object.
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        Entity Other = collision.GetComponent<Entity>();
-        if (Other)
+        if (!Dead)
         {
-            Other.ApplyDamage(ContactDamage);
+            Entity Other = collision.GetComponent<Entity>();
+            if (Other)
+            {
+                Other.ApplyDamage(ContactDamage, this);
+            }
         }
     }
 
@@ -223,40 +246,44 @@ public class Entity : MonoBehaviour
     // If the Entity dies, spawn the held items.
     // @param Damage - The amount of damage this entity will be inflicted by.
     // @return - The total amount of damage this entity recieved.
-    public int ApplyDamage(int Damage)
+    public int ApplyDamage(int Damage, Entity Attacker)
     {
-        if (!Immune && !Dead && Damage > 0)
+        if (!Reflect || !Attacker)
         {
-            CurrentHealth -= Damage;
-
-            Anim.SetBool("Damaged", true);
-            StartCoroutine(StartImmunityFrames());
-            if (CurrentHealth <= 0)
+            if (!Immune && !Dead && Damage > 0)
             {
-                Dead = true;
-                Anim.SetBool("Dead", true);
-                StartCoroutine(DropItems());
+                CurrentHealth -= Damage;
 
-                if (Col)
+                Anim.SetBool("Damaged", true);
+                StartCoroutine(StartImmunityFrames());
+                if (CurrentHealth <= 0)
                 {
-                    Col.isTrigger = true;
+                    Dead = true;
+                    Anim.SetBool("Dead", true);
+                    StartCoroutine(DropItems());
+
+                    if (Anim)
+                    {
+                        Anim.SetLayerWeight(1, 0);
+                        Anim.ResetTrigger("Jump");
+                        Anim.SetBool("Falling", false);
+                    }
+
+                    SFX.PlaySound(Sounds.DeathSound);
+                    OnDeath();
+                }
+                else
+                {
+                    SFX.PlaySound(Sounds.HurtSound);
                 }
 
-                if (Rigid)
-                {
-                    Rigid.bodyType = RigidbodyType2D.Kinematic;
-                    Rigid.velocity = new Vector2(0.0f, Rigid.velocity.y);
-                }
-
-                SFX.PlaySound(Sounds.DeathSound);
-                OnDeath();
+                return Damage;
             }
-            else
-            {
-                SFX.PlaySound(Sounds.HurtSound);
-            }
-
-            return Damage;
+        }
+        else
+        {
+            if (Attacker)
+                Attacker.ApplyDamage(Damage, this);
         }
         return 0;
     }
@@ -310,7 +337,7 @@ public class Entity : MonoBehaviour
                 }
                 else
                 {
-                    ApplyDamage(Amount);
+                    ApplyDamage(Amount, this);
                     Total = 0;
                 }
             }
@@ -365,6 +392,12 @@ public class Entity : MonoBehaviour
         }
     }
 
+    public IEnumerator StartStunned(float Duration)
+    {
+        Stunned = true;
+        yield return new WaitForSeconds(Duration);
+        Stunned = false;
+    }
 
     // Called when this entity dies.
     public virtual void OnDeath()
@@ -376,15 +409,18 @@ public class Entity : MonoBehaviour
     // @param - What ability should be casted in the ability array
     public void UseAbility(int AbilityIndex)
     {
-        if (Abilities[AbilityIndex].Obtained)
+        if (!Stunned)
         {
-            if (Abilities[AbilityIndex])
+            if (Abilities[AbilityIndex].Obtained)
             {
-                Abilities[AbilityIndex].CastAbility();
-            }
-            else
-            {
-                Debug.Log("Ability " + AbilityIndex.ToString() + " is not set!");
+                if (Abilities[AbilityIndex])
+                {
+                    Abilities[AbilityIndex].CastAbility();
+                }
+                else
+                {
+                    Debug.Log("Ability " + AbilityIndex.ToString() + " is not set!");
+                }
             }
         }
     }
@@ -395,13 +431,16 @@ public class Entity : MonoBehaviour
     // Flying entities cannot jump.
     public virtual void Jump()
     {
-        if (OnGround() && !Flying && Rigid)
+        if (!Stunned)
         {
-            Rigid.velocity = new Vector3(Rigid.velocity.x, JumpStrength, 0.0f);
+            if (OnGround() && !Flying && Rigid)
+            {
+                Rigid.velocity = new Vector3(Rigid.velocity.x, JumpStrength, 0.0f);
 
-            Anim.SetTrigger("Jump");
+                Anim.SetTrigger("Jump");
 
-            Anim.SetLayerWeight(1, 1);
+                Anim.SetLayerWeight(1, 1);
+            }
         }
     }
 
@@ -412,26 +451,28 @@ public class Entity : MonoBehaviour
     // @param Value - The direction the chaeracter should move in (-1 to move left, 1 to move right).
     public void MoveSideways(float Value)
     {
-
-        if (!Attacking && Rigid)
+        if (!Stunned)
         {
-            Rigid.velocity = new Vector2((Value * MovementSpeed) * Time.deltaTime, Rigid.velocity.y);
-            float Normalised = Value * ((Value >= 0.0f) ? 1 : -1);
-
-            if (Value > 0.0f && transform.localScale.x != 1.0f)
+            if (!Attacking && Rigid)
             {
-                transform.localScale = new Vector2(1.0f, transform.localScale.y);
-            }
-            else if (Value < 0.0f && transform.localScale.x != -1.0f)
-            {
-                transform.localScale = new Vector2(-1.0f, transform.localScale.y);
-            }
+                Rigid.velocity = new Vector2((Value * MovementSpeed) * Time.deltaTime, Rigid.velocity.y);
+                float Normalised = Value * ((Value >= 0.0f) ? 1 : -1);
 
-            Anim.SetFloat("MovementSpeed", Normalised);
+                if (Value > 0.0f && transform.localScale.x != 1.0f)
+                {
+                    transform.localScale = new Vector2(1.0f, transform.localScale.y);
+                }
+                else if (Value < 0.0f && transform.localScale.x != -1.0f)
+                {
+                    transform.localScale = new Vector2(-1.0f, transform.localScale.y);
+                }
 
-            if (Normalised > 0.01f)
-            {
-                Anim.speed = AnimSpeed * Normalised;
+                Anim.SetFloat("MovementSpeed", Normalised);
+
+                if (Normalised > 0.01f)
+                {
+                    Anim.speed = AnimSpeed * Normalised;
+                }
             }
         }
         //else

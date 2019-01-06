@@ -36,7 +36,7 @@ public class Thwump : MonoBehaviour
         Entity Other = collision.gameObject.GetComponent<Entity>();
         if (Other)
         {
-            Other.ApplyDamage(Damage);
+            Other.ApplyDamage(Damage, null);
         }
 
         GetComponent<CameraShake>().Play = true;

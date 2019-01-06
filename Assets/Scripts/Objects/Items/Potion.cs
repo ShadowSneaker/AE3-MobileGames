@@ -31,7 +31,7 @@ public class Potion : ItemScript
 
 
             case PotionType.Poison:
-                User.ApplyDamage(PotionStrength);
+                User.ApplyDamage(PotionStrength, null);
                 break;
         }
     }
