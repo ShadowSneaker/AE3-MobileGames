@@ -54,14 +54,15 @@ public class Dash : Abilitiy
     {
         base.Start();
         Rigid = GetComponent<Rigidbody2D>();
+        This = GetComponent<Entity>();
 
         if (ReturnOnEnd)
         {
             StartPos = transform.position;
-            This = GetComponent<Entity>();
-            StartDir = (transform.localScale.x > 0.0f) ? 1 : -1;
+            
         }
-        CurrentDir = (transform.localScale.x > 0.0f) ? 1 : -1;
+        StartDir = (transform.localScale.x > 0.0f) ? 1 : -1;
+        CurrentDir = StartDir;
     }
 	
 	// Update is called once per frame
@@ -94,7 +95,7 @@ public class Dash : Abilitiy
             }
             else
             {
-                transform.localScale = new Vector3(StartDir, transform.localScale.y, transform.localScale.z);
+                transform.localScale = new Vector3(This.transform.localScale.x, transform.localScale.y, transform.localScale.z);
             }
         }
 

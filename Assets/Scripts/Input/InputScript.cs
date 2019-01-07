@@ -57,7 +57,7 @@ public class InputScript : MonoBehaviour
 
 
             /// Touch Inputs
-
+            DragDirection = EDragDirection.None;
             if (Input.touchCount == 1)
             {
                 Touch To = Input.GetTouch(0);
@@ -72,7 +72,6 @@ public class InputScript : MonoBehaviour
 
                     case TouchPhase.Moved:
                         LastTouchPos = To.position;
-                        CalculateDirection();
                         break;
 
 
@@ -122,11 +121,13 @@ public class InputScript : MonoBehaviour
                 {
                     // Right Swipe
                     DragDirection = EDragDirection.Right;
+                    Debug.Log("Right");
                 }
                 else
                 {
                     // Left Swipe
                     DragDirection = EDragDirection.Left;
+                    Debug.Log("Left");
                 }
             }
             else
@@ -136,11 +137,13 @@ public class InputScript : MonoBehaviour
                 {
                     // Up Swipe
                     DragDirection = EDragDirection.Up;
+                    Debug.Log("Up");
                 }
                 else
                 {
                     // Down Swipe
                     DragDirection = EDragDirection.Down;
+                    Debug.Log("Down");
                 }
             }
         }

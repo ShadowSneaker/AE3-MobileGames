@@ -409,13 +409,14 @@ public class Entity : MonoBehaviour
     // @param - What ability should be casted in the ability array
     public void UseAbility(int AbilityIndex)
     {
-        if (!Stunned)
+        if (!Stunned && Abilities[AbilityIndex] && !Attacking)
         {
             if (Abilities[AbilityIndex].Obtained)
             {
                 if (Abilities[AbilityIndex])
                 {
                     Abilities[AbilityIndex].CastAbility();
+                    Debug.Log("Used ability: " + AbilityIndex.ToString());
                 }
                 else
                 {

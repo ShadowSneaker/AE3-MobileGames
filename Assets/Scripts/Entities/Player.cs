@@ -89,10 +89,6 @@ public class Player : Entity
             case EDragDirection.Down:
                 UseAbility(4);
                 break;
-
-
-            case EDragDirection.Tap:
-                break;
         }
     }
 }

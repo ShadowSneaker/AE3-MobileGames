@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 50190418039334480}
   - component: {fileID: 114090661891729910}
   - component: {fileID: 114915115993682650}
+  - component: {fileID: 114735477769196576}
   - component: {fileID: 114647881569519714}
   - component: {fileID: 114888507769027496}
   m_Layer: 9
@@ -71,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1463172384208808}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.16, z: 0}
+  m_LocalPosition: {x: -1, y: -3.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4281636889565754}
@@ -178,8 +179,8 @@ MonoBehaviour:
   GroundOffset: 0.15
   Abilities:
   - {fileID: 114915115993682650}
+  - {fileID: 114735477769196576}
   - {fileID: 114647881569519714}
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -210,7 +211,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1463172384208808}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9837a6467c0d1bf4e85d2d0c46dc76f7, type: 3}
+  m_Script: {fileID: 11500000, guid: aad2d48989c81d54a812f274c9178559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Obtained: 1
+  ObtainLevel: 1
+  StartOnCooldown: 0
+  RandomCoolDownTime: 0
+  MinCooldown: 0
+  Cooldown: 5
+  Clip: {fileID: 0}
+  SoundClip: {fileID: 0}
+  OverrideAnimation: 1
+  AbilityDuration: 0
+--- !u!114 &114735477769196576
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1463172384208808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f50cdba221e3a964abcae579b72fb3b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Obtained: 1
@@ -218,15 +240,22 @@ MonoBehaviour:
   StartOnCooldown: 0
   RandomCoolDownTime: 0
   MinCooldown: 0
-  Cooldown: 5
-  Clip: {fileID: 7400000, guid: 3b8e05f619b5eb44091664dadd02c281, type: 2}
+  Cooldown: 1
+  Clip: {fileID: 0}
   SoundClip: {fileID: 0}
   OverrideAnimation: 1
-  Owner: {fileID: 0}
-  AbilityUp: 1
-  AOC: {fileID: 0}
-  Anim: {fileID: 0}
-  AbilityTime: 0
+  DashSpeed: 1000
+  UseDamageRange: 1
+  Damage: 3
+  MaxDamage: 9
+  DashDuration: 1
+  DashForward: 1
+  DashDirection: {x: 0, y: 0}
+  ReturnOnEnd: 0
+  WaitDelay: 0
+  TurnOnEnd: 0
+  StunOnWallHit: 1
+  StunDuration: 2
 --- !u!114 &114888507769027496
 MonoBehaviour:
   m_ObjectHideFlags: 1
