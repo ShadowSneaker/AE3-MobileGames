@@ -1,7 +1,37 @@
 fileFormatVersion: 2
 guid: abe501d8b5957e845addb1a54fd968c7
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: PlayerBullRushAnim_0
+    21300002: PlayerBullRushAnim_1
+    21300004: PlayerBullRushAnim_2
+    21300006: PlayerBullRushAnim_3
+    21300008: PlayerBullRushAnim_4
+    21300010: PlayerBullRushAnim_5
+    21300012: PlayerBullRushAnim_6
+    21300014: PlayerBullRushAnim_7
+    21300016: PlayerBullRushAnim_8
+    21300018: PlayerBullRushAnim_9
+    21300020: PlayerBullRushAnim_10
+    21300022: PlayerBullRushAnim_11
+    21300024: PlayerBullRushAnim_12
+    21300026: PlayerBullRushAnim_13
+    21300028: PlayerBullRushAnim_14
+    21300030: PlayerBullRushAnim_15
+    21300032: PlayerBullRushAnim_16
+    21300034: PlayerBullRushAnim_17
+    21300036: PlayerBullRushAnim_18
+    21300038: PlayerBullRushAnim_19
+    21300040: PlayerBullRushAnim_20
+    21300042: PlayerBullRushAnim_21
+    21300044: PlayerBullRushAnim_22
+    21300046: PlayerBullRushAnim_23
+    21300048: PlayerBullRushAnim_24
+    21300050: PlayerBullRushAnim_25
+    21300052: PlayerBullRushAnim_26
+    21300054: PlayerBullRushAnim_27
+    21300056: PlayerBullRushAnim_28
+    21300058: PlayerBullRushAnim_29
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -29,7 +59,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -38,7 +68,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -67,9 +97,642 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4653
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ab798a8616f3574cb7b945f233c8543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_1
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 4653
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8ab84f1b2dfc14fb0e575db72d87e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_2
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 4653
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d79415d3282744983401643b7345ef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4136
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 314c09979a9405b41a1ea903d52671f0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_4
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 4136
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c80d1572bdc19834fb0b941bf355e10c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_5
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 4136
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad9e9ad022c4282468ab0dfe1210e3ef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3619
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 474af468ea3abc5488573efe0437a540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_7
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 3619
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2042ebc97e2e95646be301c44d6b3c28
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_8
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 3619
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c9628ce9bf870946ab3be60ca7d134b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3102
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f04af50f8192e4498697b872374da3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_10
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 3102
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e803df672459c4c4a8653e5d49850c17
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_11
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 3102
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d2b99252b38f324b93b367a53640ab7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2585
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2428e6abd346102498cc6fa2ad631605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_13
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 2585
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5856b25c67eeefd44bb283926a0109db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_14
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 2585
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd6efbb57f83b0c419bb62b9d9d9ede5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2068
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9dafa09af3693d4097ccb17b50f6183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_16
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 2068
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceccbee469a366e488bac14191ab5351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_17
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 2068
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3744b5316d83b2a49bb58098c57752e9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1551
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05a75621a5da15e4ea8b7d0aa35ac638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_19
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 1551
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde1e4b8fbeefee4997db4dafac21818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_20
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 1551
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ac40625a1762449be1a9269cbc8bb6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1034
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7281adfb22cd0df46b38bb240153d99d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_22
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 1034
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6c7959ab760b14bbba4aa98cbfed4e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_23
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 1034
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81e9d187e0ff5af4ebd509b48e5c27ad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 517
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34af0d26892a2db4b8d9208dceded67f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_25
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 517
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96033d1431aee644a8838bb670171f43
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_26
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 517
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acd5c945393c36b46a0e3beeac8db1b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3248ac03daf7d6342925411b7b6958e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_28
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 0
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55dcdc65855f55845a6ae91215c144ad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBullRushAnim_29
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 0
+        width: 406
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4c51696eed3b294497047ec98edd90f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -1,7 +1,27 @@
 fileFormatVersion: 2
 guid: e5793d0f765c0af468521d5c18b1bcbd
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: PlayerWalkAnim_0
+    21300002: PlayerWalkAnim_1
+    21300004: PlayerWalkAnim_2
+    21300006: PlayerWalkAnim_3
+    21300008: PlayerWalkAnim_4
+    21300010: PlayerWalkAnim_5
+    21300012: PlayerWalkAnim_6
+    21300014: PlayerWalkAnim_7
+    21300016: PlayerWalkAnim_8
+    21300018: PlayerWalkAnim_9
+    21300020: PlayerWalkAnim_10
+    21300022: PlayerWalkAnim_11
+    21300024: PlayerWalkAnim_12
+    21300026: PlayerWalkAnim_13
+    21300028: PlayerWalkAnim_14
+    21300030: PlayerWalkAnim_15
+    21300032: PlayerWalkAnim_16
+    21300034: PlayerWalkAnim_17
+    21300036: PlayerWalkAnim_18
+    21300038: PlayerWalkAnim_19
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -29,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -38,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -67,9 +87,442 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: PlayerWalkAnim_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4167
+        width: 364
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6c39d79a9a201148821ba50e9c27fae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWalkAnim_1
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 4167
+        width: 364
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 640989962f1d0a04d98158681da0ab98
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWalkAnim_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3704
+        width: 364
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90de8e03f90e74748b2dce563348d60c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWalkAnim_3
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 3704
+        width: 364
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01139b85d4b6d52468f414cafb906d2f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWalkAnim_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3241
+        width: 364
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da79534ec3eca4d4cad5f4b4678986d3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWalkAnim_5
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 3241
+        width: 364
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1820c55817129724186c847a8c52f83a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWalkAnim_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2778
+        width: 364
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 557f29cb1c887a0469b11dea8f8f45cc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWalkAnim_7
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 2778
+        width: 364
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a80c095e21a7647991d37c66831761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWalkAnim_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2315
+        width: 364
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95bf213809d712045b627f2b5ecfc6aa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWalkAnim_9
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 2315
+        width: 364
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c31a63272f95eae4380ac99bf20e73b1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWalkAnim_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1852
+        width: 364
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 958acac669182294c82756fbb8e12348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWalkAnim_11
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 1852
+        width: 364
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc4fb6bcc1dab145b887e78ce38ed62
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWalkAnim_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1389
+        width: 364
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95301155bef2b7143bc1cf8a7ff109e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWalkAnim_13
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 1389
+        width: 364
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f83af9fae5f45148a5a411983cb94cf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWalkAnim_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 926
+        width: 364
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b0b30a9f4ec1be458cfa06cb713cf1e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWalkAnim_15
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 926
+        width: 364
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 679461ef10e4d684d88b16e771c1601c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWalkAnim_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 463
+        width: 364
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5cdb3fb2df43e94fb4238f8cdd06136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWalkAnim_17
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 463
+        width: 364
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 514407bf88c422842a5671c13f8a285c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWalkAnim_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 364
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f7deeb17bee53645896653d654e717b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWalkAnim_19
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 0
+        width: 364
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edc1b8a8c542d1b4fa489808044676a9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

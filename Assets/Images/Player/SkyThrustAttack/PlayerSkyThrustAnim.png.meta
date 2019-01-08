@@ -1,7 +1,27 @@
 fileFormatVersion: 2
 guid: 4bde881b68b1bc641b13e63b66e8ce1f
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: PlayerSkyThrustAnim_0
+    21300002: PlayerSkyThrustAnim_1
+    21300004: PlayerSkyThrustAnim_2
+    21300006: PlayerSkyThrustAnim_3
+    21300008: PlayerSkyThrustAnim_4
+    21300010: PlayerSkyThrustAnim_5
+    21300012: PlayerSkyThrustAnim_6
+    21300014: PlayerSkyThrustAnim_7
+    21300016: PlayerSkyThrustAnim_8
+    21300018: PlayerSkyThrustAnim_9
+    21300020: PlayerSkyThrustAnim_10
+    21300022: PlayerSkyThrustAnim_11
+    21300024: PlayerSkyThrustAnim_12
+    21300026: PlayerSkyThrustAnim_13
+    21300028: PlayerSkyThrustAnim_14
+    21300030: PlayerSkyThrustAnim_15
+    21300032: PlayerSkyThrustAnim_16
+    21300034: PlayerSkyThrustAnim_17
+    21300036: PlayerSkyThrustAnim_18
+    21300038: PlayerSkyThrustAnim_19
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -29,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -38,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -67,9 +87,442 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: PlayerSkyThrustAnim_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5886
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d5c4be15bd74b4f8d75d61de084ed7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSkyThrustAnim_1
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 5886
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e0665e211157604c99d8c2cb20797a0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSkyThrustAnim_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5232
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cbe169ed74ba1c4aa2d0a60b934e6d5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSkyThrustAnim_3
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 5232
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c02e44116afbc5f4383fe1cf2c59c8ad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSkyThrustAnim_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4578
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af01616e9b581af4f940b059dbcaa48c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSkyThrustAnim_5
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 4578
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf433453cf639a947b8cb2796983e031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSkyThrustAnim_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3924
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29213117f020ad3438fcd1569d89d1fd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSkyThrustAnim_7
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 3924
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f2b47c804197642b44dd2043dc7b29
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSkyThrustAnim_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3270
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e2ce9a217eec2149b095373423741a9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSkyThrustAnim_9
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 3270
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6c246301d987a34c97725b5b6c3d6e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSkyThrustAnim_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2616
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eaee2004acadd1469859094f869f66b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSkyThrustAnim_11
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 2616
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e925287574151034f9cd60ceae0b056a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSkyThrustAnim_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1962
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d1da29cb265d324eb80fa3c7d53ca11
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSkyThrustAnim_13
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 1962
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 482e72eac34eff04b8bb7c97c286a442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSkyThrustAnim_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1308
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 774639acf125f894582456b812343414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSkyThrustAnim_15
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 1308
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feaca2489c1d8004ea6bff12bb75ddb9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSkyThrustAnim_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 654
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe383e6e1b34f944cac8d84adcef23c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSkyThrustAnim_17
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 654
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 957012104d37ce747bd4c57f21322c61
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSkyThrustAnim_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b560c21706dcf494d893627b353066db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSkyThrustAnim_19
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 0
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62c24be6fb5a9314bbba4a3159fa23e7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

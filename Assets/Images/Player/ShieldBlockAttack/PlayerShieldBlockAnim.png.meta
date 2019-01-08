@@ -1,7 +1,39 @@
 fileFormatVersion: 2
 guid: 8905f37d029f1ec46abf7af480eaefbb
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: PlayerShieldBlockAnim_0
+    21300002: PlayerShieldBlockAnim_1
+    21300004: PlayerShieldBlockAnim_2
+    21300006: PlayerShieldBlockAnim_3
+    21300008: PlayerShieldBlockAnim_4
+    21300010: PlayerShieldBlockAnim_5
+    21300012: PlayerShieldBlockAnim_6
+    21300014: PlayerShieldBlockAnim_7
+    21300016: PlayerShieldBlockAnim_8
+    21300018: PlayerShieldBlockAnim_9
+    21300020: PlayerShieldBlockAnim_10
+    21300022: PlayerShieldBlockAnim_11
+    21300024: PlayerShieldBlockAnim_12
+    21300026: PlayerShieldBlockAnim_13
+    21300028: PlayerShieldBlockAnim_14
+    21300030: PlayerShieldBlockAnim_15
+    21300032: PlayerShieldBlockAnim_16
+    21300034: PlayerShieldBlockAnim_17
+    21300036: PlayerShieldBlockAnim_18
+    21300038: PlayerShieldBlockAnim_19
+    21300040: PlayerShieldBlockAnim_20
+    21300042: PlayerShieldBlockAnim_21
+    21300044: PlayerShieldBlockAnim_22
+    21300046: PlayerShieldBlockAnim_23
+    21300048: PlayerShieldBlockAnim_24
+    21300050: PlayerShieldBlockAnim_25
+    21300052: PlayerShieldBlockAnim_26
+    21300054: PlayerShieldBlockAnim_27
+    21300056: PlayerShieldBlockAnim_28
+    21300058: PlayerShieldBlockAnim_29
+    21300060: PlayerShieldBlockAnim_30
+    21300062: PlayerShieldBlockAnim_31
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -29,7 +61,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -38,7 +70,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -67,9 +99,682 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7930
+        width: 355
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9a667fd2e94c9c45b17abeccecac863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_1
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 7930
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa2fea99e925eb4a905e299cd4eca3a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_2
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 7930
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f3a4c066169a3a4c90a77329e9e6c87
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7137
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57af3025706344c4f816fc337e394f27
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_4
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 7137
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3fc4b6f521557e44b33933fe963897b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_5
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 7137
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3cd75419a40e264da251c896d5385e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6344
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8fe5ed6085a060448bae5f151aa8516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_7
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 6344
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92d81c1af964b2c47bbe84ba4fdeae88
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_8
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 6344
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 126d36a375f53ce4dbaa9fda0c4db3d0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5551
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d329e56dee01d54aafa6f8b78924bba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_10
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 5551
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa646f04314a2c14899af3646efe7a88
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_11
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 5551
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29ae3bf8ee529c74fa9253f31458d6ee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4758
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ef319faa247d44a8bf2d96f26c88e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_13
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 4758
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a253c4f5605d8f94ba062eabb0b24d67
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_14
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 4758
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1a3cd25dba6f6a44aee71324093332c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3965
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d87c5da059b839b46b4429019c0b467d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_16
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 3965
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea92adad653d1a42acf80bcdef09618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_17
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 3965
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b49b7e7feae4fd447b1ae6b47d286003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3172
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3419a6d889fd92f4cb8bc616967683a6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_19
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 3172
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 784fa1ce4c4c18f42bf7cc1e5445a5f0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_20
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 3172
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66ff651f5752f414f99658d5496c1a90
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2379
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04cd22e547b241e41bc3f331e63eb8db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_22
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 2379
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29bea4dc3b589124f8dc5573e566c66c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_23
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 2379
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f66d5745dc51b0242880ec8c5b2a406d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1586
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35f09b8227d1495428007e8b2a0ba807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_25
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 1586
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 682eaf0858a47b74eb851e2a49721898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_26
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 1586
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6ad423811c8bed409e1ed2751e8072c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 793
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72eeb0651900ce5499fbb9217f6412f0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_28
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 793
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f516cb3942ca7c428bf9d363d60bcb4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_29
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 793
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fddbad58e1c42fe4cb7a0a8f6605ce7e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a4ff3c5a77d62b46825094301d5b670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShieldBlockAnim_31
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 0
+        width: 348
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce0bebf782ee3454cbca5a3b3fae794d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

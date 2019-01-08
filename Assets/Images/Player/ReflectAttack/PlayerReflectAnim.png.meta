@@ -1,7 +1,37 @@
 fileFormatVersion: 2
 guid: ee79f1f203d1c16429b31030b4cf2b22
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: PlayerReflectAnim_0
+    21300002: PlayerReflectAnim_1
+    21300004: PlayerReflectAnim_2
+    21300006: PlayerReflectAnim_3
+    21300008: PlayerReflectAnim_4
+    21300010: PlayerReflectAnim_5
+    21300012: PlayerReflectAnim_6
+    21300014: PlayerReflectAnim_7
+    21300016: PlayerReflectAnim_8
+    21300018: PlayerReflectAnim_9
+    21300020: PlayerReflectAnim_10
+    21300022: PlayerReflectAnim_11
+    21300024: PlayerReflectAnim_12
+    21300026: PlayerReflectAnim_13
+    21300028: PlayerReflectAnim_14
+    21300030: PlayerReflectAnim_15
+    21300032: PlayerReflectAnim_16
+    21300034: PlayerReflectAnim_17
+    21300036: PlayerReflectAnim_18
+    21300038: PlayerReflectAnim_19
+    21300040: PlayerReflectAnim_20
+    21300042: PlayerReflectAnim_21
+    21300044: PlayerReflectAnim_22
+    21300046: PlayerReflectAnim_23
+    21300048: PlayerReflectAnim_24
+    21300050: PlayerReflectAnim_25
+    21300052: PlayerReflectAnim_26
+    21300054: PlayerReflectAnim_27
+    21300056: PlayerReflectAnim_28
+    21300058: PlayerReflectAnim_29
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -29,7 +59,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -38,7 +68,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -67,9 +97,642 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: PlayerReflectAnim_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4221
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b0d7430fc6662469d7a36fa5fc3368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_1
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 4221
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4288b0a30fe068442a7b2ded08feeeb5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_2
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 4221
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c9d6335e5df27f418b783c8db055629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3752
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df3e0d05ed887814cb38fbd1bca15ae4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_4
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 3752
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df990ddd27a97574d94525d1462c1a5f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_5
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 3752
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0431b84438380fd4ab4ba745ddc221ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3283
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5838111190c94644b8cf9a4b49ade07
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_7
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 3283
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea4ba98f5a82474da1779ab9775b381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_8
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 3283
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df9d58aa5c9ad704392f99529ce3348a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2814
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a09d7dc9a68fb004f87ec64f71e0b0bb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_10
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 2814
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6479e662a0cdfe44ba828c62042979dc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_11
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 2814
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e62d1dde8d1f634d8e9f98ada6923a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2345
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 374a67aae7fc915449bbf8ae0361c03f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_13
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 2345
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3fe51c6215f0240b564581bf731cf4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_14
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 2345
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5667d41cbee23143a4efcc5b6142737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1876
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5a9b43e08c64504fb51049d47769407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_16
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1876
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a3f02dbe3c2bd643990d02b72f41bfb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_17
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1876
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dfa4e18b90323b4380ab0c76a38770d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1407
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46fbbc06cf6bd4d45b02c6dcec0dea36
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_19
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1407
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d75ffe4c42e21c4996ddfaee2c98fb1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_20
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1407
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f084e88a392c724eb755bdff322465d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 938
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baab555c0596389408c6d3f53146eb3b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_22
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 938
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd5d2750d882c344ad552505f8d652e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_23
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 938
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd4c8d52b2c6e1d4ab8cc8a0d528e8f4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 469
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dac69c7a2cc6a54b962237b50890206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_25
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 469
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 278bb88b0da222b4d8f3178f4189e81d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_26
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 469
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55f565a1026b5e48b854b032aeaa559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38ccce72d51159f4bac2be7b6ab580b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_28
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f9dacc8a91465d4886a35ca3207a67f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerReflectAnim_29
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 450
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 747d66c621519bf4c84fa004401955ec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

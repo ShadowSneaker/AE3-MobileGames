@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: 3e05052cfaef3574f94d89ea65c92b25
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: PlayerTremorSmashAnim_0
+    21300002: PlayerTremorSmashAnim_1
+    21300004: PlayerTremorSmashAnim_2
+    21300006: PlayerTremorSmashAnim_3
+    21300008: PlayerTremorSmashAnim_4
+    21300010: PlayerTremorSmashAnim_5
+    21300012: PlayerTremorSmashAnim_6
+    21300014: PlayerTremorSmashAnim_7
+    21300016: PlayerTremorSmashAnim_8
+    21300018: PlayerTremorSmashAnim_9
+    21300020: PlayerTremorSmashAnim_10
+    21300022: PlayerTremorSmashAnim_11
+    21300024: PlayerTremorSmashAnim_12
+    21300026: PlayerTremorSmashAnim_13
+    21300028: PlayerTremorSmashAnim_14
+    21300030: PlayerTremorSmashAnim_15
+    21300032: PlayerTremorSmashAnim_16
+    21300034: PlayerTremorSmashAnim_17
+    21300036: PlayerTremorSmashAnim_18
+    21300038: PlayerTremorSmashAnim_19
+    21300040: PlayerTremorSmashAnim_20
+    21300042: PlayerTremorSmashAnim_21
+    21300044: PlayerTremorSmashAnim_22
+    21300046: PlayerTremorSmashAnim_23
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -29,7 +53,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -38,7 +62,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -67,9 +91,522 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: PlayerTremorSmashAnim_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5026
+        width: 714
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6bb2eabe09baa94f8e5864a6e229370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerTremorSmashAnim_1
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 5026
+        width: 714
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d9d9d44d6a5444ba9ee0a2db60c4c8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerTremorSmashAnim_2
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 5026
+        width: 714
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c187355e2cabcff46be0cdb76684a51d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerTremorSmashAnim_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4308
+        width: 714
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b5837154cc3ba247ade3f28146d52d9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerTremorSmashAnim_4
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 4308
+        width: 714
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 672c2cf6b044a41498c81e9c05b4806b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerTremorSmashAnim_5
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 4308
+        width: 714
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ef64aa5d51dda94aa6100ae4ff7beee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerTremorSmashAnim_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3590
+        width: 714
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c31a9194cebb84db54dc13fabf8891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerTremorSmashAnim_7
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 3590
+        width: 714
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a3f5be58cf6f2488819a27dd1b9a06
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerTremorSmashAnim_8
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 3590
+        width: 714
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc261bfcd83bf6a4da24688f22b79165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerTremorSmashAnim_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2872
+        width: 714
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c792fb6596900f4982e1cda6114723b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerTremorSmashAnim_10
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 2872
+        width: 714
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca78b35980b417f428a6950bcef5f5d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerTremorSmashAnim_11
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 2872
+        width: 714
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef7bdf8446357641b1f5fbd62f77c48
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerTremorSmashAnim_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2154
+        width: 714
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c187ed31f66735243af2097f3a1f6697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerTremorSmashAnim_13
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 2154
+        width: 714
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4175b269211897b41a967bd06dc455ce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerTremorSmashAnim_14
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 2154
+        width: 714
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 829c0a8dc892d8945afe0588f552f293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerTremorSmashAnim_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1436
+        width: 714
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5c1c366b2a272e4590db0dbf6e0e80e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerTremorSmashAnim_16
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 1436
+        width: 714
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2131dae7c33b0b8498c8a493a7a17a57
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerTremorSmashAnim_17
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 1436
+        width: 714
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f2c00eacbc048458537960319f9718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerTremorSmashAnim_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 718
+        width: 714
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d60b327410d3a0142995426bd73b510b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerTremorSmashAnim_19
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 718
+        width: 714
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16adf5f1f0c8ee14c9f5645674bff8a4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerTremorSmashAnim_20
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 718
+        width: 714
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ec17b48e43a2c45a3a3a7273e3434e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerTremorSmashAnim_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 714
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c3b8bc2ad35dcc4d83417f4e72d0044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerTremorSmashAnim_22
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 0
+        width: 714
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b732aa11881f722428f59f5bd718be80
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerTremorSmashAnim_23
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 0
+        width: 714
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad6a2223df15d8943b69abe788d0761a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
