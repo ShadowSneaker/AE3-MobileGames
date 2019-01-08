@@ -51,7 +51,7 @@ public class InputScript : MonoBehaviour
 //#elif UNITY_ANDROID
         /// Joystick Inputs
 
-        if (!User.IsDead())
+        if (!User.IsDead() && !User.Attacking)
         {
             User.MoveSideways(CrossPlatformInputManager.GetAxisRaw("Horizontal"));
 

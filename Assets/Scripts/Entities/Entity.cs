@@ -269,6 +269,14 @@ public class Entity : MonoBehaviour
                         Anim.SetBool("Falling", false);
                     }
 
+                        Debug.Log("Ran");
+                    if (OnGround())
+                    {
+                        Col.isTrigger = true;
+                        Rigid.bodyType = RigidbodyType2D.Kinematic;
+                        Rigid.velocity = Vector2.zero;
+                    }
+
                     SFX.PlaySound(Sounds.DeathSound);
                     OnDeath();
                 }
@@ -454,7 +462,7 @@ public class Entity : MonoBehaviour
     {
         if (!Stunned)
         {
-            if (!Attacking && Rigid)
+            if (Rigid)
             {
                 Rigid.velocity = new Vector2((Value * MovementSpeed) * Time.deltaTime, Rigid.velocity.y);
                 float Normalised = Value * ((Value >= 0.0f) ? 1 : -1);
