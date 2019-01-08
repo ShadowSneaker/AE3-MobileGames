@@ -240,7 +240,6 @@ public class Entity : MonoBehaviour
         }
     }
 
-
     // Damages a targed based off the inputted damage.
     // Kills the Entity if the health goes below 0.
     // If the Entity dies, spawn the held items.

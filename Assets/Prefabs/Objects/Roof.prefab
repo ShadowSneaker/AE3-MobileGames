@@ -9,47 +9,45 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1153092115999494}
+  m_RootGameObject: {fileID: 1628710553309078}
   m_IsPrefabParent: 1
---- !u!1 &1153092115999494
+--- !u!1 &1628710553309078
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4174375098762412}
-  - component: {fileID: 33019572282194864}
-  - component: {fileID: 23703936818193202}
-  - component: {fileID: 95957614329931574}
-  - component: {fileID: 61549511564394242}
-  - component: {fileID: 114645064213467284}
+  - component: {fileID: 4556899807816188}
+  - component: {fileID: 33772640202201044}
+  - component: {fileID: 23222645767365708}
+  - component: {fileID: 61700429205262586}
   m_Layer: 0
-  m_Name: CollapsePlatform
-  m_TagString: Floor
+  m_Name: Roof
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4174375098762412
+--- !u!4 &4556899807816188
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1153092115999494}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12, y: 30.5, z: 0}
+  m_GameObject: {fileID: 1628710553309078}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23703936818193202
+--- !u!23 &23222645767365708
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1153092115999494}
+  m_GameObject: {fileID: 1628710553309078}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -59,7 +57,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 507f8ec8bcb5f9a4a90ee222c3043fb2, type: 3}
+  - {fileID: 2100000, guid: e6f1ad93299637f4a914f0c749807e47, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,26 +77,26 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33019572282194864
+--- !u!33 &33772640202201044
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1153092115999494}
-  m_Mesh: {fileID: 4300000, guid: 326d0af43c2f1a444bcbcf821500d72a, type: 3}
---- !u!61 &61549511564394242
+  m_GameObject: {fileID: 1628710553309078}
+  m_Mesh: {fileID: 4300000, guid: e6f1ad93299637f4a914f0c749807e47, type: 3}
+--- !u!61 &61700429205262586
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1153092115999494}
+  m_GameObject: {fileID: 1628710553309078}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.14999999}
+  m_Offset: {x: -1, y: -0.55}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -109,34 +107,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.8125, y: 0.29999998}
+  m_Size: {x: 4, y: 1.1}
   m_EdgeRadius: 0
---- !u!95 &95957614329931574
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1153092115999494}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fb2e350c172f7974b98109d00ed25eaa, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114645064213467284
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1153092115999494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e42c3e81d4690c4199ee8a90c96cb6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
