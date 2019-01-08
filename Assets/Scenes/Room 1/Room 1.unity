@@ -17953,8 +17953,13 @@ Prefab:
     - target: {fileID: 114888507769027496, guid: c667d7f97f0bf214186274064c7a1a79,
         type: 2}
       propertyPath: ScreenPercentForSwipe
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 114735477769196576, guid: c667d7f97f0bf214186274064c7a1a79,
+        type: 2}
+      propertyPath: Clip
+      value: 
+      objectReference: {fileID: 7400000, guid: da751ce266486b9468cefa4c83d80b42, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c667d7f97f0bf214186274064c7a1a79, type: 2}
   m_IsPrefabParent: 0
