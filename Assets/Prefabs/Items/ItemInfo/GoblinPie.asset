@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1f35a16c8746574a8e0348c431e9d4b, type: 3}
+  m_Name: GoblinPie
+  m_EditorClassIdentifier: 
+  ConsumeOnUse: 1
+  Image: {fileID: 21300000, guid: 89612a7ad676b904384cf6289708a933, type: 3}
+  ItemName: Goblin Pie
+  SellValue: 0

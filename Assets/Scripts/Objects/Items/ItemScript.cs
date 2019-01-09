@@ -24,4 +24,10 @@ public class ItemScript : ScriptableObject
     {
         
     }
+
+    public virtual void Use()
+    {
+        // this will be where the item is then used.
+        // for this it will display a description unless its a potion then used on the player
+    }
 }
