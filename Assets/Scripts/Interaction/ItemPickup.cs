@@ -21,10 +21,15 @@ public class ItemPickup : MonoBehaviour
     {
         if (CanBePickedUp && collision.CompareTag("Player"))
         {
-            // Put Item into Inventory.
+            
+            bool Itempicked = Inventory.Instance.AddItems(Item); // inventory functionality
             Entity Other = collision.GetComponent<Player>();
             Item.Use(Other);
-            Destroy(gameObject);
+            if(Itempicked)
+            {
+                Destroy(gameObject);
+            }
+            
         }
     }
 
