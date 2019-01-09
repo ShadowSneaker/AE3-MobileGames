@@ -2550,6 +2550,10 @@ Prefab:
       propertyPath: GoToRoom
       value: Room 19
       objectReference: {fileID: 0}
+    - target: {fileID: 4906355618425646, guid: e1416f20045b23148aa21192afd469de, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1416f20045b23148aa21192afd469de, type: 2}
   m_IsPrefabParent: 0
@@ -5319,6 +5323,10 @@ Prefab:
     - target: {fileID: 1511333405021692, guid: e1416f20045b23148aa21192afd469de, type: 2}
       propertyPath: m_Name
       value: EntranceDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906355618425646, guid: e1416f20045b23148aa21192afd469de, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1416f20045b23148aa21192afd469de, type: 2}

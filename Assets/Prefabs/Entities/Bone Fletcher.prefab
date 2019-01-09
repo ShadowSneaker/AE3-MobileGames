@@ -109,7 +109,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d5dfdbbb7cb5ea438ff6ded368818af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Obtained: 1
+  ObtainLevel: 0
   StartOnCooldown: 0
+  RandomCoolDownTime: 0
+  MinCooldown: 0
   Cooldown: 5.95
   Clip: {fileID: 0}
   SoundClip: {fileID: 0}
@@ -144,6 +148,7 @@ MonoBehaviour:
   CanFly: 0
   MaxHealth: 7
   MovementSpeed: 0
+  ContactDamage: 1
   JumpStrength: 0
   ImmunityFrameLength: 0.5
   TerminalVelocity: -20
@@ -157,8 +162,11 @@ MonoBehaviour:
   WillDropItems: []
   MELEE_COLIDER: {fileID: 0}
   AlwaysAttack: 1
+  AlwaysAttackAbility: 0
   SearchBehind: 0
   RaycastLength: Infinity
+  RaycastAttackAbility: 0
+  CancleAlwaysWhenRaycastHit: 0
 --- !u!212 &212631458713153950
 SpriteRenderer:
   m_ObjectHideFlags: 1
