@@ -12,6 +12,9 @@ public class DoorScript : ActivatableObject
 
     private Animator Anim;
 
+    private TransitionScript Transition;
+
+
 
     // Use this for initialization
     void Start()
@@ -19,6 +22,7 @@ public class DoorScript : ActivatableObject
         Anim = GetComponent<Animator>();
 
         Anim.SetBool("Open", Activated);
+        Transition = FindObjectOfType<TransitionScript>();
     }
 
     private void Update()
@@ -32,7 +36,6 @@ public class DoorScript : ActivatableObject
         // Only go to the next scene if the player goes through the door.
         if (collision.gameObject.CompareTag("Player"))
         {
-
             if (GoToRoom != "")
             {
                 for (int i = 0; i < SceneManager.sceneCountInBuildSettings; ++i)
@@ -42,7 +45,14 @@ public class DoorScript : ActivatableObject
 
                     if (GoToRoom == Scene.Substring(LastSlash + 1, Scene.LastIndexOf(".") - LastSlash - 1))
                     {
-                        SceneManager.LoadScene(GoToRoom);
+                        if (Transition)
+                        {
+                            Transition.GoToScene(GoToRoom);
+                        }
+                        else
+                        {
+                            SceneManager.LoadScene(GoToRoom);
+                        }
                     }
                 }
             }

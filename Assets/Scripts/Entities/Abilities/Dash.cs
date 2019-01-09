@@ -118,11 +118,14 @@ public class Dash : Abilitiy
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Entity Other = collision.gameObject.GetComponent<Entity>();
-        if (Other && EnableTimer)
+        if (Other)
         {
-            Other.ApplyDamage((UseDamageRange) ? Random.Range(Damage, MaxDamage) : Damage, This);
+            if (EnableTimer)
+            {
+                Other.ApplyDamage((UseDamageRange) ? Random.Range(Damage, MaxDamage) : Damage, This);
+            }
         }
-        else if (StunOnWallHit && collision.gameObject.CompareTag("Untagged"))
+        else if (StunOnWallHit && EnableTimer && collision.gameObject.CompareTag("Untagged"))
         {
             StartCoroutine(This.StartStunned(StunDuration));
         }

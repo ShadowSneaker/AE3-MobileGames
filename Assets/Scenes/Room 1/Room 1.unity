@@ -5838,6 +5838,10 @@ Prefab:
       propertyPath: m_Name
       value: SM_Roof (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: e6f1ad93299637f4a914f0c749807e47, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6f1ad93299637f4a914f0c749807e47, type: 3}
   m_IsPrefabParent: 0
@@ -5978,13 +5982,13 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114371493713891856, guid: e1416f20045b23148aa21192afd469de,
         type: 2}
-      propertyPath: GoToRoom
-      value: Room 2
+      propertyPath: Activated
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114371493713891856, guid: e1416f20045b23148aa21192afd469de,
         type: 2}
-      propertyPath: Activated
-      value: 1
+      propertyPath: GoToRoom
+      value: Room 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1416f20045b23148aa21192afd469de, type: 2}
@@ -10185,6 +10189,11 @@ Prefab:
     - target: {fileID: 1628710553309078, guid: fdca371818db7b140adea2b99c5a3e83, type: 2}
       propertyPath: m_Name
       value: Roof (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 23222645767365708, guid: fdca371818db7b140adea2b99c5a3e83,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fdca371818db7b140adea2b99c5a3e83, type: 2}

@@ -1,12 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : Entity
 {
     public UserInterface UI;
 
     internal InteractableObject Interact;
+
+    private TransitionScript Transition;
+
+
 
 	// Use this for initialization
 	protected override void Start ()
@@ -17,6 +22,8 @@ public class Player : Entity
         {
             UI.Init(GetHealth);
         }
+
+        Transition = FindObjectOfType<TransitionScript>();
     }
 	
 	// Update is called once per frame
@@ -41,6 +48,27 @@ public class Player : Entity
         else
         {
             UseAbility(5);
+        }
+    }
+
+
+    public override void OnDeath()
+    {
+        StartCoroutine(DeathTimer());
+    }
+
+
+    private IEnumerator DeathTimer()
+    {
+        yield return new WaitForSeconds(1.5f);
+
+        if (Transition)
+        {
+            Transition.ReloadScene();
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
