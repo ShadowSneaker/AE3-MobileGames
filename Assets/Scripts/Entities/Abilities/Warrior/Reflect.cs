@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class Reflect : Abilitiy
 {
-    public float AbilityDuration;
+    //public float AbilityDuration;
+    public Color DurationColour;
 
     private bool Active;
-	
-	private IEnumerator Duration()
+
+    private SpriteRenderer Img;
+
+
+    protected override void Start()
     {
-        Owner.Reflect = true;
-        yield return new WaitForSeconds(AbilityDuration);
+        base.Start();
+        Img = GetComponent<SpriteRenderer>();
     }
 
 
@@ -23,5 +27,25 @@ public class Reflect : Abilitiy
             Rigidbody2D OtherRigid = Other.GetComponent<Rigidbody2D>();
             OtherRigid.velocity = -OtherRigid.velocity;
         }
+    }
+
+
+    public override void CastAbility()
+    {
+        if (GetAbilityUp)
+        {
+            base.CastAbility();
+            Img.color = DurationColour;
+            Owner.Reflect = true;
+            Owner.Attacking = false;
+        }
+    }
+
+
+    public override void EndAbility()
+    {
+
+        base.EndAbility();
+        Img.color = Color.white;
     }
 }

@@ -40,6 +40,8 @@ public struct SpawnParams
 
     // The maximum damage the projectile will apply.
     public int MaxDamage;
+
+    public bool ShouldNotReverse;
 }
 
 
@@ -102,7 +104,10 @@ public class FireProjectile : Abilitiy
 
 
             //Spawned.OverrideSpeed = Projectiles[i].OverrideProjectileSpeed;
-            Spawned.Reverse = (transform.localScale.x < 0.0f);
+            if (!Projectiles[i].ShouldNotReverse)
+            {
+                Spawned.Reverse = (transform.localScale.x < 0.0f);
+            }
             Spawned.Owner = gameObject;
             Destroy(Spawned.gameObject, Projectiles[i].Lifetime);
         }

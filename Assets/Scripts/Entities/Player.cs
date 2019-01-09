@@ -11,6 +11,9 @@ public class Player : Entity
 
     private TransitionScript Transition;
 
+    private bool Charged;
+
+
 
 
 	// Use this for initialization
@@ -49,6 +52,38 @@ public class Player : Entity
         {
             UseAbility(5);
         }
+    }
+
+
+    private IEnumerator Charge()
+    {
+        yield return new WaitForSeconds(3.0f);
+        Charged = true;
+    }
+
+
+    public void AttackReleased()
+    {
+        Attacking = false;
+        if (Charged && Abilities[6].GetAbilityUp)
+        {
+            Debug.Log("Ran Charged");
+            UseAbility(6);
+        }
+        else
+        {
+            Debug.Log("Ran Basic");
+            UseAbility(0);
+            StopCoroutine(Charge());
+        }
+        Charged = false;
+    }
+
+
+    public void AttackPressed()
+    {
+        StartCoroutine(Charge());
+        Attacking = true;
     }
 
 

@@ -423,7 +423,6 @@ public class Entity : MonoBehaviour
                 if (Abilities[AbilityIndex])
                 {
                     Abilities[AbilityIndex].CastAbility();
-                    Debug.Log("Used ability: " + AbilityIndex.ToString());
                 }
                 else
                 {

@@ -34,9 +34,13 @@ public class Abilitiy : MonoBehaviour
 
     public bool OverrideAnimation = true;
 
+    public bool UseDuration = true;
+
+    public float Duration;
 
     // A reference to the entity that casted this ability.
     protected Entity Owner;
+
 
 
 
@@ -77,7 +81,7 @@ public class Abilitiy : MonoBehaviour
 
     private IEnumerator AbilityDuration()
     {
-        yield return new WaitForSeconds(AbilityTime);
+        yield return new WaitForSeconds(AbilityTime + Duration);
         EndAbility();
     }
 
@@ -103,12 +107,6 @@ public class Abilitiy : MonoBehaviour
     {
         if (AbilityUp)
         {
-            AbilityUp = false;
-            if (Owner)
-            {
-                Owner.Attacking = true;
-            }
-
             if (Anim)
             {
                 if (OverrideAnimation && Clip)
@@ -138,7 +136,17 @@ public class Abilitiy : MonoBehaviour
                 
             }
 
-            StartCoroutine(AbilityDuration());
+
+            if (UseDuration)
+            {
+                AbilityUp = false;
+                if (Owner)
+                {
+                    Owner.Attacking = true;
+                    StartCoroutine(AbilityDuration());
+                }
+            }
+
         }
     }
 

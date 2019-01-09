@@ -121,13 +121,11 @@ public class InputScript : MonoBehaviour
                 {
                     // Right Swipe
                     DragDirection = EDragDirection.Right;
-                    Debug.Log("Right");
                 }
                 else
                 {
                     // Left Swipe
                     DragDirection = EDragDirection.Left;
-                    Debug.Log("Left");
                 }
             }
             else
@@ -137,13 +135,11 @@ public class InputScript : MonoBehaviour
                 {
                     // Up Swipe
                     DragDirection = EDragDirection.Up;
-                    Debug.Log("Up");
                 }
                 else
                 {
                     // Down Swipe
                     DragDirection = EDragDirection.Down;
-                    Debug.Log("Down");
                 }
             }
         }
