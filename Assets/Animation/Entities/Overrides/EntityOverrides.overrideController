@@ -8,8 +8,6 @@ AnimatorOverrideController:
   m_Name: EntityOverrides
   m_Controller: {fileID: 9100000, guid: d10d2976b238fcc4e9902050290791ea, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400000, guid: da751ce266486b9468cefa4c83d80b42, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: da751ce266486b9468cefa4c83d80b42, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 128cf1779fb2bdb418cf15a0c90ac1e7, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: 128cf1779fb2bdb418cf15a0c90ac1e7, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: f5a3cd722729ede4eb89435a323483c3, type: 2}
