@@ -698,6 +698,20 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 10.26
       objectReference: {fileID: 0}
+    - target: {fileID: 114371493713891856, guid: e1416f20045b23148aa21192afd469de,
+        type: 2}
+      propertyPath: GoToRoom
+      value: Room 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 114371493713891856, guid: e1416f20045b23148aa21192afd469de,
+        type: 2}
+      propertyPath: Activated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906355618425646, guid: e1416f20045b23148aa21192afd469de, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.018
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1416f20045b23148aa21192afd469de, type: 2}
   m_IsPrefabParent: 0
@@ -2553,6 +2567,10 @@ Prefab:
     - target: {fileID: 4906355618425646, guid: e1416f20045b23148aa21192afd469de, type: 2}
       propertyPath: m_LocalPosition.z
       value: -1.934
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906355618425646, guid: e1416f20045b23148aa21192afd469de, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.04
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1416f20045b23148aa21192afd469de, type: 2}
