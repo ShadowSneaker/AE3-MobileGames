@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -6,6 +7,8 @@ public class InventoryUI : MonoBehaviour
 
     public Transform ItemsParent;
     public GameObject InventoryUIPanel;
+
+    public Text Gold;
 
     Inventory inventory;
 
@@ -28,6 +31,8 @@ public class InventoryUI : MonoBehaviour
 
     void UpdateUI()
     {
+        Gold.text = "Gold: " + inventory.Gold;
+
         for(int i = 0; i < Slots.Length; i++)
         {
             if(i < inventory.Items.Count)

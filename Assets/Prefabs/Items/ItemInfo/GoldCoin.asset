@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ConsumeOnUse: 1
   Image: {fileID: 21300000, guid: 89d89c434c73e6c47961af94d6c89fa1, type: 3}
-  ItemName: Gold Coin
+  ItemName: Gold
   SellValue: 0

@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class UserInterface : MonoBehaviour {
+    // final thing to be done is to decide weher the health update goes
+
 
     //array of heart images
     private Image[] Hearts;
@@ -11,10 +13,15 @@ public class UserInterface : MonoBehaviour {
     // the heart image
     public Sprite HeartIMG;
 
+    // health Bar for the UI
+    public Transform ParentHealthBar;
+
+    //array of healthslots
+    HealthSlot[] Health;
 
 	void Start ()
     {
-		
+        Health = ParentHealthBar.GetComponentsInChildren<HealthSlot>();
 	}
 	
 	
@@ -34,13 +41,17 @@ public class UserInterface : MonoBehaviour {
         }
     }
 
-    public void HeartUpdate()
+    public void HeartUpdate(int health)
     {
-
+        for(int i = 0; i < Hearts.Length; i++)
+        {
+            Health[i].AddHeart(HeartIMG);
+        }
     }
 
     public void DrawHearts()
     {
 
     }
+
 }

@@ -6,8 +6,7 @@ public class Inventory : MonoBehaviour
 {
 
     public static Inventory Instance;
-
-    
+    public int Gold = 0;
 
     void Awake()
     {
@@ -32,7 +31,17 @@ public class Inventory : MonoBehaviour
             return false;
         }
 
-        Items.Add(item);
+        if(item.ItemName == "Gold")
+        {
+            Gold++;
+        }
+        else
+        {
+            Items.Add(item);
+        }
+        
+
+
 
         if(OnItemChangedCallBack != null)
             OnItemChangedCallBack.Invoke();
