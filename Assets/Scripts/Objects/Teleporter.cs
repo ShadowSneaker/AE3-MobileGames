@@ -15,16 +15,28 @@ public class Teleporter : InteractableObject
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (Active)
+        if (Interactable)
         {
-            Entity Other = collision.gameObject.GetComponent<Entity>();
-            if (Other)
+            Player OBJ = collision.GetComponent<Player>();
+            if (OBJ && !OBJ.Interact)
             {
-                EntityToTeleport = Other;
-
-                if (!Interactable)
+                EntityToTeleport = OBJ;
+                OBJ.Interact = this;
+            }
+        }
+        else
+        {
+            if (Active)
+            {
+                Entity Other = collision.gameObject.GetComponent<Entity>();
+                if (Other)
                 {
-                    Teleport();
+                    EntityToTeleport = Other;
+
+                    if (!Interactable)
+                    {
+                        Teleport();
+                    }
                 }
             }
         }
@@ -33,10 +45,21 @@ public class Teleporter : InteractableObject
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Entity Other = collision.gameObject.GetComponent<Entity>();
-        if (Other)
+        if (Interactable)
         {
-            Active = true;
+            Player OBJ = collision.GetComponent<Player>();
+            if (OBJ && OBJ.Interact == this)
+            {
+                OBJ.Interact = null;
+            }
+        }
+        else
+        {
+            Entity Other = collision.gameObject.GetComponent<Entity>();
+            if (Other)
+            {
+                Active = true;
+            }
         }
     }
 
