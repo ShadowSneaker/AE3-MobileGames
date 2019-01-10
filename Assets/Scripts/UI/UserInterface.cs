@@ -50,7 +50,7 @@ public class UserInterface : MonoBehaviour {
     public void HeartUpdate(int health)
     {
         //HeartUpdate function will be along the lines of this:
-         for (int i = 0; i < Hearts.Length; ++i)
+        for (int i = 0; i < Hearts.Length; ++i)
         {
          //If the player's current health is higher than the index, display the hearts. Otherwise disable them.
           Hearts[i].enabled = ((health >= i) ? true : false);

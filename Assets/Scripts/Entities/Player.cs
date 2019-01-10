@@ -20,7 +20,7 @@ public class Player : Entity
 	protected override void Start ()
     {
         base.Start();
-
+        UI = FindObjectOfType<UserInterface>();
         if (UI)
         {
             UI.Init(GetHealth);
