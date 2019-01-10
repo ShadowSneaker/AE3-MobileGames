@@ -252,7 +252,16 @@ public class Entity : MonoBehaviour
             if (!Immune && !Dead && Damage > 0)
             {
                 CurrentHealth -= Damage;
-                OnDamaged(Damage, Attacker);
+
+                if (Attacker)
+                {
+                    OnDamaged(Damage, Attacker);
+                }
+                else
+                {
+                    OnDamaged(Damage, null);
+                }
+
 
                 Anim.SetBool("Damaged", true);
                 StartCoroutine(StartImmunityFrames());
