@@ -24,11 +24,14 @@ public class SimonManager : MonoBehaviour
 
     public UnityEvent OnCompleted;
 
+    public NoteGuy[] NoteGuys = new NoteGuy[4];
+
 
     // The generated pattern to be played.
     private SimonColours[] Pattern;
 
     private int CurrentStep = 1;
+    private int PlayStep = 0;
 
     private bool Failed;
 
@@ -36,40 +39,49 @@ public class SimonManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        GeneratePattern();
-        StartCoroutine(PlaySequence(CurrentStep));
+        //GeneratePattern();
+        //StartCoroutine(PlaySequence(CurrentStep));
 	}
 
 
-    private IEnumerator PlaySequence(int Amount)
+    private IEnumerator PlaySequence(int Amount, float StartDelay = 0.0f)
     {
         Mathf.Clamp(Amount, 0, Pattern.Length);
 
+        yield return new WaitForSeconds(StartDelay);
+
         for (int i = 0; i < Amount; ++i)
         {
-            Debug.Log("Played: " + Pattern[i].ToString());
+            float NoteDelay = 0.0f;
+
+            //Debug.Log("Played: " + Pattern[i].ToString());
             switch (Pattern[i])
             {
                 case SimonColours.Red:
+                    NoteGuys[0].Activate();
+                    NoteDelay = NoteGuys[0].ShineDuration;
                     break;
 
 
                 case SimonColours.Green:
-
+                    NoteGuys[1].Activate();
+                    NoteDelay = NoteGuys[1].ShineDuration;
                     break;
 
 
                 case SimonColours.Yellow:
-
+                    NoteGuys[2].Activate();
+                    NoteDelay = NoteGuys[2].ShineDuration;
                     break;
 
 
                 case SimonColours.Blue:
-
+                    NoteGuys[3].Activate();
+                    NoteDelay = NoteGuys[3].ShineDuration;
                     break;
             }
 
-            yield return new WaitForSeconds(SequenceDelay);
+            yield return new WaitForSeconds(SequenceDelay + NoteDelay);
         }
     }
 
@@ -78,12 +90,15 @@ public class SimonManager : MonoBehaviour
     public void GeneratePattern()
     {
         CurrentStep = 1;
+        PlayStep = 0;
         Failed = false;
         Pattern = new SimonColours[SegmentCount];
         for (int i = 0; i < SegmentCount; ++i)
         {
             Pattern.SetValue(Random.Range(0, 4), i);
         }
+
+        StartCoroutine(PlaySequence(CurrentStep));
     }
 
 
@@ -112,26 +127,38 @@ public class SimonManager : MonoBehaviour
                     Col = SimonColours.Blue;
                     break;
             }
+            
 
-
-            if (Pattern[CurrentStep] == Col)
+            if (Pattern[PlayStep] == Col)
             {
-                ++CurrentStep;
-                if (CurrentStep > Pattern.Length)
+                ++PlayStep;
+
+                if (PlayStep >= CurrentStep)
                 {
-                    if (OnCompleted != null)
+                    ++CurrentStep;
+
+                    if (CurrentStep > Pattern.Length)
                     {
-                        OnCompleted.Invoke();
+                        if (OnCompleted != null)
+                        {
+                            OnCompleted.Invoke();
+                        }
                     }
-                }
-                else
-                {
-                    PlaySequence(CurrentStep);
+                    else
+                    {
+                        PlayStep = 0;
+                        StartCoroutine(PlaySequence(CurrentStep, 2.0f));
+                    }
                 }
             }
             else
             {
                 Failed = true;
+
+                for (int i = 0; i < NoteGuys.Length; ++i)
+                {
+                    NoteGuys[i].Activate();
+                }
             }
         }
     }
