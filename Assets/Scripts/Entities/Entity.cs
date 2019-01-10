@@ -106,7 +106,7 @@ public class Entity : MonoBehaviour
     private float AnimSpeed;
 
     // The current health the entity has.
-    private int CurrentHealth;
+    protected int CurrentHealth;
 
     // The value determining if the entity is dead or alive.
     private bool Dead = false;
@@ -252,6 +252,7 @@ public class Entity : MonoBehaviour
             if (!Immune && !Dead && Damage > 0)
             {
                 CurrentHealth -= Damage;
+                OnDamaged(Damage, Attacker);
 
                 Anim.SetBool("Damaged", true);
                 StartCoroutine(StartImmunityFrames());
@@ -294,6 +295,10 @@ public class Entity : MonoBehaviour
         }
         return 0;
     }
+
+
+    protected virtual void OnDamaged(int Damage, Entity Damager)
+    { }
 
 
     // Heals a target based off the inputted amount.

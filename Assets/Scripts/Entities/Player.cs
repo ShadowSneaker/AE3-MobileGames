@@ -35,6 +35,19 @@ public class Player : Entity
 		
 	}
 
+    protected override void OnDamaged(int Damage, Entity Damager)
+    {
+        // Byron example code for updating UI
+        UI.HeartUpdate(CurrentHealth);
+
+        //HeartUpdate function will be along the lines of this:
+        // for (int i = 0; i < HeartImages.Length; ++i)
+        //{
+            // If the player's current health is higher than the index, display the hearts. Otherwise disable them.
+        //  HeartImage.enabled = ((CurrentHealth >= i) ? true : false);
+        //}
+    }
+
 
     public override void Jump()
     {
