@@ -11,7 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1f35a16c8746574a8e0348c431e9d4b, type: 3}
   m_Name: EsscenceAir
   m_EditorClassIdentifier: 
-  ConsumeOnUse: 1
+  ConsumeOnUse: 0
   Image: {fileID: 21300000, guid: 7df6fb80ba0fa7f4c9714861a7cb574f, type: 3}
   ItemName: Air Essence
   SellValue: 0
+  DisplayInfo: 1
+  Description: Smells Fresh

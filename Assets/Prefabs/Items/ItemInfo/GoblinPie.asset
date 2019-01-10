@@ -11,7 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1f35a16c8746574a8e0348c431e9d4b, type: 3}
   m_Name: GoblinPie
   m_EditorClassIdentifier: 
-  ConsumeOnUse: 1
+  ConsumeOnUse: 0
   Image: {fileID: 21300000, guid: 89612a7ad676b904384cf6289708a933, type: 3}
   ItemName: Goblin Pie
   SellValue: 0
+  DisplayInfo: 1
+  Description: Yummy!!

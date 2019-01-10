@@ -11,7 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1f35a16c8746574a8e0348c431e9d4b, type: 3}
   m_Name: SpectralDust
   m_EditorClassIdentifier: 
-  ConsumeOnUse: 1
+  ConsumeOnUse: 0
   Image: {fileID: 21300000, guid: bd9fcb37bf23acb419c655e380bc7c66, type: 3}
   ItemName: Spectral Dust
   SellValue: 0
+  DisplayInfo: 1
+  Description: Shiny Dust Thingy

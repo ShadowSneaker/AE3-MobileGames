@@ -15,3 +15,5 @@ MonoBehaviour:
   Image: {fileID: 21300000, guid: 798fb0ece056aa2448da55be05c726d1, type: 3}
   ItemName: Mushroom Head
   SellValue: 0
+  DisplayInfo: 1
+  Description: Press F for mushroom man

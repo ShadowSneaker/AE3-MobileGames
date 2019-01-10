@@ -11,7 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1f35a16c8746574a8e0348c431e9d4b, type: 3}
   m_Name: EssenceofEarth
   m_EditorClassIdentifier: 
-  ConsumeOnUse: 1
+  ConsumeOnUse: 0
   Image: {fileID: 21300000, guid: d67a2c0178a37c54b86cc41b64fc7b3c, type: 3}
-  ItemName: ' Earth essence'
+  ItemName: Earth essence
   SellValue: 0
+  DisplayInfo: 1
+  Description: Very down to earth

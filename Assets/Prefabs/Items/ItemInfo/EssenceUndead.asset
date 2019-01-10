@@ -11,7 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1f35a16c8746574a8e0348c431e9d4b, type: 3}
   m_Name: EssenceUndead
   m_EditorClassIdentifier: 
-  ConsumeOnUse: 1
+  ConsumeOnUse: 0
   Image: {fileID: 21300000, guid: f612895ad3ace3f4c96cc89e58ce06ef, type: 3}
   ItemName: Undead essence
   SellValue: 0
+  DisplayInfo: 1
+  Description: Undeath or Undead?

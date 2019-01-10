@@ -11,7 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1f35a16c8746574a8e0348c431e9d4b, type: 3}
   m_Name: Skull
   m_EditorClassIdentifier: 
-  ConsumeOnUse: 1
+  ConsumeOnUse: 0
   Image: {fileID: 21300000, guid: 1e1fb47b098224f40b8c5f75bda939cb, type: 3}
   ItemName: Skull
   SellValue: 0
+  DisplayInfo: 1
+  Description: Bone Head!

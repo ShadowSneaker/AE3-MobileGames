@@ -15,3 +15,5 @@ MonoBehaviour:
   Image: {fileID: 21300000, guid: 279f0aed9c5e594448e4835c81ae155d, type: 3}
   ItemName: DummyBolt
   SellValue: 0
+  DisplayInfo: 1
+  Description: Ha! Dummy!

@@ -18,16 +18,27 @@ public class ItemScript : ScriptableObject
     // How muchthis item is worth when selling.
     public int SellValue;
 
+    // if the item cant be consumed it displays the information
+    public bool DisplayInfo = false;
+
+    //description of the item
+    public string Description;
 
 
 	public virtual void Use(Entity User)
     {
-        
+        if(ConsumeOnUse)
+        {
+            if(ItemName == "Potion")
+            {
+                User.ApplyHeal(2);
+            }
+        }
+        else
+        {
+            DisplayInfo = true;
+        }
     }
 
-    public virtual void Use()
-    {
-        // this will be where the item is then used.
-        // for this it will display a description unless its a potion then used on the player
-    }
+    
 }
