@@ -34,7 +34,6 @@ public class Trap : MonoBehaviour
     // Adds the object when it enters the collider.
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Ran");
         Entity Obj = collision.gameObject.GetComponent<Entity>();
         
         if (Obj)

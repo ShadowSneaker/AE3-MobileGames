@@ -21,10 +21,6 @@ public class Player : Entity
     {
         base.Start();
         UI = FindObjectOfType<UserInterface>();
-        if (UI)
-        {
-            UI.Init(GetHealth);
-        }
 
         Transition = FindObjectOfType<TransitionScript>();
     }
@@ -40,7 +36,7 @@ public class Player : Entity
         
         UI.HeartUpdate(CurrentHealth);
 
-        
+        Debug.Log("Ran");
     }
 
 

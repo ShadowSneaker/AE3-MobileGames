@@ -247,23 +247,20 @@ public class Entity : MonoBehaviour
     // @return - The total amount of damage this entity recieved.
     public int ApplyDamage(int Damage, Entity Attacker)
     {
-        if (Attacker)
-        {
-            OnDamaged(Damage, Attacker);
-        }
-        else
-        {
-            OnDamaged(Damage, null);
-        }
-
-
         if (!Reflect || !Attacker)
         {
             if (!Immune && !Dead && Damage > 0)
             {
                 CurrentHealth -= Damage;
 
-                
+                if (Attacker)
+                {
+                    OnDamaged(Damage, Attacker);
+                }
+                else
+                {
+                    OnDamaged(Damage, null);
+                }
 
 
                 Anim.SetBool("Damaged", true);
