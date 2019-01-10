@@ -18,5 +18,6 @@ public class MadmanTrigger : MonoBehaviour
             FindObjectOfType<DialogueManager>().GetFinalText(dialogue.FinalLine);
         }
         
+        
     }
 }

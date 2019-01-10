@@ -34,8 +34,8 @@ public class SpikeTrapTimer : MonoBehaviour {
             DownTime -= Time.deltaTime;
             if(DownTime <= 0)
             {
-                SpikeTrap1.SetActive(true);
-                SpikeTrap2.SetActive(true);
+                SpikeTrap1.SetActive(false);
+                SpikeTrap2.SetActive(false);
                 UpTime = 1.5f;
                 up = true;
                 down = false;
@@ -46,7 +46,11 @@ public class SpikeTrapTimer : MonoBehaviour {
             UpTime -= Time.deltaTime;
             if(UpTime <= 0)
             {
-
+                SpikeTrap1.SetActive(true);
+                SpikeTrap2.SetActive(true);
+                DownTime = 3f;
+                up = false;
+                down = true;
             }
         }
 	}
