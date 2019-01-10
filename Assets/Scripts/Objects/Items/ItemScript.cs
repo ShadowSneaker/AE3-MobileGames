@@ -36,6 +36,7 @@ public class ItemScript : ScriptableObject
         }
         else
         {
+            Debug.Log("Display info true");
             DisplayInfo = true;
         }
     }

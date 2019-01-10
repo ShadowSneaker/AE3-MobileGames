@@ -34,12 +34,15 @@ public class InventorySlot : MonoBehaviour
     {
         if(item != null)
         {
+            Debug.Log("NotNull");
 
             // this part needs finishing later
             item.Use(GameObject.FindGameObjectWithTag("Player").GetComponent<Entity>());
 
             if(item.DisplayInfo)
             {
+                Debug.Log("Entered Display if");
+                ItemInfo.enabled = true;
                 // enable the display pannel and change the info
                 InfoText = ItemInfo.GetComponentsInChildren<Text>();
 
