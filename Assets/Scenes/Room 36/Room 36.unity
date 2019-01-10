@@ -303,6 +303,11 @@ Prefab:
       propertyPath: m_UsedByEffector
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -463,6 +468,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -509,6 +519,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_Platform3 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -1043,6 +1058,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114371493713891856, guid: e1416f20045b23148aa21192afd469de,
+        type: 2}
+      propertyPath: Activated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114371493713891856, guid: e1416f20045b23148aa21192afd469de,
+        type: 2}
+      propertyPath: GoToRoom
+      value: Room 37
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1416f20045b23148aa21192afd469de, type: 2}
   m_IsPrefabParent: 0
@@ -1202,6 +1227,11 @@ Prefab:
       propertyPath: m_UsedByEffector
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -1417,6 +1447,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_Platform3 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -1774,6 +1809,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_Platform3 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -2062,6 +2102,11 @@ Prefab:
       propertyPath: m_UsedByEffector
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -2315,6 +2360,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -2508,6 +2558,11 @@ Prefab:
       propertyPath: m_UsedByEffector
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -2659,6 +2714,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -2912,6 +2972,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -3436,6 +3501,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -3612,6 +3682,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -3754,6 +3829,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -3916,6 +3996,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -4254,6 +4339,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_Platform3 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -4360,6 +4450,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -4887,6 +4982,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -5380,6 +5480,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -5488,6 +5593,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -6223,6 +6333,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -6950,6 +7065,11 @@ Prefab:
       propertyPath: m_UsedByEffector
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -7854,6 +7974,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_Platform3 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -8746,6 +8871,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -9299,6 +9429,11 @@ Prefab:
       propertyPath: m_UsedByEffector
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -9405,6 +9540,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -9511,6 +9651,11 @@ Prefab:
       propertyPath: m_UsedByEffector
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -9567,6 +9712,11 @@ Prefab:
       propertyPath: m_UsedByEffector
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -10026,6 +10176,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -10410,6 +10565,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_Platform3 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -10538,6 +10698,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_Platform3 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -10634,6 +10799,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -11431,6 +11601,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -11706,6 +11881,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -12087,6 +12267,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_Platform3 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -12242,6 +12427,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -12692,6 +12882,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_Platform3 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -12884,6 +13079,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -13122,6 +13322,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -13402,6 +13607,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -14024,6 +14234,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -14271,6 +14486,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -14317,6 +14537,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_Platform3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -14525,6 +14750,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_Platform3 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -14851,6 +15081,11 @@ Prefab:
       propertyPath: m_UsedByEffector
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -15211,6 +15446,11 @@ Prefab:
       propertyPath: m_UsedByEffector
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -15329,6 +15569,11 @@ Prefab:
       propertyPath: m_UsedByEffector
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -15945,6 +16190,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_Platform3 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -15991,6 +16241,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -16042,6 +16297,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_Platform3 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -16088,6 +16348,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -16144,6 +16409,11 @@ Prefab:
       propertyPath: m_UsedByEffector
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -16195,6 +16465,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_Platform3 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -16241,6 +16516,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -16529,6 +16809,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -16639,6 +16924,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -17150,6 +17440,11 @@ Prefab:
       propertyPath: m_UsedByEffector
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -17201,6 +17496,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -17719,6 +18019,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -17770,6 +18075,11 @@ Prefab:
       propertyPath: m_UsedByEffector
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -17931,6 +18241,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -18036,6 +18351,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -18393,6 +18713,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -18855,6 +19180,11 @@ Prefab:
       propertyPath: m_UsedByEffector
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -19182,6 +19512,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_Platform3 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -19339,6 +19674,11 @@ Prefab:
       propertyPath: m_UsedByEffector
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -19390,6 +19730,11 @@ Prefab:
       propertyPath: m_UsedByEffector
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -19500,6 +19845,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_Platform3 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -19554,6 +19904,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -19718,6 +20073,11 @@ Prefab:
       propertyPath: m_UsedByEffector
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -19764,6 +20124,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -20250,6 +20615,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -21303,6 +21673,11 @@ Prefab:
       propertyPath: m_UsedByEffector
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -21493,6 +21868,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_Platform3 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -21786,6 +22166,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_Platform3 (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -21887,6 +22272,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -22056,6 +22446,11 @@ Prefab:
       propertyPath: m_UsedByEffector
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -22166,6 +22561,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -22764,6 +23164,11 @@ Prefab:
       propertyPath: m_Name
       value: SM_Platform3 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 61295307256258182, guid: 016a7d5c441ac4647bafcd0339b0cfd9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a7d5c441ac4647bafcd0339b0cfd9, type: 2}
   m_IsPrefabParent: 0
@@ -23175,6 +23580,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -23454,6 +23864,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
@@ -23981,6 +24396,11 @@ Prefab:
       propertyPath: m_Name
       value: Floor Base (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 61497998969247466, guid: ae2e8340cbcb8404f909ef8b3e9031e2,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3c024e8fc1fa47b851c5085c5a5d3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae2e8340cbcb8404f909ef8b3e9031e2, type: 2}
   m_IsPrefabParent: 0
