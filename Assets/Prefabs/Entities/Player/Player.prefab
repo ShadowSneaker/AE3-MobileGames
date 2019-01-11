@@ -107,7 +107,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1463172384208808}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.65, y: -0.79, z: 2}
+  m_LocalPosition: {x: -1, y: -3.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4420858133897346}
@@ -265,8 +265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ca8d602b64683498ee62a2a294e348, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Obtained: 1
-  ObtainLevel: 0
+  Obtained: 0
+  ObtainLevel: 31
   StartOnCooldown: 0
   RandomCoolDownTime: 0
   MinCooldown: 0
@@ -303,8 +303,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1504ee648fd44f742bac233204bf258c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Obtained: 1
-  ObtainLevel: 0
+  Obtained: 0
+  ObtainLevel: 8
   StartOnCooldown: 0
   RandomCoolDownTime: 0
   MinCooldown: 0
@@ -341,8 +341,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d5dfdbbb7cb5ea438ff6ded368818af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Obtained: 1
-  ObtainLevel: 0
+  Obtained: 0
+  ObtainLevel: 26
   StartOnCooldown: 0
   RandomCoolDownTime: 0
   MinCooldown: 0
@@ -390,8 +390,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aad2d48989c81d54a812f274c9178559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Obtained: 1
-  ObtainLevel: 1
+  Obtained: 0
+  ObtainLevel: 14
   StartOnCooldown: 0
   RandomCoolDownTime: 0
   MinCooldown: 0
@@ -413,8 +413,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f50cdba221e3a964abcae579b72fb3b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Obtained: 1
-  ObtainLevel: 0
+  Obtained: 0
+  ObtainLevel: 2
   StartOnCooldown: 0
   RandomCoolDownTime: 0
   MinCooldown: 0
@@ -484,8 +484,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd6e21700be740f40b3643eee205fd10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Obtained: 1
-  ObtainLevel: 0
+  Obtained: 0
+  ObtainLevel: 22
   StartOnCooldown: 0
   RandomCoolDownTime: 0
   MinCooldown: 0
